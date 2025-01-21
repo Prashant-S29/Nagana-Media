@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://nagana-media.vercel.app
+
+# Sitemaps
+Sitemap: https://nagana-media.vercel.app/sitemap.xml
