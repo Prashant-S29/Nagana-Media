@@ -12,7 +12,7 @@ export const Hero: React.FC = () => {
           Technology
         </h1>
         <h1 className="text-[60px] font-bold leading-none text-white">
-          Resonate
+          Resonate!
         </h1>
 
         <p className="mt-5 text-white">
