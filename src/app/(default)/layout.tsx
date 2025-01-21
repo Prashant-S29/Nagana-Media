@@ -6,6 +6,7 @@ import { type Metadata } from "next";
 import { auth } from "~/server/auth";
 import { GLOBAL_Provider } from "~/utils/globalProvider";
 import { generateSeo } from "~/utils/generateSeo";
+import { Navbar } from "~/components/layout";
 
 // Generate SEO metadata
 export const metadata: Metadata = generateSeo({
@@ -24,7 +25,10 @@ export default async function RootLayout({
   return (
     <html lang="en" className={`${GeistSans.variable}`}>
       <body>
-        <GLOBAL_Provider session={session}>{children}</GLOBAL_Provider>
+        <GLOBAL_Provider session={session}>
+          <Navbar />
+          {children}
+        </GLOBAL_Provider>
       </body>
     </html>
   );

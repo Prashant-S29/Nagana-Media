@@ -31,10 +31,7 @@ declare module "next-auth" {
  * @see https://next-auth.js.org/configuration/options
  */
 export const authConfig = {
-  providers: [
-    DiscordProvider,
-   
-  ],
+  providers: [DiscordProvider],
   adapter: PrismaAdapter(db),
   callbacks: {
     session: ({ session, user }) => ({
