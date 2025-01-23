@@ -6,7 +6,7 @@ import { type Metadata } from "next";
 import { auth } from "~/server/auth";
 import { GLOBAL_Provider } from "~/utils/globalProvider";
 import { generateSeo } from "~/utils/generateSeo";
-import { Navbar } from "~/components/layout";
+import { Footer, Navbar } from "~/components/layout";
 
 // Generate SEO metadata
 export const metadata: Metadata = generateSeo({
@@ -28,6 +28,7 @@ export default async function RootLayout({
         <GLOBAL_Provider session={session}>
           <Navbar />
           {children}
+          <Footer />
         </GLOBAL_Provider>
       </body>
     </html>

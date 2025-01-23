@@ -6,7 +6,7 @@ export const BlogGrid: React.FC = () => {
   return (
     <div className="bg-white px-[350px] py-[60px]">
       <p className="text-center text-xs font-bold uppercase text-brand">
-        Blog Grid
+        Blog & News
       </p>
       <h1 className="text-center text-[40px] font-bold">
         Our Latest Blog Posts
