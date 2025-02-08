@@ -40,7 +40,9 @@ export const Navbar: React.FC = () => {
           </NavigationMenu>
         </nav>
 
-        <Button variant="brand">Let&apos;s Talk</Button>
+        <Button variant="brand" asChild>
+          <Link href="/contact">Let&apos;s Talk</Link>
+        </Button>
       </div>
     </div>
   );

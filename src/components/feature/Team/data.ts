@@ -32,4 +32,10 @@ export const teamData: TeamProps[] = [
     image: "",
     linkedIn: "/",
   },
+  {
+    name: "Prashant Singh",
+    designation: "Web Developer",
+    image: "",
+    linkedIn: "/",
+  },
 ];
