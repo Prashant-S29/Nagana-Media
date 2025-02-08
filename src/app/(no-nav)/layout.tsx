@@ -2,8 +2,6 @@ import "~/styles/globals.css";
 
 import { type Metadata } from "next";
 
-import { auth } from "~/server/auth";
-
 // utils
 import { GLOBAL_Provider } from "~/utils/globalProvider";
 import { generateSeo } from "~/utils/generateSeo";
@@ -24,11 +22,10 @@ export const metadata: Metadata = generateSeo({
 export default async function NoNavLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
-  const session = await auth();
   return (
     <html lang="en" className={`${fonts.outfit.className} antialiased`}>
       <body>
-        <GLOBAL_Provider session={session}>{children}</GLOBAL_Provider>
+        <GLOBAL_Provider >{children}</GLOBAL_Provider>
       </body>
     </html>
   );

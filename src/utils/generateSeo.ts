@@ -47,9 +47,9 @@ export const generateSeo = ({
     type: "website",
     images: [
       {
-        url: image ? image : siteConfig.ogImage.url,
-        width: width ? width : siteConfig.ogImage.width,
-        height: height ? height : siteConfig.ogImage.height,
+        url: image ?? siteConfig.ogImage.url,
+        width: width ?? siteConfig.ogImage.width,
+        height: height ?? siteConfig.ogImage.height,
       },
     ],
   },
@@ -60,9 +60,9 @@ export const generateSeo = ({
     description,
     images: [
       {
-        url: image ? image : siteConfig.ogImage.url,
-        width: width ? width : siteConfig.ogImage.width,
-        height: height ? height : siteConfig.ogImage.height,
+        url: image ?? siteConfig.ogImage.url,
+        width: width ?? siteConfig.ogImage.width,
+        height: height ?? siteConfig.ogImage.height,
       },
     ],
   },

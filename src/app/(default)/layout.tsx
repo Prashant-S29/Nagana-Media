@@ -2,17 +2,17 @@ import "~/styles/globals.css";
 
 import { type Metadata } from "next";
 
-import { auth } from "~/server/auth";
-
 // components
 import { Footer, Navbar } from "~/components/layout";
 
 // utils
-import { GLOBAL_Provider } from "~/utils/globalProvider";
 import { generateSeo } from "~/utils/generateSeo";
 
 // fonts
 import { fonts } from "~/fonts";
+
+// provider
+import { GLOBAL_Provider } from "~/utils/globalProvider";
 
 // Generate SEO metadata
 export const metadata: Metadata = generateSeo({
@@ -27,11 +27,10 @@ export const metadata: Metadata = generateSeo({
 export default async function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
-  const session = await auth();
   return (
     <html lang="en" className={`${fonts.outfit.className} antialiased`}>
       <body>
-        <GLOBAL_Provider session={session}>
+        <GLOBAL_Provider>
           <Navbar />
           {children}
           <Footer />
