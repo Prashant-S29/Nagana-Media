@@ -15,6 +15,7 @@ const outfit = Outfit({
 });
 
 const bebas_neue = Bebas_Neue({
+  subsets: ["latin"],
   weight: "400",
   variable: "--font-bebas-neue",
   adjustFontFallback: true,
