@@ -20,7 +20,7 @@ export const WhyChooseUs: React.FC = () => {
           {whyChooseUsData.map((data, index) => (
             <div key={index} className="">
               <h3
-                className={`font-medium leading-none uppercase text-white ${fonts.bebas_neue.className}`}
+                className={`font-medium uppercase leading-none text-white ${fonts.bebas_neue.className}`}
               >
                 {data.title}
               </h3>
@@ -30,7 +30,7 @@ export const WhyChooseUs: React.FC = () => {
                   style={{ width: `${data.percentage}%` }}
                 />
                 <p
-                  className={`absolute -top-5 font-medium leading-none uppercase text-white ${fonts.bebas_neue.className}`}
+                  className={`absolute -top-5 font-medium uppercase leading-none text-white ${fonts.bebas_neue.className}`}
                   style={{ left: `${data.percentage - 6}%` }}
                 >
                   {data.percentage}%

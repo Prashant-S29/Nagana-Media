@@ -73,14 +73,15 @@ const Services: React.FC = () => {
       </div>
 
       {/* Companies Logo */}
-      <div className="w-full bg-[#fff] grid grid-cols-4  gap-[30px] px-[300px] py-[50px]">
-
-        {Array(4).fill(" ").map((_, index)=>(
-            <div   key={index} className="w-full h-[150px] bg-[#f4f4f4] border rounded-lg"/>
-        ))}
-
-        
-
+      <div className="grid w-full grid-cols-4 gap-[30px] bg-[#fff] px-[300px] py-[50px]">
+        {Array(4)
+          .fill(" ")
+          .map((_, index) => (
+            <div
+              key={index}
+              className="h-[150px] w-full rounded-lg border bg-[#f4f4f4]"
+            />
+          ))}
       </div>
     </>
   );

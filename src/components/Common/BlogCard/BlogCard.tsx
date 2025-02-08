@@ -20,7 +20,7 @@ export const BlogCard: React.FC<BlogCardProps> = ({ data }) => {
         <p className="text-xs text-black/50">
           {data.date} | {data.tags}
         </p>
-        <h1 className="text-sm font-medium mt-1 leading-tight">{data.title}</h1>
+        <h1 className="mt-1 text-sm font-medium leading-tight">{data.title}</h1>
 
         <Button asChild variant="brand" size="sm">
           <Link

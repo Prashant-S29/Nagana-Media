@@ -11,7 +11,7 @@ const outfit = Outfit({
   weight: ["400", "500", "600", "700"],
   variable: "--font-outfit",
   adjustFontFallback: true,
-//   fallback: [montserrat.className],
+  //   fallback: [montserrat.className],
 });
 
 const bebas_neue = Bebas_Neue({
@@ -19,9 +19,8 @@ const bebas_neue = Bebas_Neue({
   weight: "400",
   variable: "--font-bebas-neue",
   adjustFontFallback: true,
-//   fallback: [montserrat.className],
+  //   fallback: [montserrat.className],
 });
-
 
 export const fonts = {
   montserrat,

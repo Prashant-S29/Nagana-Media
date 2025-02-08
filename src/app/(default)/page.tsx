@@ -1,16 +1,7 @@
 import React from "react";
 
 // components
-import {
-  BlogGrid,
-  FAQ,
-  Hero,
-  Team,
-  Testimonial,
-  WhatWeDo,
-  WhyChooseUs,
-} from "~/components/feature";
-import { TagMarquee } from "~/components/common";
+import { BlogGrid, Hero, WhatWeDo, WhyChooseUs } from "~/components/feature";
 
 const Home: React.FC = () => {
   return (
@@ -18,10 +9,6 @@ const Home: React.FC = () => {
       <Hero />
       <WhatWeDo />
       <WhyChooseUs />
-      {/* <Team /> */}
-      {/* <TagMarquee /> */}
-      {/* <Testimonial /> */}
-      {/* <FAQ /> */}
       <BlogGrid />
     </main>
   );

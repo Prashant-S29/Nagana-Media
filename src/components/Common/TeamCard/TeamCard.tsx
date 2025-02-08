@@ -13,7 +13,7 @@ export const TeamCard: React.FC<TeamCardProps> = ({ data }) => {
     <div className="group w-[250px] rounded-lg border bg-white p-3 shadow-sm">
       <div className="relative h-[260px] w-full">
         <div className="h-full w-full rounded-sm border bg-[#f9f9f9]" />
-        <div className="absolute top-3  right-3">
+        <div className="absolute right-3 top-3">
           <Button asChild variant="outline" size="icon">
             <Link href={data.linkedIn} target="_blank">
               <SocialIcons.LinkedInIcon />
