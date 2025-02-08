@@ -1,25 +1,27 @@
 import React from "react";
 import { whyChooseUsData } from "./data";
+import { fonts } from "~/fonts";
 
 export const WhyChooseUs: React.FC = () => {
   return (
-    <div className="flex h-[80vh] w-full items-center justify-between bg-[#262626] px-[350px]">
+    <div className="flex h-[80vh] w-full items-center justify-between gap-[50px] bg-[#262626] px-[350px]">
       <div className="">
         <p className="text-xs font-bold uppercase text-brand">Why Choose Us</p>
         <h1 className="mt-4 text-[36px] font-bold leading-none text-white">
           Great Solutions for your Business
         </h1>
-        <p className="mt-3 text-xs text-white/70">
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugiat
-          suscipit nesciunt rem, repellendus, atque, iste incidunt expedita ex
-          repellat expedita ex repellat expedita ex repellat quod libero
-          molestias!
+        <p className="mt-3 text-sm leading-tight text-white/70">
+          We take your technology innovation to the market with consistent
+          content generation, sustained marketing campaigns, and ensuring
+          uniform messaging across your digital footprint.
         </p>
 
         <div className="mt-5 flex flex-col gap-3">
           {whyChooseUsData.map((data, index) => (
             <div key={index} className="">
-              <h3 className="text-xs font-medium uppercase text-white">
+              <h3
+                className={`font-medium leading-none uppercase text-white ${fonts.bebas_neue.className}`}
+              >
                 {data.title}
               </h3>
               <div className="relative mt-1 h-2 w-[400px] bg-brand/40">
@@ -28,7 +30,7 @@ export const WhyChooseUs: React.FC = () => {
                   style={{ width: `${data.percentage}%` }}
                 />
                 <p
-                  className="absolute -top-5 text-xs font-medium uppercase text-white"
+                  className={`absolute -top-5 font-medium leading-none uppercase text-white ${fonts.bebas_neue.className}`}
                   style={{ left: `${data.percentage - 6}%` }}
                 >
                   {data.percentage}%

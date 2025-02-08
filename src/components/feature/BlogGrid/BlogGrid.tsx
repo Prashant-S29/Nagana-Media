@@ -1,6 +1,6 @@
 import React from "react";
 import { blogData } from "./data";
-import { BlogCard } from "~/components/Common";
+import { BlogCard } from "~/components/common";
 
 export const BlogGrid: React.FC = () => {
   return (

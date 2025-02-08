@@ -3,8 +3,7 @@ export type TeamProps = {
   designation: string;
   image: string;
 
-  twitter: string;
-  instagram: string;
+  linkedIn: string;
 };
 
 export const teamData: TeamProps[] = [
@@ -12,29 +11,25 @@ export const teamData: TeamProps[] = [
     name: "Abhijeet Singh",
     designation: "Founder",
     image: "",
-    twitter: "/",
-    instagram: "/",
+    linkedIn: "/",
   },
   {
     name: "Ashish Choudhary",
     designation: "Lead Growth Marketer and Web Designer",
     image: "",
-    twitter: "/",
-    instagram: "/",
+    linkedIn: "/",
   },
 
   {
     name: "Mohit Kumar",
     designation: "UI/UX Designer",
     image: "",
-    twitter: "/",
-    instagram: "/",
+    linkedIn: "/",
   },
   {
     name: "Harshita Soni",
     designation: "Project Coordinator",
     image: "",
-    twitter: "/",
-    instagram: "/",
+    linkedIn: "/",
   },
 ];

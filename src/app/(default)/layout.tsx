@@ -1,12 +1,18 @@
 import "~/styles/globals.css";
 
-import { GeistSans } from "geist/font/sans";
 import { type Metadata } from "next";
 
 import { auth } from "~/server/auth";
+
+// components
+import { Footer, Navbar } from "~/components/layout";
+
+// utils
 import { GLOBAL_Provider } from "~/utils/globalProvider";
 import { generateSeo } from "~/utils/generateSeo";
-import { Footer, Navbar } from "~/components/layout";
+
+// fonts
+import { fonts } from "~/fonts";
 
 // Generate SEO metadata
 export const metadata: Metadata = generateSeo({
@@ -23,7 +29,7 @@ export default async function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   const session = await auth();
   return (
-    <html lang="en" className={`${GeistSans.variable}`}>
+    <html lang="en" className={`${fonts.outfit.className} antialiased`}>
       <body>
         <GLOBAL_Provider session={session}>
           <Navbar />

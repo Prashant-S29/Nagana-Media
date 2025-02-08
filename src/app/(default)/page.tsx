@@ -10,7 +10,7 @@ import {
   WhatWeDo,
   WhyChooseUs,
 } from "~/components/feature";
-import { TagMarquee } from "~/components/Common";
+import { TagMarquee } from "~/components/common";
 
 const Home: React.FC = () => {
   return (
@@ -18,10 +18,10 @@ const Home: React.FC = () => {
       <Hero />
       <WhatWeDo />
       <WhyChooseUs />
-      <Team />
-      <TagMarquee />
-      <Testimonial />
-      <FAQ />
+      {/* <Team /> */}
+      {/* <TagMarquee /> */}
+      {/* <Testimonial /> */}
+      {/* <FAQ /> */}
       <BlogGrid />
     </main>
   );

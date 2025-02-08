@@ -14,8 +14,10 @@ import Link from "next/link";
 
 export const Navbar: React.FC = () => {
   return (
-    <div className="flex items-center justify-between border-b border-gray-500 bg-gradient-to-r from-[#0c1323] to-[#1e2f45] px-[350px] py-8">
-      <p className="text-white">Nagana Media</p>
+    <div className="flex w-full items-center justify-between border-b border-gray-500 bg-gradient-to-r from-[#0c1323] to-[#1e2f45] px-[350px] py-8">
+      <Link href="/" className="text-white">
+        Nagana Media
+      </Link>
 
       <div className="flex items-center gap-2">
         <nav className="flex items-center gap-5">
@@ -26,7 +28,7 @@ export const Navbar: React.FC = () => {
                   <NavigationMenuItem key={index}>
                     <Link href={data.href} legacyBehavior passHref>
                       <NavigationMenuLink
-                        className={`${navigationMenuTriggerStyle()} bg-transparent font-normal text-white hover:bg-transparent hover:text-white`}
+                        className={`${navigationMenuTriggerStyle()} bg-transparent font-normal text-white underline-offset-4 hover:bg-transparent hover:text-white hover:underline focus:bg-transparent focus:text-white focus:underline`}
                       >
                         {data.label}
                       </NavigationMenuLink>
@@ -36,8 +38,6 @@ export const Navbar: React.FC = () => {
               ))}
             </NavigationMenuList>
           </NavigationMenu>
-
-          {/* {session && <AdminProfile data={session} status={status} />} */}
         </nav>
 
         <Button variant="brand">Let&apos;s Talk</Button>

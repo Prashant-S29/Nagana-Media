@@ -1,4 +1,4 @@
-interface WhatWeDoProps {
+export interface WhatWeDoProps {
   icon: string;
   title: string;
   description: string;

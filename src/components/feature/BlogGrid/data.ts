@@ -7,21 +7,21 @@ export type BlogProps = {
 
 export const blogData: BlogProps[] = [
   {
-    title: "Lorem Lorem title 1",
+    title: "Essential Tools for Managing Digital Asser Library",
     date: "June 16, 2024",
-    tags: "lorem lorem",
+    tags: "Business",
     href: "#",
   },
   {
-    title: "Lorem Lorem title 2",
+    title: "Essential Tools for Managing Digital Asser Library",
     date: "June 24, 2024",
-    tags: "lorem lorem",
+    tags: "Business",
     href: "#",
   },
   {
-    title: "Lorem Lorem title 3",
+    title: "Essential Tools for Managing Digital Asser Library",
     date: "July 04, 2024",
-    tags: "lorem lorem",
+    tags: "Business",
     href: "#",
   },
 ];
