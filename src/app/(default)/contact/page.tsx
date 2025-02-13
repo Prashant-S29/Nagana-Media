@@ -11,7 +11,7 @@ const Contact: React.FC = () => {
         className="flex h-[60vh] w-full items-center justify-center bg-gradient-to-r from-[#0c1323] to-[#1e2f45]"
       >
         <div className="">
-          <h1 className="text-[40px] font-bold leading-none text-white lg:text-[50px] xl:text-[60px]">
+          <h1 className="text-[40px] font-bold leading-none text-white lg:text-center lg:text-[50px] xl:text-[60px]">
             We&apos;re Here To Help
           </h1>
 
