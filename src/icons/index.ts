@@ -5,6 +5,8 @@ import { FaFacebookF as FacebookIcon } from "react-icons/fa6";
 
 import { FiArrowUpRight as SendArrowIcon } from "react-icons/fi";
 
+import { CgMenuRightAlt as MenuIcon } from "react-icons/cg";
+
 const SocialIcons = {
   InstagramIcon,
   TwitterIcon,
@@ -12,4 +14,4 @@ const SocialIcons = {
   FacebookIcon,
 };
 
-export { SocialIcons, SendArrowIcon };
+export { SocialIcons, SendArrowIcon, MenuIcon };

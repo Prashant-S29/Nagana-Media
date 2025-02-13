@@ -24,5 +24,4 @@ export const ContactUsSchema = z.object({
     .max(300, "First name must be at most 300 characters"),
 });
 
-
 export type ContactUsFormValues = z.infer<typeof ContactUsSchema>;

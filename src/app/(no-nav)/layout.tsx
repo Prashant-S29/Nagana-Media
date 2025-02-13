@@ -25,7 +25,7 @@ export default async function NoNavLayout({
   return (
     <html lang="en" className={`${fonts.outfit.className} antialiased`}>
       <body>
-        <GLOBAL_Provider >{children}</GLOBAL_Provider>
+        <GLOBAL_Provider>{children}</GLOBAL_Provider>
       </body>
     </html>
   );

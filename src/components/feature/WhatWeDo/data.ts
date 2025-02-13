@@ -28,3 +28,27 @@ export const whatWeDoData: WhatWeDoProps[] = [
     href: "#",
   },
 ];
+
+export const engineData: WhatWeDoProps[] = [
+  {
+    icon: "/images/icons/icon-1.svg",
+    title: "Content Engine",
+    description:
+      "Create high-intent, well-researched content for your solutions and build an ecosystem of stories.",
+    href: "#",
+  },
+  {
+    icon: "/images/icons/icon-1.svg",
+    title: "Marketing Engine",
+    description:
+      "Carefully-selected marketing campaigns ensure that we only deploy what works for you.",
+    href: "#",
+  },
+  {
+    icon: "/images/icons/icon-1.svg",
+    title: "Sales Engine",
+    description:
+      "Fill the gaps in your sales process with specialized product and service description presentations.",
+    href: "#",
+  },
+];

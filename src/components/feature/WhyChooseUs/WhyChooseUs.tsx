@@ -4,10 +4,13 @@ import { fonts } from "~/fonts";
 
 export const WhyChooseUs: React.FC = () => {
   return (
-    <div className="flex h-[80vh] w-full items-center justify-between gap-[50px] bg-[#262626] px-[350px]">
-      <div className="">
+    <div
+      data-container
+      className="flex h-full w-full flex-col-reverse items-center justify-between gap-5 bg-[#262626] py-[50px] sm:flex-row sm:gap-[50px]"
+    >
+      <div>
         <p className="text-xs font-bold uppercase text-brand">Why Choose Us</p>
-        <h1 className="mt-4 text-[36px] font-bold leading-none text-white">
+        <h1 className="mt-4 text-[30px] font-bold leading-none text-white md:text-[36px]">
           Great Solutions for your Business
         </h1>
         <p className="mt-3 text-sm leading-tight text-white/70">
@@ -24,7 +27,7 @@ export const WhyChooseUs: React.FC = () => {
               >
                 {data.title}
               </h3>
-              <div className="relative mt-1 h-2 w-[400px] bg-brand/40">
+              <div className="relative mt-1 h-2 w-full bg-brand/40 sm:w-[400px]">
                 <div
                   className="absolute left-0 top-0 h-full bg-brand"
                   style={{ width: `${data.percentage}%` }}
@@ -40,7 +43,7 @@ export const WhyChooseUs: React.FC = () => {
           ))}
         </div>
       </div>
-      <div className="h-[400px] min-w-[350px] rounded-lg border" />
+      <div className="h-[200px] w-full min-w-full rounded-lg border sm:h-[400px] sm:min-w-[350px]" />
     </div>
   );
 };

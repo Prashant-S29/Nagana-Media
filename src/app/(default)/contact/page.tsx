@@ -6,13 +6,16 @@ import { fonts } from "~/fonts";
 const Contact: React.FC = () => {
   return (
     <>
-      <div className="flex h-[60vh] w-full items-center justify-center bg-gradient-to-r from-[#0c1323] to-[#1e2f45] px-[350px]">
+      <div
+        data-container
+        className="flex h-[60vh] w-full items-center justify-center bg-gradient-to-r from-[#0c1323] to-[#1e2f45]"
+      >
         <div className="">
-          <h1 className="text-center text-[60px] font-bold leading-none text-white">
+          <h1 className="text-[40px] font-bold leading-none text-white lg:text-[50px] xl:text-[60px]">
             We&apos;re Here To Help
           </h1>
 
-          <p className="mt-5 text-center text-white">
+          <p className="mt-2 text-base font-light leading-tight text-white sm:mt-5 sm:text-base">
             Feel free to reach out to us for any inquiries or support. We look
             forward to connecting with you!
           </p>
@@ -20,7 +23,10 @@ const Contact: React.FC = () => {
       </div>
 
       {/* Intro */}
-      <div className="flex w-full gap-[50px] bg-[#f9f9f9] px-[300px] py-[50px]">
+      <div
+        data-container
+        className="flex w-full flex-col gap-[50px] bg-[#f9f9f9] py-[50px] sm:flex-row"
+      >
         <div className="w-full">
           <h1
             className={`${fonts.bebas_neue.className} text-[40px] font-bold leading-tight`}
@@ -38,7 +44,7 @@ const Contact: React.FC = () => {
             we&apos;re just a call, email, or chat away. Let us make your
             experience seamless and stress-free. We&apos;re here to help!
           </p>
-          <div className="mt-5 grid grid-cols-2 gap-4">
+          <div className="mt-5 grid grid-cols-1 gap-4 sm:grid-cols-2">
             <div>
               <p className="text-sm leading-tight text-black/50">Email</p>
               <p className="font-medium leading-tight text-black">
@@ -55,7 +61,7 @@ const Contact: React.FC = () => {
                 <Link href="tel:+916377191007">(+91) 63771 91007</Link>
               </p>
             </div>
-            <div className="col-span-2">
+            <div className="sm:col-span-2">
               <p className="text-sm leading-tight text-black/50">
                 Office Address
               </p>

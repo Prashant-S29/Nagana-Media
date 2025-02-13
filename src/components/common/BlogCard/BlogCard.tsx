@@ -13,14 +13,16 @@ interface BlogCardProps {
 
 export const BlogCard: React.FC<BlogCardProps> = ({ data }) => {
   return (
-    <div className="h-[300px] w-[250px] overflow-hidden rounded-xl bg-[#f9f9f9]">
+    <div className="w-full overflow-hidden rounded-xl bg-[#f9f9f9]">
       <div className="h-[180px] w-full rounded-t-xl border" />
 
       <div className="px-3 py-3">
         <p className="text-xs text-black/50">
           {data.date} | {data.tags}
         </p>
-        <h1 className="mt-1 text-sm font-medium leading-tight">{data.title}</h1>
+        <h1 className="mt-1 text-base font-semibold leading-tight sm:font-medium">
+          {data.title}
+        </h1>
 
         <Button asChild variant="brand" size="sm">
           <Link

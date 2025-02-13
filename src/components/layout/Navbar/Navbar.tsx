@@ -1,5 +1,9 @@
 import React from "react";
+import Link from "next/link";
 import { Button } from "~/components/ui/button";
+
+// data
+import { NavbarItems } from "./data";
 
 // Components
 import {
@@ -9,17 +13,19 @@ import {
   NavigationMenuList,
   navigationMenuTriggerStyle,
 } from "~/components/ui/navigation-menu";
-import { NavbarItems } from "./data";
-import Link from "next/link";
+import { MobileNav } from "../MobileNav";
 
 export const Navbar: React.FC = () => {
   return (
-    <div className="flex w-full items-center justify-between border-b border-gray-500 bg-gradient-to-r from-[#0c1323] to-[#1e2f45] px-[350px] py-8">
+    <div
+      data-container
+      className="flex w-full items-center justify-between border-b border-gray-500 bg-gradient-to-r from-[#0c1323] to-[#1e2f45] py-4 sm:py-8"
+    >
       <Link href="/" className="text-white">
         Nagana Media
       </Link>
 
-      <div className="flex items-center gap-2">
+      <div className="flex items-center gap-2 max-[900px]:hidden">
         <nav className="flex items-center gap-5">
           <NavigationMenu>
             <NavigationMenuList>
@@ -44,6 +50,9 @@ export const Navbar: React.FC = () => {
           <Link href="/contact">Let&apos;s Talk</Link>
         </Button>
       </div>
+      <nav className="hidden max-[900px]:block">
+        <MobileNav />
+      </nav>
     </div>
   );
 };

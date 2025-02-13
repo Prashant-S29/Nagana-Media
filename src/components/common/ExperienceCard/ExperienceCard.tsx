@@ -7,8 +7,8 @@ interface ExperienceCardProps {
 
 export const ExperienceCard: React.FC<ExperienceCardProps> = ({ data }) => {
   return (
-    <div className="flex items-center gap-4 rounded-lg border bg-white px-5 py-4 shadow-sm">
-      <div className="flex aspect-square min-w-[60px] items-center justify-center rounded-full bg-brand">
+    <div className="flex flex-col gap-4 rounded-lg border bg-white px-5 py-4 shadow-sm sm:flex-row sm:items-center">
+      <div className="flex aspect-square w-[60px] min-w-[60px] items-center justify-center rounded-full bg-brand">
         <p className={`text-xl font-semibold leading-none text-white`}>
           {data.percentage}%
         </p>

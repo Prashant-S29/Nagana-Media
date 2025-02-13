@@ -1,7 +1,7 @@
 import React from "react";
 
 // data
-import { whatWeDoData } from "./data";
+import { engineData, whatWeDoData } from "./data";
 
 // components
 import { Button } from "~/components/ui/button";
@@ -10,12 +10,18 @@ import { ServiceCard } from "~/components/common";
 export const WhatWeDo: React.FC = () => {
   return (
     <>
-      <div className="flex w-full items-center justify-between gap-[50px] bg-white px-[300px] py-[80px]">
-        <div className="h-[400px] min-w-[400px] rounded-lg border" />
+      <div
+        data-container
+        className="flex w-full flex-col items-center justify-between gap-5 bg-white py-[20px] max-[900px]:py-[40px] sm:flex-row sm:gap-[50px] sm:py-[80px]"
+      >
+        {/* <div className="h-[400px] min-w-[400px] rounded-lg border" /> */}
+        <div className="block h-[350px] w-full rounded-lg border sm:min-w-[300px] lg:h-[450px] lg:min-w-[400px]" />
 
         <div>
-          <h1 className="text-[50px] font-bold">What we do</h1>
-          <p className="text-black/50">
+          <h1 className="text-[30px] font-bold leading-none sm:text-center sm:leading-tight">
+            What we do
+          </h1>
+          <p className="mt-2 text-black/50 sm:mt-0">
             We identify the right touchpoints for your technology solution to
             create an interlinked, end-to-end, marketing and sales operation.{" "}
           </p>
@@ -30,86 +36,108 @@ export const WhatWeDo: React.FC = () => {
           </Button>
         </div>
       </div>
-      <div className="w-full bg-[#f9f9f9] px-[300px] py-[50px]">
-        <h1 className="text-center text-[30px] font-bold">
-          All-In-One Cloud Software
+      <div data-container className="w-full bg-[#f9f9f9] py-[50px]">
+        <h1 className="text-[28px] font-bold leading-none sm:text-center sm:leading-tight md:text-[30px]">
+          {/* All-In-One Cloud Software */}
+          Choose what you need, when you need it.
         </h1>
-        <p className="text-center leading-tight text-black/50">
-          TOTC is one powerful online software suite that combines all the tools
+        <div className="mt-5 flex justify-center sm:mt-0">
+          <p className="max-w-[700px] leading-tight text-black/50 sm:text-center">
+            {/* TOTC is one powerful online software suite that combines all the tools
           needed
-          <br /> to run a successful school or office.
-        </p>
+          <br /> to run a successful school or office. */}
+            Our services allow you high degree of composability and help you
+            only select the service that fills in the gaps in your product
+            marketing, communication, and GTM strategy.
+          </p>
+        </div>
 
-        <div className="mt-[50px] grid grid-cols-3 gap-x-4 gap-y-14">
+        <div className="mt-[50px] grid gap-x-4 gap-y-5 max-[700px]:grid-cols-1 sm:grid-cols-2 sm:gap-y-14 lg:grid-cols-3">
           {whatWeDoData.map((data, index) => (
             <ServiceCard key={index} data={data} />
           ))}
         </div>
       </div>
-      <div className="mt-[100px] flex justify-between px-[350px] py-[80px]">
-        <div>
+      <div data-container className="py-10">
+        <h2 className="leading text-[30px] font-bold leading-none sm:text-center sm:text-[28px] sm:leading-tight">
+          Address change with Bespoke <br className="hidden sm:block" />
+          Strategy
+        </h2>
+        <div className="mt-8 justify-between gap-9 sm:mt-[100px] sm:flex sm:py-[80px]">
           <div>
-            <div className="h-[400px] w-[70%] rounded-xl border" />
-            <h1 className="mt-8 text-xl font-bold">360-degree Coverage</h1>
-            <p className="mt-1 leading-tight text-black/50">
-              Cover all the areas of GTM projects, fill all gaps and address all
-              concerns.
-            </p>
-          </div>
+            <div className="">
+              <div className="h-[200px] w-full rounded-xl border sm:h-[400px] sm:w-[70%]" />
+              <h1 className="mt-3 px-2 text-base font-bold sm:mt-8 sm:px-0 sm:text-xl">
+                360-degree Coverage
+              </h1>
+              <p className="px-2 text-sm leading-tight text-black/50 sm:mt-1 sm:px-0 sm:text-base">
+                Cover all the areas of GTM projects, fill all gaps and address
+                all concerns.
+              </p>
+            </div>
 
-          <div className="mt-[50px]">
-            <div className="h-[300px] w-full rounded-xl border" />
-            <h1 className="mt-8 text-xl font-bold">Execute on Cue</h1>
-            <p className="mt-1 leading-tight text-black/50">
-              Hire experts who executes marketing & content campaigns on your
-              behalf.
-            </p>
-          </div>
-        </div>
-        <div className="-mt-[100px]">
-          <div>
-            <div className="h-[300px] w-full rounded-xl border" />
-            <h1 className="mt-8 text-xl font-bold">Flexible Strategy</h1>
-            <p className="mt-1 leading-tight text-black/50">
-              Shift posture swiftly with change in market trends and needs.
-            </p>
-          </div>
-
-          <div className="mt-[50px] flex justify-end">
-            <div className="min-w-[70%] max-w-[70%]">
-              <div className="flex justify-end">
-                <div className="h-[400px] w-full rounded-xl border" />
-              </div>
-              <h1 className="mt-8 text-xl font-bold">Scale Quickly</h1>
-              <p className="mt-1 leading-tight text-black/50">
-                Scales highly integrated marketing and scales initiatives
-                fractionally.
+            <div className="mt-8 sm:mt-[50px]">
+              <div className="h-[200px] w-full rounded-xl border sm:h-[300px]" />
+              <h1 className="mt-3 px-2 text-base font-bold sm:mt-8 sm:px-0 sm:text-xl">
+                Execute on Cue
+              </h1>
+              <p className="px-2 text-sm leading-tight text-black/50 sm:mt-1 sm:px-0 sm:text-base">
+                Hire experts who executes marketing & content campaigns on your
+                behalf.
               </p>
             </div>
           </div>
+          <div className="mt-8 sm:-mt-[100px]">
+            <div>
+              <div className="h-[200px] w-full rounded-xl border sm:h-[300px]" />
+              <h1 className="mt-3 px-2 text-base font-bold sm:mt-8 sm:px-0 sm:text-xl">
+                Flexible Strategy
+              </h1>
+              <p className="px-2 text-sm leading-tight text-black/50 sm:mt-1 sm:px-0 sm:text-base">
+                Shift posture swiftly with change in market trends and needs.
+              </p>
+            </div>
 
-          <div className="mt-8 flex justify-end">
-            <div className="flex w-[70%] justify-center">
-              <div className="flex aspect-square w-[120px] items-center justify-center rounded-full bg-brand">
-                <p className="text-lg font-semibold text-white">View All</p>
+            <div className="mt-8 flex justify-end sm:mt-[50px]">
+              <div className="w-full min-w-[70%] sm:max-w-full md:max-w-[70%]">
+                <div className="flex justify-end">
+                  <div className="h-[200px] w-full rounded-xl border sm:h-[400px]" />
+                </div>
+                <h1 className="mt-3 px-2 text-base font-bold sm:mt-8 sm:px-0 sm:text-xl">
+                  Scale Quickly
+                </h1>
+                <p className="px-2 text-sm leading-tight text-black/50 sm:mt-1 sm:px-0 sm:text-base">
+                  Scales highly integrated marketing and scales initiatives
+                  fractionally.
+                </p>
+              </div>
+            </div>
+
+            <div className="mt-8 hidden justify-end sm:flex">
+              <div className="flex w-[70%] justify-center">
+                <div className="flex aspect-square w-[120px] items-center justify-center rounded-full bg-brand">
+                  <p className="text-lg font-semibold text-white">View All</p>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <div className="bg-[#f9f9f9] px-[300px] py-[40px]">
+      <div data-container className="bg-[#f9f9f9] py-[40px]">
         <div>
-          <h1 className="text-center text-[40px] font-bold">
+          <h1 className="text-[30px] font-bold leading-none sm:text-center sm:leading-tight">
             Achieve Consistent Organic Growth
           </h1>
-          <p className="text-center leading-tight text-black/50">
-            We take your technology innovation to the market with design,
-            consistent content generation, sustained marketing campaigns, and
-            ensuring uniformity across your digital footprint.
-          </p>
+          <div className="mt-3 flex justify-center sm:mt-0">
+            <p className="max-w-[700px] leading-tight text-black/50 sm:text-center">
+              We take your technology innovation to the market with design,
+              consistent content generation, sustained marketing campaigns, and
+              ensuring uniformity across your digital footprint.
+            </p>
+          </div>
         </div>
-        <div className="mt-[50px] grid grid-cols-3 gap-4">
-          {whatWeDoData.map((data, index) => (
+        <div className="mt-[50px] grid gap-x-4 gap-y-5 max-[700px]:grid-cols-1 sm:grid-cols-2 sm:gap-y-14 lg:grid-cols-3">
+          {engineData.map((data, index) => (
             <ServiceCard key={index} data={data} />
           ))}
         </div>
