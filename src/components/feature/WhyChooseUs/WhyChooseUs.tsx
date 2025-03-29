@@ -1,6 +1,12 @@
 import React from "react";
+import Image from "next/image";
+
+// data
 import { whyChooseUsData } from "./data";
+
+// fonts
 import { fonts } from "~/fonts";
+import { whyChooseUsImage } from "public/assets/static";
 
 export const WhyChooseUs: React.FC = () => {
   return (
@@ -11,12 +17,11 @@ export const WhyChooseUs: React.FC = () => {
       <div>
         <p className="text-xs font-bold uppercase text-brand">Why Choose Us</p>
         <h1 className="mt-4 text-[30px] font-bold leading-none text-white md:text-[36px]">
-          Great Solutions for your Business
+          We understand the key pillars for your business success.
         </h1>
         <p className="mt-3 text-sm leading-tight text-white/70">
-          We take your technology innovation to the market with consistent
-          content generation, sustained marketing campaigns, and ensuring
-          uniform messaging across your digital footprint.
+          Address your product marketing, brand awareness, and GTM strategy
+          needs with constant expert support across critical verticals.
         </p>
 
         <div className="mt-5 flex flex-col gap-3">
@@ -43,7 +48,15 @@ export const WhyChooseUs: React.FC = () => {
           ))}
         </div>
       </div>
-      <div className="h-[200px] w-full min-w-full rounded-lg border sm:h-[400px] sm:min-w-[350px]" />
+      <div className="w-full min-w-full overflow-hidden rounded-lg sm:min-w-[350px]">
+        <Image
+          src={whyChooseUsImage}
+          alt="whyChooseUsImage"
+          width={600}
+          height={600}
+          className="w-full object-cover"
+        />
+      </div>
     </div>
   );
 };

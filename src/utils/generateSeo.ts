@@ -12,61 +12,85 @@ interface Props {
   description: string;
   url: string;
   image?: string;
-  width?: number;
-  height?: number;
+  keywords?: string[];
+  robots?: {
+    index?: boolean;
+    follow?: boolean;
+    noindex?: boolean;
+    nofollow?: boolean;
+  };
+  author?: string;
+  openGraphType?: "website" | "article" | "book" | "profile";
 }
 
-/**
- * Generates SEO metadata for a page, including Open Graph and Twitter card information.
- *
- * @param title - The title of the page.
- * @param description - A brief description of the page content.
- * @param url - The URL of the page.
- * @param image - Optional. The URL of the image to be used in the metadata.
- * @param width - Optional. The width of the image in pixels.
- * @param height - Optional. The height of the image in pixels.
- * @returns The metadata object formatted for use with Next.js.
- */
 export const generateSeo = ({
   title,
   description,
   url,
   image,
-  width,
-  height,
-}: Props): Metadata => ({
-  title,
-  description,
-  metadataBase: new URL(siteConfig.url),
-  openGraph: {
+  keywords,
+  robots,
+  author,
+  openGraphType = "website",
+}: Props): Metadata => {
+  // TODO: update this
+  const defaultImage = "";
+  const imageUrl = image ?? defaultImage;
+
+  const metadata: Metadata = {
     title,
     description,
-    siteName: siteConfig.name,
-    url,
-    locale: "en_US",
-    type: "website",
-    images: [
-      {
-        url: image ?? siteConfig.ogImage.url,
-        width: width ?? siteConfig.ogImage.width,
-        height: height ?? siteConfig.ogImage.height,
-      },
-    ],
-  },
-  twitter: {
-    card: "summary_large_image",
-    site: siteConfig.twitterHandle,
-    title,
-    description,
-    images: [
-      {
-        url: image ?? siteConfig.ogImage.url,
-        width: width ?? siteConfig.ogImage.width,
-        height: height ?? siteConfig.ogImage.height,
-      },
-    ],
-  },
-  alternates: {
-    canonical: url,
-  },
-});
+    metadataBase: new URL(siteConfig.url),
+    openGraph: {
+      title,
+      description,
+      siteName: siteConfig.name,
+      url,
+      locale: "en_GB",
+      type: openGraphType,
+      images: [
+        {
+          url: imageUrl,
+          width: 640,
+          height: 321,
+          alt: description,
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      site: "@prashant_gigs",
+      title,
+      description,
+      images: [
+        {
+          url: imageUrl,
+          width: 641,
+          height: 321,
+          alt: description,
+        },
+      ],
+    },
+    alternates: {
+      canonical: url,
+    },
+  };
+
+  if (keywords && keywords.length > 0) {
+    metadata.keywords = keywords;
+  }
+
+  if (robots) {
+    metadata.robots = {
+      index: robots.index ?? undefined,
+      follow: robots.follow ?? undefined,
+    };
+  }
+
+  if (author) {
+    metadata.authors = [{ name: author }];
+    metadata.creator = author;
+  }
+
+  return metadata;
+};

@@ -13,3 +13,30 @@ export type SiteConfig = {
     twitter: string;
   };
 };
+
+export interface Author {
+  name: string;
+  picture: string;
+}
+
+export interface Blog {
+  slug: string;
+  title: string;
+  date: string;
+  coverImage: string;
+  author: Author;
+  excerpt: string;
+  ogImage: {
+    url: string;
+  };
+  content: string;
+  preview?: boolean;
+}
+
+export interface Service {
+  slug: string;
+  icon: string;
+  title: string;
+  description: string;
+  content: string;
+}

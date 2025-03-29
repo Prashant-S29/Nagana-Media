@@ -1,25 +1,52 @@
 import React from "react";
+import Image from "next/image";
+
+// assets
+import { servicePageBannerImage } from "public/assets/static";
 
 // data
-import { ExperienceData, ServicesData } from "./data";
+import { ExperienceData } from "./data";
+
+// fonts
+import { fonts } from "~/fonts";
+
+// utils
+import { getAllServices } from "~/utils/api";
 
 // components
 import { ExperienceCard, ServiceCard } from "~/components/common";
-import { fonts } from "~/fonts";
+import { generateSeo } from "~/utils/generateSeo";
+
+export const generateMetadata = () =>
+  generateSeo({
+    title: "Services",
+    description:
+      "Driving growth for Technology Companies through Digital Marketing Excellence",
+    url: "/services",
+  });
 
 const Services: React.FC = () => {
+  // get all the services
+  const allServices = getAllServices();
   return (
     <>
       <div
         data-container
-        className="flex h-[60vh] w-full items-center justify-center bg-gradient-to-r from-[#0c1323] to-[#1e2f45]"
+        className="relative flex h-[80vh] w-full items-center justify-center bg-gradient-to-r from-[#0c1323] to-[#1e2f45]"
       >
-        <div className="">
-          <h1 className="text-[40px] font-bold leading-none text-white lg:text-[50px] xl:text-[60px]">
-            We Do Everything
+        <Image
+          src={servicePageBannerImage}
+          alt="servicePageBannerImage"
+          fill
+          className="w-full object-cover"
+        />
+
+        <div className="relative z-10">
+          <h1 className="text-center text-[40px] font-bold leading-none text-white lg:text-[50px] xl:text-[60px]">
+            Build Your Own Service Stack
           </h1>
 
-          <p className="mt-2 text-base font-light leading-tight text-white sm:mt-5 sm:text-base">
+          <p className="mt-2 text-center text-base font-light leading-tight text-white sm:mt-5 sm:text-base">
             Driving growth for Technology Companies through Digital Marketing
             Excellence
           </p>
@@ -38,7 +65,7 @@ const Services: React.FC = () => {
         </p>
 
         <div className="mt-6 grid grid-cols-1 gap-x-4 gap-y-7 sm:mt-[50px] sm:grid-cols-2 md:gap-y-14 lg:grid-cols-3">
-          {ServicesData.map((data, index) => (
+          {allServices.map((data, index) => (
             <ServiceCard key={index} data={data} />
           ))}
         </div>

@@ -7,11 +7,7 @@ import { Toaster } from "sonner";
 // hooks
 import { useMounted } from "~/hooks/useMounted";
 
-export const GLOBAL_Provider = ({
-  children,
-}: {
-  children: React.ReactNode;
-}) => {
+export const Provider = ({ children }: { children: React.ReactNode }) => {
   const mounted = useMounted();
 
   if (!mounted) {

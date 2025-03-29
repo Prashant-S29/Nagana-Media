@@ -19,9 +19,8 @@ export const Footer: React.FC = () => {
           <div className="">
             <h1 className="text-lg text-white">Nagana Media</h1>
 
-            <p className="mt-1 text-sm font-light leading-tight text-white/70 sm:mt-3">
-              A state of plants, usually at night, when their leaflets approach
-              each other and the flowers close and droop, or are covered
+            <p className="text-sm font-light leading-tight text-white/70">
+              Make technology resonate.
             </p>
 
             <div className="mt-3 flex items-center gap-2">

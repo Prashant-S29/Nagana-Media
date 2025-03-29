@@ -1,3 +1,5 @@
+import Image from "next/image";
+import { heroSectionImage } from "public/assets/static";
 import React from "react";
 
 // components
@@ -36,7 +38,15 @@ export const Hero: React.FC = () => {
           Let&apos;s Talk
         </Button>
       </div>
-      <div className="block h-[350px] min-w-[300px] rounded-lg border max-[900px]:hidden lg:h-[450px] lg:min-w-[400px]" />
+      <div className="min-w-[300px] rounded-lg max-[900px]:hidden lg:min-w-[400px]">
+        <Image
+          src={heroSectionImage}
+          alt="heroImage"
+          width={600}
+          height={600}
+          className="w-full object-cover"
+        />
+      </div>
     </div>
   );
 };

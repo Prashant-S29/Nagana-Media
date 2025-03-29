@@ -17,6 +17,10 @@ export const NavbarItems: NavbarItemProps[] = [
     href: "/work",
   },
   {
+    label: "Blogs",
+    href: "/blogs",
+  },
+  {
     label: "Knowledge Hub",
     href: "/knowledge-hub",
   },

@@ -6,36 +6,38 @@ export type TeamProps = {
   linkedIn: string;
 };
 
+import { mohit, abhijeet, ashish, harshita } from "public/assets/static";
+
 export const teamData: TeamProps[] = [
   {
     name: "Abhijeet Singh",
     designation: "Founder",
-    image: "",
+    image: abhijeet.src,
     linkedIn: "/",
   },
   {
     name: "Ashish Choudhary",
     designation: "Lead Growth Marketer and Web Designer",
-    image: "",
+    image: ashish.src,
     linkedIn: "/",
   },
 
   {
     name: "Mohit Kumar",
     designation: "UI/UX Designer",
-    image: "",
+    image: mohit.src,
     linkedIn: "/",
   },
   {
     name: "Harshita Soni",
     designation: "Project Coordinator",
-    image: "",
+    image: harshita.src,
     linkedIn: "/",
   },
-  {
-    name: "Prashant Singh",
-    designation: "Web Developer",
-    image: "",
-    linkedIn: "/",
-  },
+  // {
+  //   name: "Prashant Singh",
+  //   designation: "Web Developer",
+  //   image: mohit.src,
+  //   linkedIn: "/",
+  // },
 ];

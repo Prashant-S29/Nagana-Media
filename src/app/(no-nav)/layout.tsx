@@ -3,7 +3,7 @@ import "~/styles/globals.css";
 import { type Metadata } from "next";
 
 // utils
-import { GLOBAL_Provider } from "~/utils/globalProvider";
+import { Provider } from "~/utils/globalProvider";
 import { generateSeo } from "~/utils/generateSeo";
 
 // fonts
@@ -25,7 +25,7 @@ export default async function NoNavLayout({
   return (
     <html lang="en" className={`${fonts.outfit.className} antialiased`}>
       <body>
-        <GLOBAL_Provider>{children}</GLOBAL_Provider>
+        <Provider>{children}</Provider>
       </body>
     </html>
   );

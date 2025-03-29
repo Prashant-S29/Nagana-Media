@@ -19,7 +19,7 @@ export const Navbar: React.FC = () => {
   return (
     <div
       data-container
-      className="flex w-full items-center justify-between border-b border-gray-500 bg-gradient-to-r from-[#0c1323] to-[#1e2f45] py-4 sm:py-8"
+      className="absolute top-0 z-50 flex h-[100px] w-full items-center justify-between py-4 sm:py-8"
     >
       <Link href="/" className="text-white">
         Nagana Media

@@ -1,7 +1,5 @@
 import "~/styles/globals.css";
 
-import { type Metadata } from "next";
-
 // components
 import { Footer, Navbar } from "~/components/layout";
 
@@ -12,17 +10,18 @@ import { generateSeo } from "~/utils/generateSeo";
 import { fonts } from "~/fonts";
 
 // provider
-import { GLOBAL_Provider } from "~/utils/globalProvider";
+import { Provider } from "~/utils/globalProvider";
 
 // Generate SEO metadata
-export const metadata: Metadata = generateSeo({
-  title: {
-    template: `%s | Nagana Media - We make technology resonate`,
-    default: "Nagana Media - We make technology resonate",
-  },
-  description: "We make technology resonate",
-  url: "/",
-});
+export const generateMetadata = () =>
+  generateSeo({
+    title: {
+      template: `%s | Nagana Media - We make technology resonate.`,
+      default: "Nagana Media - We make technology resonate.",
+    },
+    description: "We make technology resonate",
+    url: "/",
+  });
 
 export default async function RootLayout({
   children,
@@ -30,11 +29,11 @@ export default async function RootLayout({
   return (
     <html lang="en" className={`${fonts.outfit.className} antialiased`}>
       <body>
-        <GLOBAL_Provider>
+        <Provider>
           <Navbar />
           {children}
           <Footer />
-        </GLOBAL_Provider>
+        </Provider>
       </body>
     </html>
   );

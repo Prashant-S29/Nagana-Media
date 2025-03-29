@@ -3,3 +3,4 @@ export * from "./TagMarquee";
 export * from "./BlogCard";
 export * from "./ServiceCard";
 export * from "./ExperienceCard";
+export * from "./EngineCard";

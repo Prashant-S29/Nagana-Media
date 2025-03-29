@@ -1,7 +1,30 @@
 import React from "react";
+
+// data
 import { StatsData } from "./data";
+
+// fonts
 import { fonts } from "~/fonts";
+
+// utils
+import { generateSeo } from "~/utils/generateSeo";
+
+// components
 import { Team } from "~/components/feature";
+import {
+  aboutUsBannerImage,
+  aboutUsImageOne,
+  aboutUsImageTwo,
+} from "public/assets/static";
+import Image from "next/image";
+
+export const generateMetadata = () =>
+  generateSeo({
+    title: "About Us",
+    description:
+      "We are Nagana Media and we provide creative digital solutions for modern brands.",
+    url: "/about",
+  });
 
 const About: React.FC = () => {
   return (
@@ -9,9 +32,16 @@ const About: React.FC = () => {
       {/* Main Intro */}
       <div
         data-container
-        className="flex h-[60vh] w-full items-center justify-center bg-gradient-to-r from-[#0c1323] to-[#1e2f45]"
+        className="relative flex h-[80vh] w-full items-center justify-center bg-gradient-to-r from-[#0c1323] to-[#1e2f45]"
       >
-        <div className="w-full sm:text-center">
+        <Image
+          src={aboutUsBannerImage}
+          alt="aboutUsBannerImage"
+          fill
+          className="w-full object-cover"
+        />
+
+        <div className="relative z-10 w-full sm:text-center">
           <h1 className="text-[40px] font-bold leading-none text-white lg:text-[50px] xl:text-[60px]">
             About Us
           </h1>
@@ -44,8 +74,15 @@ const About: React.FC = () => {
           </p>
         </div>
         <div className="relative w-[200px] sm:min-w-[300px]">
-          <div className="relative z-10 aspect-square w-full rounded-full bg-[#f4f4f4]" />
-          <div className="absolute -right-3 top-0 h-full w-full rounded-full bg-brand/30 sm:-right-8" />
+          <div className="relative z-10 aspect-square w-[300px] overflow-hidden rounded-full bg-[#f4f4f4]">
+            <Image
+              src={aboutUsImageOne}
+              alt="aboutUsImageOne"
+              fill
+              className="w-full object-cover"
+            />
+          </div>
+          <div className="absolute -right-3 top-0 h-full w-full rounded-full bg-brand/30" />
         </div>
       </div>
 
@@ -78,13 +115,21 @@ const About: React.FC = () => {
         </p>
         <p className="mt-2 leading-tight text-black/50">
           We offer end-to-end digital marketing services like web development,
-          SEO, content creation, lead generation, marketing campaigns, client
-          reachouts, social media management, and conversion optimization.
+          SEO,technology content creation, lead generation, marketing campaigns,
+          client reachouts, social media management, and conversion
+          optimization.
         </p>
         <div className="mt-9 flex items-center justify-center gap-[100px]">
           <div className="relative hidden lg:block">
-            <div className="relative z-10 aspect-square w-[300px] rounded-full bg-[#f4f4f4]" />
-            <div className="absolute -right-8 top-0 h-full w-full rounded-full bg-brand/30" />
+            <div className="relative z-10 aspect-square w-[300px] overflow-hidden rounded-full bg-[#f4f4f4]">
+              <Image
+                src={aboutUsImageTwo}
+                alt="aboutUsImageTwo"
+                fill
+                className="w-full object-cover"
+              />
+            </div>
+            <div className="absolute -right-3 top-0 h-full w-full rounded-full bg-brand/30" />
           </div>
           <div className="flex w-full flex-col gap-4">
             <p className="max-w-[500px] rounded-lg bg-brand/20 px-5 py-4 leading-tight">

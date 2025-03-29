@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import type { TeamProps } from "~/components/feature/Team/data";
@@ -12,7 +13,14 @@ export const TeamCard: React.FC<TeamCardProps> = ({ data }) => {
   return (
     <div className="group w-[250px] rounded-lg border bg-white p-3 shadow-sm">
       <div className="relative h-[260px] w-full">
-        <div className="h-full w-full rounded-sm border bg-[#f9f9f9]" />
+        <div className="relative h-full w-full overflow-hidden rounded-sm border bg-[#f9f9f9]">
+          <Image
+            src={data.image}
+            alt={data.name}
+            fill
+            className="w-full object-cover"
+          />
+        </div>
         <div className="absolute right-3 top-3">
           <Button asChild variant="outline" size="icon">
             <Link href={data.linkedIn} target="_blank">

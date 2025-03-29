@@ -20,8 +20,8 @@ export const ContactUsSchema = z.object({
     .max(20, "Subject must be at most 20 characters"),
   message: z
     .string()
-    .min(10, "First name must be at least 10 characters")
-    .max(300, "First name must be at most 300 characters"),
+    .min(10, "Message must be at least 10 characters")
+    .max(300, "Message must be at most 300 characters"),
 });
 
 export type ContactUsFormValues = z.infer<typeof ContactUsSchema>;

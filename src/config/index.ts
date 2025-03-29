@@ -3,7 +3,7 @@ import type { SiteConfig } from "~/types";
 export const siteConfig: SiteConfig = {
   name: "Nagana Media",
   description: "Make Technology Resonate",
-  url: "https://naganamedia.vercel.app",
+  url: "https://nagana-media.vercel.app",
   domain: "canvas.vercel.app",
   ogImage: {
     url: "https://example.com/images/banner.png",

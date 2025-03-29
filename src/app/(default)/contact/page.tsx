@@ -1,25 +1,51 @@
-import Link from "next/link";
 import React from "react";
-import { ContactUsForm } from "~/components/form";
+import Link from "next/link";
+
+// fonts
 import { fonts } from "~/fonts";
+
+// utils
+import { generateSeo } from "~/utils/generateSeo";
+
+// components
+import { ContactUsForm } from "~/components/form";
+import { Button } from "~/components/ui/button";
+import Image from "next/image";
+import { contactUsImageBanner } from "public/assets/static";
+
+export const generateMetadata = () =>
+  generateSeo({
+    title: "Contact Us",
+    description:
+      "Get in touch with Nagana Media for expert digital marketing solutions and strategic guidance to grow your brand.",
+    url: "/contact",
+  });
 
 const Contact: React.FC = () => {
   return (
     <>
       <div
         data-container
-        className="flex h-[60vh] w-full items-center justify-center bg-gradient-to-r from-[#0c1323] to-[#1e2f45]"
+        className="relative flex h-[80vh] w-full flex-col items-center justify-center bg-gradient-to-r from-[#0c1323] to-[#1e2f45]"
       >
-        <div className="">
-          <h1 className="text-[40px] font-bold leading-none text-white lg:text-center lg:text-[50px] xl:text-[60px]">
-            We&apos;re Here To Help
-          </h1>
+        <Image
+          src={contactUsImageBanner}
+          alt="contactUsImageBanner"
+          fill
+          className="w-full object-cover"
+        />
 
-          <p className="mt-2 text-base font-light leading-tight text-white sm:mt-5 sm:text-base">
-            Feel free to reach out to us for any inquiries or support. We look
-            forward to connecting with you!
-          </p>
-        </div>
+        <h1 className="z-10 text-[40px] font-bold leading-none text-white lg:text-center lg:text-[50px] xl:text-[60px]">
+          Book a free consultation
+        </h1>
+
+        <p className="z-10 mt-2 text-base font-light leading-tight text-white sm:mt-3 sm:text-base">
+          Want to see how you can build a better story for your business?
+        </p>
+
+        <Button variant="brand" className="z-10 mt-5">
+          Book a Call
+        </Button>
       </div>
 
       {/* Intro */}
