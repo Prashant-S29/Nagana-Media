@@ -98,7 +98,7 @@ const Services: React.FC = () => {
       </div>
 
       {/* Companies Logo */}
-      <div
+      {/* <div
         data-container
         className="grid w-full grid-cols-2 gap-3 bg-[#fff] py-[50px] sm:grid-cols-3 sm:gap-[30px] md:grid-cols-4"
       >
@@ -110,7 +110,7 @@ const Services: React.FC = () => {
               className="h-[150px] w-full rounded-lg border bg-[#f4f4f4]"
             />
           ))}
-      </div>
+      </div> */}
     </>
   );
 };

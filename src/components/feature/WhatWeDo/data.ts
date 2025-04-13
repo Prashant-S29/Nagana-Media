@@ -1,3 +1,5 @@
+import { calendar, file, users } from "public/assets/static";
+
 export interface WhatWeDoProps {
   icon: string;
   title: string;
@@ -7,21 +9,21 @@ export interface WhatWeDoProps {
 
 export const engineData: WhatWeDoProps[] = [
   {
-    icon: "/images/icons/icon-1.svg",
+    icon: file.src,
     title: "Content Engine",
     description:
       "Create high-intent, well-researched content for your solutions and build an ecosystem of stories.",
     href: "#",
   },
   {
-    icon: "/images/icons/icon-1.svg",
+    icon: calendar.src,
     title: "Marketing Engine",
     description:
       "Carefully-selected marketing campaigns ensure that we only deploy what works for you.",
     href: "#",
   },
   {
-    icon: "/images/icons/icon-1.svg",
+    icon: users.src,
     title: "Sales Engine",
     description:
       "Fill the gaps in your sales process with specialized product and service description presentations.",

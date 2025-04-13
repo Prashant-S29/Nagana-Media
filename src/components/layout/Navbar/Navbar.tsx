@@ -14,6 +14,8 @@ import {
   navigationMenuTriggerStyle,
 } from "~/components/ui/navigation-menu";
 import { MobileNav } from "../MobileNav";
+import Image from "next/image";
+import { logo } from "public/assets/static";
 
 export const Navbar: React.FC = () => {
   return (
@@ -22,7 +24,7 @@ export const Navbar: React.FC = () => {
       className="absolute top-0 z-50 flex h-[100px] w-full items-center justify-between py-4 sm:py-8"
     >
       <Link href="/" className="text-white">
-        Nagana Media
+        <Image src={logo} alt="logo" width={120} height={50} />
       </Link>
 
       <div className="flex items-center gap-2 max-[900px]:hidden">

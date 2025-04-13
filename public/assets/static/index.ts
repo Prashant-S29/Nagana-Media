@@ -20,6 +20,12 @@ import harshita from "./harshita.png";
 import mohit from "./mohit.png";
 import ashish from "./ashish.png";
 
+import logo from "./logo.png";
+
+import calendar from "./calendar.png";
+import users from "./users.png";
+import file from "./file.png";
+
 export {
   heroSectionImage,
   whatWeDoImage,
@@ -38,4 +44,8 @@ export {
   harshita,
   mohit,
   ashish,
+  logo,
+  calendar,
+  users,
+  file,
 };

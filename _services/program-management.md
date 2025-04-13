@@ -1,5 +1,5 @@
 ---
-icon: "/assets/services/marketing-enablement/cover.jpg"
+icon: "/assets/static/users.png"
 title: "Program Management"
 description: "Manage your digital marketing, design, and content initiatives with ease."
 ---

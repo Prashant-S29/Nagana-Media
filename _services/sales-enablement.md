@@ -1,5 +1,5 @@
 ---
-icon: "/assets/services/marketing-enablement/cover.jpg"
+icon: "/assets/static/calendar.png"
 title: "Sales Enablement"
 description: "Select our sales support service that comes in to deliver specific sales assets during key business events or build internal repository of employee training material."
 ---

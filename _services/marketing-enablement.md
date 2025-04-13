@@ -1,5 +1,5 @@
 ---
-icon: "/assets/services/marketing-enablement/cover.jpg"
+icon: "/assets/static/file.png"
 title: "Marketing Enablement"
 description: "Fill in your marketing gaps with specialized technology content, marketing initiatives, or scale your digital footprint."
 ---
