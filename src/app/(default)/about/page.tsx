@@ -150,7 +150,7 @@ const About: React.FC = () => {
       </div>
 
       {/* Meet Our Team */}
-      <Team />
+      {/* <Team /> */}
     </>
   );
 };
