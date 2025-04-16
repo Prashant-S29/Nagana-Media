@@ -106,7 +106,7 @@ const About: React.FC = () => {
       {/* Growth with Nagana Media */}
       <div data-container className="w-full bg-[#fff] py-[50px]">
         <h1 className="text-[30px] font-bold leading-none sm:leading-tight">
-          Empowering Growth With Nanga Media
+          Empowering Growth With Nagana Media
         </h1>
         <p className="mt-3 leading-tight text-black/50">
           In such a time, you can&apos;t put all your money on one tactic. To
