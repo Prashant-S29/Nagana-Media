@@ -34,13 +34,12 @@ export const Navbar: React.FC = () => {
               {NavbarItems.map((data, index) => (
                 <div key={index}>
                   <NavigationMenuItem key={index}>
-                    <Link href={data.href} legacyBehavior passHref>
-                      <NavigationMenuLink
-                        className={`${navigationMenuTriggerStyle()} bg-transparent font-normal text-white underline-offset-4 hover:bg-transparent hover:text-white hover:underline focus:bg-transparent focus:text-white focus:underline`}
-                      >
-                        {data.label}
-                      </NavigationMenuLink>
-                    </Link>
+                    <NavigationMenuLink
+                      href={data.href}
+                      className={`${navigationMenuTriggerStyle()} bg-transparent font-normal text-white underline-offset-4 hover:bg-transparent hover:text-white hover:underline focus:bg-transparent focus:text-white focus:underline`}
+                    >
+                      {data.label}
+                    </NavigationMenuLink>
                   </NavigationMenuItem>
                 </div>
               ))}

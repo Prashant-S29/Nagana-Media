@@ -30,8 +30,7 @@ export const WhatWeDo: React.FC = () => {
         data-container
         className="flex w-full flex-col items-center justify-between gap-5 bg-white py-[20px] max-[900px]:py-[40px] sm:flex-row sm:gap-[50px] sm:py-[80px]"
       >
-        {/* <div className="h-[400px] min-w-[400px] rounded-lg border" /> */}
-        <div className="block h-[350px] w-full rounded-lg sm:min-w-[300px] lg:h-[450px] lg:min-w-[400px]">
+        <div className="block h-full w-full rounded-lg sm:min-w-[300px] lg:min-w-[400px]">
           <Image
             src={whatWeDoImage}
             alt="whatWeDoImage"

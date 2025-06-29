@@ -6,6 +6,7 @@ import { Toaster } from "sonner";
 
 // hooks
 import { useMounted } from "~/hooks/useMounted";
+import { PostHogProvider } from "./postHogProvider";
 
 export const Provider = ({ children }: { children: React.ReactNode }) => {
   const mounted = useMounted();
@@ -15,9 +16,11 @@ export const Provider = ({ children }: { children: React.ReactNode }) => {
   }
 
   return (
-    <TRPCReactProvider>
-      <Toaster richColors />
-      {children}
-    </TRPCReactProvider>
+    <PostHogProvider>
+      <TRPCReactProvider>
+        <Toaster richColors />
+        {children}
+      </TRPCReactProvider>
+    </PostHogProvider>
   );
 };

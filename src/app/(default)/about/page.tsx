@@ -10,7 +10,6 @@ import { fonts } from "~/fonts";
 import { generateSeo } from "~/utils/generateSeo";
 
 // components
-import { Team } from "~/components/feature";
 import {
   aboutUsBannerImage,
   aboutUsImageOne,
