@@ -74,19 +74,19 @@ const Services: React.FC = () => {
       {/* Experience */}
       <div data-container className="w-full bg-[#f9f9f9] py-[50px]">
         <p
-          className={`text-xl font-semibold uppercase leading-none text-brand ${fonts.bebas_neue.className}`}
+          className={`text-xl font-semibold  leading-none text-brand ${fonts.bebas_neue.className}`}
         >
           Experience
         </p>
         <h1 className="mt-4 text-[30px] font-bold leading-none text-black md:text-[36px]">
           Grow Your Online Presence.
         </h1>
-        <p className="mt-2 text-sm leading-tight text-black/50">
+        {/* <p className="mt-2 text-sm leading-tight text-black/50">
           Lorem Ipsum is simply dummy text of the printing and typesetting
           industry.
           <br />
           Lorem Ipsum has been the industry&apos;s standard dummy text ever.
-        </p>
+        </p> */}
 
         <div className="mt-5 flex items-center gap-[100px]">
           <div className="flex w-full flex-col gap-3">
