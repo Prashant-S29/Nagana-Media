@@ -43,15 +43,15 @@ const Contact: React.FC = () => {
           Want to see how you can build a better story for your business?
         </p>
 
-        <Button variant="brand" className="z-10 mt-5">
-          Book a Call
+        <Button variant="brand" asChild className="z-10 mt-5">
+          <Link href="#contact-form">Book a Call</Link>
         </Button>
       </div>
 
       {/* Intro */}
       <div
         data-container
-        className="flex w-full flex-col gap-[50px] bg-[#f9f9f9] py-[50px] sm:flex-row"
+        className="flex w-full flex-col gap-[50px] bg-[#f9f9f9] py-[50px] md:flex-row"
       >
         <div className="w-full">
           <h1
@@ -64,7 +64,7 @@ const Contact: React.FC = () => {
           >
             We are here to help!
           </h1>
-          <p className="mt-5 text-base leading-tight text-black/50">
+          <p className="mt-5 max-w-[500px] text-base leading-tight text-black/50">
             Our dedicated team is ready to provide the answers and support you
             need. Whether it&apos;s a quick question or a detailed concern,
             we&apos;re just a call, email, or chat away. Let us make your
@@ -101,7 +101,10 @@ const Contact: React.FC = () => {
         </div>
 
         {/* contact form */}
-        <div className="w-full max-w-[500px] rounded-xl border bg-white p-5">
+        <div
+          id="contact-form"
+          className="w-full rounded-xl border bg-white p-5"
+        >
           <ContactUsForm />
         </div>
       </div>

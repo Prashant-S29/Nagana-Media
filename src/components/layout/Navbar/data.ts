@@ -12,16 +12,16 @@ export const NavbarItems: NavbarItemProps[] = [
     label: "About Us",
     href: "/about",
   },
-  {
-    label: "Our Work",
-    href: "/work",
-  },
+  // {
+  //   label: "Our Work",
+  //   href: "/work",
+  // },
   {
     label: "Blogs",
     href: "/blogs",
   },
-  {
-    label: "Knowledge Hub",
-    href: "/knowledge-hub",
-  },
+  // {
+  //   label: "Knowledge Hub",
+  //   href: "/knowledge-hub",
+  // },
 ];

@@ -5,19 +5,19 @@ interface StatsProps {
 
 export const StatsData: StatsProps[] = [
   {
-    label: "500+",
-    title: "Project Completed",
+    label: "10+ XP",
+    title: "B2B Marketing",
   },
   {
-    label: "95%",
-    title: "Client Retention Rate",
+    label: "15+ XP",
+    title: "Content Creation",
   },
   {
-    label: "1200+",
-    title: "Lead Generation",
+    label: "11+ XP",
+    title: "Web Design",
   },
   {
-    label: "30%",
-    title: "Avg increase in ROI",
+    label: "07+ XP",
+    title: "Program Management",
   },
 ];

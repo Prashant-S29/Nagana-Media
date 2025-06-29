@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { heroSectionImage } from "public/assets/static";
 import React from "react";
 
@@ -34,8 +35,8 @@ export const Hero: React.FC = () => {
           adoption.
         </p>
 
-        <Button variant="brand" className="mt-5">
-          Let&apos;s Talk
+        <Button variant="brand" asChild className="mt-8">
+          <Link href="/contact">Let&apos;s Talk</Link>
         </Button>
       </div>
       <div className="min-w-[300px] rounded-lg max-[900px]:hidden lg:min-w-[400px]">

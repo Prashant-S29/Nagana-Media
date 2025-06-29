@@ -7,22 +7,22 @@ interface FooterSocialGridProps {
 }
 
 export const footerSocialGridData: FooterSocialGridProps[] = [
-  {
-    icon: SocialIcons.TwitterIcon,
-    href: "/",
-  },
-  {
-    icon: SocialIcons.InstagramIcon,
-    href: "/",
-  },
+  // {
+  //   icon: SocialIcons.TwitterIcon,
+  //   href: "/",
+  // },
+  // {
+  //   icon: SocialIcons.InstagramIcon,
+  //   href: "/",
+  // },
   {
     icon: SocialIcons.LinkedInIcon,
-    href: "/",
+    href: "https://www.linkedin.com/company/nagana-media-tech/posts/?feedView=all",
   },
-  {
-    icon: SocialIcons.FacebookIcon,
-    href: "/",
-  },
+  // {
+  //   icon: SocialIcons.FacebookIcon,
+  //   href: "/",
+  // },
 ];
 
 interface FooterLinksProps {
@@ -38,20 +38,20 @@ export const footerLinksData: FooterLinksProps[] = [
     category: "Quick Links",
     links: [
       {
-        label: "Company Profile",
-        href: "/",
+        label: "About Us",
+        href: "/about",
       },
-      {
-        label: "Help Center",
-        href: "/",
-      },
-      {
-        label: "Projects",
-        href: "/",
-      },
+      // {
+      //   label: "Help Center",
+      //   href: "/",
+      // },
+      // {
+      //   label: "Projects",
+      //   href: "/",
+      // },
       {
         label: "News and Blogs",
-        href: "/",
+        href: "/blogs",
       },
     ],
   },
@@ -59,16 +59,16 @@ export const footerLinksData: FooterLinksProps[] = [
     category: "Our Services",
     links: [
       {
-        label: "Ui/Ux Design",
-        href: "/",
+        label: "Marketing Enablement",
+        href: "/services/marketing-enablement",
       },
       {
-        label: "Web Design",
-        href: "/",
+        label: "Program Management",
+        href: "/services/program-management",
       },
       {
-        label: "Digital Marketing",
-        href: "/",
+        label: "Sales Enablement",
+        href: "/services/sales-enablement",
       },
     ],
   },

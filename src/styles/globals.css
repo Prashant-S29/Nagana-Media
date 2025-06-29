@@ -75,7 +75,6 @@
   padding-right: 20px;
 }
 
-
 @media (min-width: 500px) {
   [data-container] {
     padding-left: 50px;
@@ -97,3 +96,7 @@
   }
 }
 
+* {
+  scroll-behavior: smooth;
+  scroll-padding: 100px;
+}

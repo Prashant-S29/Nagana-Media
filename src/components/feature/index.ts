@@ -5,3 +5,4 @@ export * from "./Team";
 export * from "./Testimonial";
 export * from "./FAQ";
 export * from "./BlogGrid";
+export * from "./CalendlyFormEmbbed";

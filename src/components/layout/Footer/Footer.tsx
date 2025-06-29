@@ -10,8 +10,11 @@ import { footerLinksData, footerSocialGridData } from "./data";
 // components
 import { Button } from "~/components/ui/button";
 import { Input } from "~/components/ui/input";
+import { getAllServices } from "~/utils/api";
 
 export const Footer: React.FC = () => {
+  const allServices = getAllServices();
+
   return (
     <footer data-container className="bg-[#262626]">
       <div className="flex flex-col sm:flex-row">
@@ -32,7 +35,7 @@ export const Footer: React.FC = () => {
                   asChild
                   className="group h-7 w-7 rounded-sm bg-white hover:bg-brand"
                 >
-                  <Link href={data.href}>
+                  <Link href={data.href} target="_blank">
                     <data.icon className="text-black transition-colors group-hover:text-white" />
                   </Link>
                 </Button>
@@ -82,14 +85,14 @@ export const Footer: React.FC = () => {
           </div>
         </div>
       </div>
-      <div className="flex w-full items-center justify-between border-t border-white/20 py-4 text-xs text-white/70">
+      <div className="flex w-full items-center justify-center border-t border-white/20 py-4 text-xs text-white/70">
         <p className="">&copy; Copyright 2024. All rights reserved.</p>
 
-        <section className="flex items-center gap-3">
-          <Link href="/">About</Link>
+        {/* <section className="flex items-center gap-3">
+          <Link href="/about">About</Link>
           <Link href="/">Team</Link>
           <Link href="/">Support</Link>
-        </section>
+        </section> */}
       </div>
     </footer>
   );
