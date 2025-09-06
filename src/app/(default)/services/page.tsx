@@ -74,7 +74,7 @@ const Services: React.FC = () => {
       {/* Experience */}
       <div data-container className="w-full bg-[#f9f9f9] py-[50px]">
         <p
-          className={`text-xl font-semibold  leading-none text-brand ${fonts.bebas_neue.className}`}
+          className={`text-xl font-semibold leading-none text-brand ${fonts.bebas_neue.className}`}
         >
           Experience
         </p>

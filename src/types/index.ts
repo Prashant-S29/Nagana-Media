@@ -30,7 +30,10 @@ export interface Blog {
     url: string;
   };
   content: string;
-  preview?: boolean;
+  metaTitle?: string;
+  metaDescription?: string;
+  primaryKeyword?: string;
+  secondaryKeywords?: string[];
 }
 
 export interface Service {

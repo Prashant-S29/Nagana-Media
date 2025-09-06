@@ -16,7 +16,12 @@ export const BlogCard: React.FC<BlogCardProps> = ({ data }) => {
   return (
     <div className="flex w-full flex-col justify-between rounded-xl">
       <div className="relative min-h-[180px] w-full overflow-hidden rounded-t-xl">
-        <Image src={data.coverImage} alt="blogImage" fill />
+        <Image
+          src={data.coverImage}
+          alt="blogImage"
+          fill
+          className="object-cover object-top"
+        />
       </div>
 
       <div className="flex h-full w-full flex-col justify-between rounded-b-xl bg-[#f9f9f9] px-3 py-3">
