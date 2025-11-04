@@ -197,6 +197,7 @@ const Post: React.FC<Params> = async ({ params }) => {
         <Image
           src={post.coverImage}
           alt={post.title}
+          unoptimized
           width={1200}
           height={600}
           className="h-auto w-full rounded-xl"
