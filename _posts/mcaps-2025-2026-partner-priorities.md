@@ -4,7 +4,7 @@ excerpt: "Explore Microsoft’s MCAPS 2025–2026 priorities: AI, cloud, securit
 coverImage: "/assets/blog/mcaps-2025-2026-partner-priorities/cover.png"
 date: "2025-09-06T05:35:07.322Z"
 author:
-  name: Tim Neutkens
+  name: Nagana Media
   picture: "/assets/blog/authors/tim.jpeg"
 ogImage:
   url: "/assets/blog/mcaps-2025-2026-partner-priorities/cover.png"

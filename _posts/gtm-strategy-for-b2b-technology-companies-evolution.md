@@ -4,7 +4,7 @@ excerpt: "Explore the evolution of GTM strategy for B2B technology companies, fr
 coverImage: "/assets/blog/gtm-strategy-for-b2b-technology-companies-evolution/cover.png"
 date: "2025-09-06T05:35:07.322Z"
 author:
-  name: Tim Neutkens
+  name: Nagana Media
   picture: "/assets/blog/authors/tim.jpeg"
 ogImage:
   url: "/assets/blog/gtm-strategy-for-b2b-technology-companies-evolution/cover.png"
