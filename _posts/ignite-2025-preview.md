@@ -1,5 +1,5 @@
 ---
-title: "Ignite 2025 Preview: AI, Security and the Partner Playbook for What Comes Next"
+title: "Microsoft Ignite 2025 Preview: AI, Security and the Partner Playbook for What Comes Next"
 excerpt: "Explore how Ignite 2025 reshapes Microsoft's partner strategy, from Judson Althoff's keynote shift to AI, security, hybrid cloud, and industry-focused growth."
 coverImage: "/assets/blog/ignite-2025-preview/cover.png"
 date: "2025-11-18T05:35:07.322Z"
@@ -8,8 +8,8 @@ author:
   picture: "/assets/blog/authors/tim.jpeg"
 ogImage:
   url: "/assets/blog/ignite-2025-preview/cover.png"
-metaTitle: "Ignite 2025: The Shift Every Microsoft Partner Must Track"
-metaDescription: "Explore how Ignite 2025 reshapes Microsoft's partner strategy, from Judson Althoff's keynote shift to AI, security, hybrid cloud, and industry-focused growth."
+metaTitle: "Microsoft Ignite 2025: The Shift Every Microsoft Partner Must Track"
+metaDescription: "Explore how Microsoft Ignite 2025 reshapes Microsoft's partner strategy, from Judson Althoff's keynote shift to AI, security, hybrid cloud, and industry-focused growth."
 primaryKeyword: "Microsoft Ignite 2025"
 secondaryKeywords:
   [
