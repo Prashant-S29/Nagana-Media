@@ -12,6 +12,14 @@ interface BlogCardProps {
   data: Blog;
 }
 
+const formatDate = (dateString: string) => {
+  return new Intl.DateTimeFormat("en-GB", {
+    day: "2-digit",
+    month: "long",
+    year: "numeric",
+  }).format(new Date(dateString));
+};
+
 export const BlogCard: React.FC<BlogCardProps> = ({ data }) => {
   return (
     <div className="flex w-full flex-col justify-between rounded-xl">
@@ -27,7 +35,7 @@ export const BlogCard: React.FC<BlogCardProps> = ({ data }) => {
       <div className="flex h-full w-full flex-col justify-between rounded-b-xl bg-[#f9f9f9] px-3 py-3">
         <div>
           <p className="text-xs text-black/50">
-            {data.date} | {data.author.name}
+            {formatDate(data.date)} | {data.author.name}
           </p>
           <h1 className="mt-1 text-base font-semibold leading-tight sm:font-medium">
             {data.title}

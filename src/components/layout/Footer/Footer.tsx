@@ -86,13 +86,7 @@ export const Footer: React.FC = () => {
         </div>
       </div>
       <div className="flex w-full items-center justify-center border-t border-white/20 py-4 text-xs text-white/70">
-        <p className="">&copy; Copyright 2024. All rights reserved.</p>
-
-        {/* <section className="flex items-center gap-3">
-          <Link href="/about">About</Link>
-          <Link href="/">Team</Link>
-          <Link href="/">Support</Link>
-        </section> */}
+        <p className="">&copy; Copyright 2025. All rights reserved.</p>
       </div>
     </footer>
   );
