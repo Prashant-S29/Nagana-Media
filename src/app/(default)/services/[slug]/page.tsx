@@ -12,6 +12,10 @@ import { getAllServices, getServiceBySlug } from "~/utils/api";
 import markdownToHtml from "~/utils/markdownToHtml";
 import { generateSeo } from "~/utils/generateSeo";
 
+// Force static generation - critical for SEO and LLM crawlers
+export const dynamic = "force-static";
+export const dynamicParams = false;
+
 export async function generateMetadata(props: Params): Promise<Metadata> {
   const params = await props.params;
   const service = getServiceBySlug(params.slug);
@@ -20,11 +24,48 @@ export async function generateMetadata(props: Params): Promise<Metadata> {
     return notFound();
   }
 
-  return generateSeo({
-    title: `${service.title} | Services`,
-    description: `${service.description}`,
-    url: `/services/${service.slug}`,
-  });
+  const baseUrl =
+    process.env.NEXT_PUBLIC_BASE_URL ?? "https://www.naganamedia.com";
+  const serviceUrl = `${baseUrl}/services/${params.slug}`;
+
+  return {
+    title: `${service.title} | Nagana Media Services`,
+    description: service.description,
+    keywords: [
+      service.title,
+      "GTM Strategy",
+      "B2B Technology",
+      "Sales Enablement",
+      "Marketing Enablement",
+    ].join(", "),
+    authors: [{ name: "Nagana Media Team" }],
+    creator: "Nagana Media",
+    publisher: "Nagana Media",
+    category: "Business Services",
+
+    // Open Graph
+    openGraph: {
+      title: service.title,
+      description: service.description,
+      url: serviceUrl,
+      siteName: "Nagana Media",
+      type: "website",
+      locale: "en_US",
+    },
+
+    // Twitter
+    twitter: {
+      card: "summary_large_image",
+      title: service.title,
+      description: service.description,
+      creator: "@NaganaMedia",
+    },
+
+    // Additional SEO
+    alternates: {
+      canonical: serviceUrl,
+    },
+  };
 }
 
 export async function generateStaticParams() {
@@ -50,9 +91,36 @@ const Service: React.FC<Params> = async ({ params }) => {
   }
 
   const content = await markdownToHtml(service.content || "");
+  const baseUrl =
+    process.env.NEXT_PUBLIC_BASE_URL ?? "https://www.naganamedia.com";
+
+  // JSON-LD Structured Data for Service
+  const serviceJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    name: service.title,
+    description: service.description,
+    provider: {
+      "@type": "Organization",
+      name: "Nagana Media",
+      url: baseUrl,
+    },
+    serviceType: service.title,
+    areaServed: {
+      "@type": "Place",
+      name: "Worldwide",
+    },
+    url: `${baseUrl}/services/${slug}`,
+  };
 
   return (
     <>
+      {/* JSON-LD Structured Data */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceJsonLd) }}
+      />
+
       <div
         data-container
         className="flex h-[60vh] w-full items-center justify-center bg-gradient-to-r from-[#0c1323] to-[#1e2f45]"

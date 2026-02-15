@@ -13,6 +13,10 @@ import { getAllPosts, getPostBySlug } from "~/utils/api";
 import markdownToHtml from "~/utils/markdownToHtml";
 import { generateSeo } from "~/utils/generateSeo";
 
+// Force static generation - this is critical for crawlers
+export const dynamic = "force-static";
+export const dynamicParams = false;
+
 export async function generateMetadata(props: {
   params: Promise<{ slug: string }>;
 }): Promise<Metadata> {
@@ -23,7 +27,8 @@ export async function generateMetadata(props: {
     return notFound();
   }
 
-  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL ?? "https://yourdomain.com";
+  const baseUrl =
+    process.env.NEXT_PUBLIC_BASE_URL ?? "https://www.naganamedia.com";
   const postUrl = `${baseUrl}/blogs/${params.slug}`;
   const ogImageUrl = `${baseUrl}/api/og?title=${encodeURIComponent(post.title)}&excerpt=${encodeURIComponent(post.excerpt)}`;
 
@@ -68,7 +73,6 @@ export async function generateMetadata(props: {
       type: "article",
       publishedTime: post.date,
       authors: [post.author.name],
-      // tags: [post.primaryKeyword, ...(post.secondaryKeywords ?? [])],
     },
 
     // Twitter
@@ -76,7 +80,7 @@ export async function generateMetadata(props: {
       card: "summary_large_image",
       title: post.metaTitle ?? post.title,
       description: post.metaDescription ?? post.excerpt,
-      creator: "@NaganaMedia", // Replace with your Twitter handle
+      creator: "@NaganaMedia",
       images: [ogImageUrl],
     },
 
@@ -121,7 +125,8 @@ const Post: React.FC<Params> = async ({ params }) => {
   }
 
   const content = await markdownToHtml(post.content ?? "");
-  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
+  const baseUrl =
+    process.env.NEXT_PUBLIC_BASE_URL ?? "https://www.naganamedia.com";
 
   // JSON-LD Structured Data
   const jsonLd = {
@@ -142,7 +147,7 @@ const Post: React.FC<Params> = async ({ params }) => {
       name: "Nagana Media",
       logo: {
         "@type": "ImageObject",
-        url: `${baseUrl}/logo.png`, // Add your logo path
+        url: `${baseUrl}/logo.png`,
       },
     },
     mainEntityOfPage: {
@@ -171,17 +176,6 @@ const Post: React.FC<Params> = async ({ params }) => {
             {post.title}
           </h1>
           <div className="mt-6 flex items-center justify-center gap-4 text-gray-300">
-            {/* <div className="flex items-center gap-2">
-              <Image
-                src={post.author.picture}
-                alt={post.author.name}
-                width={32}
-                height={32}
-                className="rounded-full"
-              />
-              <span className="text-sm">{post.author.name}</span>
-            </div>
-            <span className="text-sm">•</span> */}
             <span className="text-sm">
               {new Date(post.date).toLocaleDateString("en-US", {
                 year: "numeric",

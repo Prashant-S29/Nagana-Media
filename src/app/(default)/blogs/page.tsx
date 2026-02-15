@@ -9,6 +9,9 @@ import { BlogCard } from "~/components/common";
 import Image from "next/image";
 import { servicePageBannerImage } from "public/assets/static";
 
+// Force static generation - critical for SEO and LLM crawlers
+export const dynamic = "force-static";
+
 export const generateMetadata = () =>
   generateSeo({
     title: "Blogs",

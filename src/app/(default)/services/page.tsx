@@ -17,6 +17,9 @@ import { getAllServices } from "~/utils/api";
 import { ExperienceCard, ServiceCard } from "~/components/common";
 import { generateSeo } from "~/utils/generateSeo";
 
+// Force static generation - critical for SEO and LLM crawlers
+export const dynamic = "force-static";
+
 export const generateMetadata = () =>
   generateSeo({
     title: "Services",

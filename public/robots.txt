@@ -1,9 +1,52 @@
 # *
 User-agent: *
 Allow: /
+Disallow: /api/
+Disallow: /_next/
+Disallow: /admin
+
+# GPTBot
+User-agent: GPTBot
+Allow: /
+
+# ChatGPT-User
+User-agent: ChatGPT-User
+Allow: /
+
+# anthropic-ai
+User-agent: anthropic-ai
+Allow: /
+
+# Claude-Web
+User-agent: Claude-Web
+Allow: /
+
+# Google-Extended
+User-agent: Google-Extended
+Allow: /
+
+# CCBot
+User-agent: CCBot
+Allow: /
+
+# PerplexityBot
+User-agent: PerplexityBot
+Allow: /
+
+# Applebot-Extended
+User-agent: Applebot-Extended
+Allow: /
+
+# cohere-ai
+User-agent: cohere-ai
+Allow: /
+
+# FacebookBot
+User-agent: FacebookBot
+Allow: /
 
 # Host
-Host: https://nagana-media.vercel.app
+Host: https://naganamedia.com
 
 # Sitemaps
-Sitemap: https://nagana-media.vercel.app/sitemap.xml
+Sitemap: https://naganamedia.com/sitemap.xml

@@ -7,6 +7,9 @@ import { fonts } from "~/fonts";
 // utils
 import { generateSeo } from "~/utils/generateSeo";
 
+// Force static generation - critical for SEO and LLM crawlers
+export const dynamic = "force-static";
+
 // components
 import { ContactUsForm } from "~/components/form";
 import { Button } from "~/components/ui/button";
