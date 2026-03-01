@@ -39,8 +39,7 @@ const Blogs: React.FC = () => {
             Our Blogs
           </h1>
           <p className="mt-2 text-base font-light leading-tight text-white sm:mt-5 sm:text-base">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laboriosam
-            minus, architecto cumque repudiandae esse
+            Insights, ideas, and innovations shaping the future of technology
           </p>
         </div>
       </div>
