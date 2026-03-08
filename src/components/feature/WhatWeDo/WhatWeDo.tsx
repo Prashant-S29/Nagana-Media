@@ -41,9 +41,9 @@ export const WhatWeDo: React.FC = () => {
         </div>
 
         <div>
-          <h1 className="text-[30px] font-bold leading-none sm:leading-tight">
+          <h2 className="text-[30px] font-bold leading-none sm:leading-tight">
             What we do
-          </h1>
+          </h2>
           <p className="mt-2 text-black/50 sm:mt-0">
             We identify the right touchpoints for your technology solution to
             create an interlinked, end-to-end, marketing and sales
@@ -61,9 +61,9 @@ export const WhatWeDo: React.FC = () => {
         </div>
       </div>
       <div data-container className="w-full bg-[#f9f9f9] py-[50px]">
-        <h1 className="text-[28px] font-bold leading-none sm:text-center sm:leading-tight md:text-[30px]">
+        <h2 className="text-[28px] font-bold leading-none sm:text-center sm:leading-tight md:text-[30px]">
           Choose what you need, when you need it.
-        </h1>
+        </h2>
         <div className="mt-5 flex justify-center sm:mt-0">
           <p className="max-w-[700px] leading-tight text-black/50 sm:text-center">
             Our services allow you high degree of composability and help you
@@ -79,7 +79,7 @@ export const WhatWeDo: React.FC = () => {
         </div>
       </div>
       <div data-container className="py-10">
-        <h2 className="leading text-[30px] font-bold leading-none sm:text-center sm:text-[28px] sm:leading-tight">
+        <h2 className="text-[30px] font-bold leading-none sm:text-center sm:text-[28px] sm:leading-tight">
           Address change with Bespoke <br className="hidden sm:block" />
           Strategy
         </h2>
@@ -95,9 +95,9 @@ export const WhatWeDo: React.FC = () => {
                   className="w-full object-cover"
                 />
               </div>
-              <h1 className="mt-3 px-2 text-base font-bold sm:mt-8 sm:px-0 sm:text-xl">
+              <h3 className="mt-3 px-2 text-base font-bold sm:mt-8 sm:px-0 sm:text-xl">
                 360-degree Coverage
-              </h1>
+              </h3>
               <p className="px-2 text-sm leading-tight text-black/50 sm:mt-1 sm:px-0 sm:text-base">
                 Cover all the areas of GTM projects, fill all gaps and address
                 all concerns.
@@ -114,9 +114,9 @@ export const WhatWeDo: React.FC = () => {
                   className="w-full object-cover"
                 />
               </div>
-              <h1 className="mt-3 px-2 text-base font-bold sm:mt-8 sm:px-0 sm:text-xl">
+              <h3 className="mt-3 px-2 text-base font-bold sm:mt-8 sm:px-0 sm:text-xl">
                 Execute on Cue
-              </h1>
+              </h3>
               <p className="px-2 text-sm leading-tight text-black/50 sm:mt-1 sm:px-0 sm:text-base">
                 Hire experts who executes marketing & content campaigns on your
                 behalf.
@@ -134,9 +134,9 @@ export const WhatWeDo: React.FC = () => {
                   className="w-full object-cover"
                 />
               </div>
-              <h1 className="mt-3 px-2 text-base font-bold sm:mt-8 sm:px-0 sm:text-xl">
+              <h3 className="mt-3 px-2 text-base font-bold sm:mt-8 sm:px-0 sm:text-xl">
                 Flexible Strategy
-              </h1>
+              </h3>
               <p className="px-2 text-sm leading-tight text-black/50 sm:mt-1 sm:px-0 sm:text-base">
                 Shift posture swiftly with change in market trends and needs.
               </p>
@@ -155,9 +155,9 @@ export const WhatWeDo: React.FC = () => {
                     />
                   </div>
                 </div>
-                <h1 className="px-2 text-base font-bold sm:mt-8 sm:px-0 sm:text-xl">
+                <h3 className="px-2 text-base font-bold sm:mt-8 sm:px-0 sm:text-xl">
                   Scale Quickly
-                </h1>
+                </h3>
                 <p className="px-2 text-sm leading-tight text-black/50 sm:mt-1 sm:px-0 sm:text-base">
                   Scales highly integrated marketing and scales initiatives
                   fractionally.
@@ -177,9 +177,9 @@ export const WhatWeDo: React.FC = () => {
       </div>
       <div data-container className="bg-[#f9f9f9] py-[40px]">
         <div>
-          <h1 className="text-[30px] font-bold leading-none sm:text-center sm:leading-tight">
+          <h2 className="text-[30px] font-bold leading-none sm:text-center sm:leading-tight">
             Achieve Consistent Organic Growth
-          </h1>
+          </h2>
           <div className="mt-3 flex justify-center sm:mt-0">
             <p className="max-w-[700px] leading-tight text-black/50 sm:text-center">
               We take your technology innovation to the market with design,

@@ -15,9 +15,9 @@ export const BlogGrid: React.FC = () => {
       <p className="text-center text-xs font-bold uppercase text-brand">
         Blog & News
       </p>
-      <h1 className="text-center text-[30px] font-bold md:text-[36px]">
+      <h2 className="text-center text-[30px] font-bold md:text-[36px]">
         Our Latest Blog Posts
-      </h1>
+      </h2>
 
       <div className="flex justify-end">
         <Link

@@ -37,9 +37,9 @@ export const BlogCard: React.FC<BlogCardProps> = ({ data }) => {
           <p className="text-xs text-black/50">
             {formatDate(data.date)} | {data.author.name}
           </p>
-          <h1 className="mt-1 text-base font-semibold leading-tight sm:font-medium">
+          <h3 className="mt-1 text-base font-semibold leading-tight sm:font-medium">
             {data.title}
-          </h1>
+          </h3>
         </div>
 
         <Button asChild variant="brand" size="sm" className="w-fit">

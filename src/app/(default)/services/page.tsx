@@ -58,13 +58,13 @@ const Services: React.FC = () => {
 
       {/* services */}
       <div data-container className="w-full bg-[#fff] py-[50px]">
-        <h1 className="text-[30px] font-bold leading-none sm:text-center sm:leading-tight">
-          All-In-One Cloud Software
-        </h1>
+        <h2 className="text-[30px] font-bold leading-none sm:text-center sm:leading-tight">
+          Flexible Services, Built for B2B Technology
+        </h2>
         <p className="mt-3 leading-tight text-black/50 sm:mt-1 sm:text-center">
-          TOTC is one powerful online software suite that combines all the tools{" "}
+          Pick the services that fill the gaps in your GTM strategy.{" "}
           <br className="hidden sm:block" />
-          needed to run a successful school or office.
+          From content and campaigns to sales support and program management.
         </p>
 
         <div className="mt-6 grid grid-cols-1 gap-x-4 gap-y-7 sm:mt-[50px] sm:grid-cols-2 md:gap-y-14 lg:grid-cols-3">
@@ -81,9 +81,9 @@ const Services: React.FC = () => {
         >
           Experience
         </p>
-        <h1 className="mt-4 text-[30px] font-bold leading-none text-black md:text-[36px]">
+        <h2 className="mt-4 text-[30px] font-bold leading-none text-black md:text-[36px]">
           Grow Your Online Presence.
-        </h1>
+        </h2>
         {/* <p className="mt-2 text-sm leading-tight text-black/50">
           Lorem Ipsum is simply dummy text of the printing and typesetting
           industry.

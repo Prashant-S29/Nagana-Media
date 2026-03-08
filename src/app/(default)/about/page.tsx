@@ -60,9 +60,9 @@ const About: React.FC = () => {
         className="flex w-full flex-col-reverse gap-8 bg-[#fff] py-9 sm:flex-row sm:items-center sm:gap-[100px] sm:py-[50px]"
       >
         <div className="w-full">
-          <h1 className="text-[30px] font-bold leading-none sm:leading-tight">
+          <h2 className="text-[30px] font-bold leading-none sm:leading-tight">
             The 21st century is the era of change, very fast change!
-          </h1>
+          </h2>
           <p className="mt-4 text-base leading-tight text-black/50">
             The way of running your business is changing and so is how people
             interact with your business. The old models of selling and marketing
@@ -95,11 +95,11 @@ const About: React.FC = () => {
       >
         {StatsData.map((data, index) => (
           <div key={index}>
-            <h1
+            <p
               className={`${fonts.bebas_neue.className} text-center text-[40px] leading-none text-brand`}
             >
               {data.label}
-            </h1>
+            </p>
             <p className="text-center text-sm text-black/50">{data.title}</p>
           </div>
         ))}
@@ -107,9 +107,9 @@ const About: React.FC = () => {
 
       {/* Growth with Nagana Media */}
       <div data-container className="w-full bg-[#fff] py-[50px]">
-        <h1 className="text-[30px] font-bold leading-none sm:leading-tight">
+        <h2 className="text-[30px] font-bold leading-none sm:leading-tight">
           Empowering Growth With Nagana Media
-        </h1>
+        </h2>
         <p className="mt-3 leading-tight text-black/50">
           In such a time, you can&apos;t put all your money on one tactic. To
           win, you&apos;ll have to have a holistic view and a vantage point that

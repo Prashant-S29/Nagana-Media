@@ -13,14 +13,10 @@ export const Hero: React.FC = () => {
       className="flex h-[80vh] w-full items-center justify-between gap-[50px] bg-gradient-to-r from-[#0c1323] to-[#1e2f45]"
     >
       <div className="">
-        <h1 className="text-[40px] font-bold leading-none text-white lg:text-[50px] xl:text-[60px]">
-          Make
-        </h1>
-        <h1 className="text-[40px] font-bold leading-none text-[#b7faff] lg:text-[50px] xl:text-[60px]">
-          Technology
-        </h1>
-        <h1 className="text-[40px] font-bold leading-none text-white lg:text-[50px] xl:text-[60px]">
-          Resonate
+        <h1 className="text-[40px] font-bold leading-none lg:text-[50px] xl:text-[60px]">
+          <span className="block text-white">Make</span>
+          <span className="block text-[#b7faff]">Technology</span>
+          <span className="block text-white">Resonate</span>
         </h1>
 
         <p className="mt-5 text-sm font-extralight leading-tight text-white sm:text-base">

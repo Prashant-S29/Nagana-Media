@@ -57,16 +57,16 @@ const Contact: React.FC = () => {
         className="flex w-full flex-col gap-[50px] bg-[#f9f9f9] py-[50px] md:flex-row"
       >
         <div className="w-full">
-          <h1
+          <h2
             className={`${fonts.bebas_neue.className} text-[40px] font-bold leading-tight`}
           >
             Have <span className="text-brand">Questions?</span>
-          </h1>
-          <h1
+          </h2>
+          <h2
             className={`${fonts.bebas_neue.className} text-[40px] font-bold leading-tight`}
           >
             We are here to help!
-          </h1>
+          </h2>
           <p className="mt-5 max-w-[500px] text-base leading-tight text-black/50">
             Our dedicated team is ready to provide the answers and support you
             need. Whether it&apos;s a quick question or a detailed concern,

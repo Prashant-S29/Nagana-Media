@@ -9,7 +9,7 @@ export const Testimonial: React.FC = () => {
   return (
     <div className="bg-white px-[350px] py-[60px]">
       <p className="text-xs font-bold uppercase text-brand">Testimonial</p>
-      <h1 className="text-[40px] font-bold">What our clients say</h1>
+      <h2 className="text-[40px] font-bold">What our clients say</h2>
 
       <div className="mt-5 flex gap-5">
         {testimonialData.map((data, index) => (

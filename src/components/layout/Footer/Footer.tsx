@@ -20,7 +20,7 @@ export const Footer: React.FC = () => {
       <div className="flex flex-col sm:flex-row">
         <div className="mt-9 w-full border-white/20 pr-8 sm:mt-0 sm:max-w-[300px] sm:border-r sm:py-9">
           <div className="">
-            <h1 className="text-lg text-white">Nagana Media</h1>
+            <p className="text-lg font-semibold text-white">Nagana Media</p>
 
             <p className="text-sm font-light leading-tight text-white/70">
               Make technology resonate.

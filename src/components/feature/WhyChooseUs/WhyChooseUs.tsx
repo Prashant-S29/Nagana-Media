@@ -16,9 +16,9 @@ export const WhyChooseUs: React.FC = () => {
     >
       <div>
         <p className="text-xs font-bold uppercase text-brand">Why Choose Us</p>
-        <h1 className="mt-4 text-[30px] font-bold leading-none text-white md:text-[36px]">
+        <h2 className="mt-4 text-[30px] font-bold leading-none text-white md:text-[36px]">
           We understand the key pillars for your business success.
-        </h1>
+        </h2>
         <p className="mt-3 text-sm leading-tight text-white/70">
           Address your product marketing, brand awareness, and GTM strategy
           needs with constant expert support across critical verticals.
