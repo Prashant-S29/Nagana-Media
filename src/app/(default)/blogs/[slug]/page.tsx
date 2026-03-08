@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { notFound } from "next/navigation";
 import "../../../../styles/globals.css";
 
@@ -9,7 +10,12 @@ import type { Metadata } from "next";
 import markdownStyles from "~/styles/markdown-styles.module.css";
 
 // utils
-import { getAllPosts, getPostBySlug } from "~/utils/api";
+import {
+  getAllPosts,
+  getPostBySlug,
+  getRelatedPosts,
+  calculateReadingTime,
+} from "~/utils/api";
 import markdownToHtml from "~/utils/markdownToHtml";
 import { generateSeo } from "~/utils/generateSeo";
 
@@ -127,8 +133,10 @@ const Post: React.FC<Params> = async ({ params }) => {
   const content = await markdownToHtml(post.content ?? "");
   const baseUrl =
     process.env.NEXT_PUBLIC_BASE_URL ?? "https://www.naganamedia.com";
+  const readingTime = calculateReadingTime(post.content ?? "");
+  const relatedPosts = getRelatedPosts(post, 3);
 
-  // JSON-LD Structured Data
+  // Article JSON-LD
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "Article",
@@ -138,16 +146,16 @@ const Post: React.FC<Params> = async ({ params }) => {
     datePublished: post.date,
     dateModified: post.date,
     author: {
-      "@type": "Person",
+      "@type": "Organization",
       name: post.author.name,
-      image: `${baseUrl}${post.author.picture}`,
+      url: baseUrl,
     },
     publisher: {
       "@type": "Organization",
       name: "Nagana Media",
       logo: {
         "@type": "ImageObject",
-        url: `${baseUrl}/logo.png`,
+        url: `${baseUrl}/assets/static/logo.png`,
       },
     },
     mainEntityOfPage: {
@@ -157,14 +165,46 @@ const Post: React.FC<Params> = async ({ params }) => {
     keywords: [post.primaryKeyword, ...(post.secondaryKeywords ?? [])],
     articleSection: "Business Strategy",
     wordCount: post.content?.split(" ").length ?? 0,
+    timeRequired: `PT${readingTime}M`,
+  };
+
+  // Breadcrumb JSON-LD
+  const breadcrumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: baseUrl,
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Blogs",
+        item: `${baseUrl}/blogs`,
+      },
+      {
+        "@type": "ListItem",
+        position: 3,
+        name: post.title,
+        item: `${baseUrl}/blogs/${slug.slug}`,
+      },
+    ],
   };
 
   return (
     <>
-      {/* JSON-LD Structured Data */}
+      {/* Article JSON-LD */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      {/* Breadcrumb JSON-LD */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
       />
 
       <div
@@ -172,7 +212,24 @@ const Post: React.FC<Params> = async ({ params }) => {
         className="flex h-[60vh] w-full items-center justify-center bg-gradient-to-r from-[#0c1323] to-[#1e2f45]"
       >
         <div className="px-4 text-center">
-          <h1 className="mx-auto mt-5 max-w-4xl text-[32px] font-bold leading-tight text-white lg:text-center lg:text-[50px] xl:text-[60px]">
+          {/* Breadcrumb nav for humans */}
+          <nav
+            aria-label="Breadcrumb"
+            className="mb-4 flex items-center justify-center gap-2 text-xs text-white/50"
+          >
+            <Link href="/" className="hover:text-white">
+              Home
+            </Link>
+            <span>/</span>
+            <Link href="/blogs" className="hover:text-white">
+              Blogs
+            </Link>
+            <span>/</span>
+            <span className="line-clamp-1 max-w-[200px] text-white/80">
+              {post.title}
+            </span>
+          </nav>
+          <h1 className="mx-auto mt-2 max-w-4xl text-[32px] font-bold leading-tight text-white lg:text-center lg:text-[50px] xl:text-[60px]">
             {post.title}
           </h1>
           <div className="mt-6 flex items-center justify-center gap-4 text-gray-300">
@@ -183,6 +240,16 @@ const Post: React.FC<Params> = async ({ params }) => {
                 day: "numeric",
               })}
             </span>
+            <span className="text-white/30">·</span>
+            <span className="text-sm">{readingTime} min read</span>
+            {post.primaryKeyword && (
+              <>
+                <span className="text-white/30">·</span>
+                <span className="rounded-full bg-white/10 px-3 py-0.5 text-xs text-white/80">
+                  {post.primaryKeyword}
+                </span>
+              </>
+            )}
           </div>
         </div>
       </div>
@@ -203,6 +270,47 @@ const Post: React.FC<Params> = async ({ params }) => {
           dangerouslySetInnerHTML={{ __html: content }}
         />
       </article>
+
+      {/* Related Posts */}
+      {relatedPosts.length > 0 && (
+        <section data-container className="border-t py-12">
+          <h2 className="text-[24px] font-bold leading-none">
+            Related Articles
+          </h2>
+          <div className="mt-6 grid gap-x-4 gap-y-6 max-[700px]:grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+            {relatedPosts.map((related) => (
+              <Link
+                key={related.slug}
+                href={`/blogs/${related.slug}`}
+                className="group flex flex-col overflow-hidden rounded-xl border bg-[#f9f9f9] transition-shadow hover:shadow-md"
+              >
+                <div className="relative h-[160px] w-full overflow-hidden">
+                  <Image
+                    src={related.coverImage}
+                    alt={related.title}
+                    fill
+                    className="object-cover object-top transition-transform group-hover:scale-105"
+                  />
+                </div>
+                <div className="flex flex-col gap-2 p-4">
+                  <p className="text-xs text-black/40">
+                    {new Date(related.date).toLocaleDateString("en-US", {
+                      year: "numeric",
+                      month: "long",
+                      day: "numeric",
+                    })}
+                    {" · "}
+                    {calculateReadingTime(related.content ?? "")} min read
+                  </p>
+                  <h3 className="text-sm font-semibold leading-snug transition-colors group-hover:text-brand">
+                    {related.title}
+                  </h3>
+                </div>
+              </Link>
+            ))}
+          </div>
+        </section>
+      )}
     </>
   );
 };

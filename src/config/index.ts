@@ -3,15 +3,15 @@ import type { SiteConfig } from "~/types";
 export const siteConfig: SiteConfig = {
   name: "Nagana Media",
   description: "Make Technology Resonate",
-  url: "https://nagana-media.vercel.app",
-  domain: "canvas.vercel.app",
+  url: "https://www.naganamedia.com",
+  domain: "naganamedia.com",
   ogImage: {
-    url: "https://example.com/images/banner.png",
-    width: 641,
-    height: 321,
+    url: "https://www.naganamedia.com/assets/static/heroImage.webp",
+    width: 1200,
+    height: 630,
   },
-  twitterHandle: "@naganamedia",
+  twitterHandle: "@NaganaMedia",
   links: {
-    twitter: "https://twitter.com/naganamedia",
+    twitter: "https://twitter.com/NaganaMedia",
   },
 };

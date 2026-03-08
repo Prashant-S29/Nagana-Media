@@ -62,7 +62,8 @@ export const metadata: Metadata = {
         url: `${baseUrl}/assets/static/heroImage.webp`,
         width: 1200,
         height: 630,
-        alt: "Nagana Media - GTM Strategy Experts",
+        alt: "Nagana Media - GTM Strategy & B2B Technology Marketing Experts",
+        type: "image/webp",
       },
     ],
   },
@@ -70,18 +71,26 @@ export const metadata: Metadata = {
   // Twitter
   twitter: {
     card: "summary_large_image",
+    site: "@NaganaMedia",
     title: "Nagana Media - GTM Strategy & B2B Technology Marketing",
     description:
       "Expert go-to-market strategy, sales enablement, and marketing solutions for B2B technology companies.",
     creator: "@NaganaMedia",
-    images: [`${baseUrl}/assets/static/heroImage.webp`],
+    images: [
+      {
+        url: `${baseUrl}/assets/static/heroImage.webp`,
+        width: 1200,
+        height: 630,
+        alt: "Nagana Media - GTM Strategy & B2B Technology Marketing Experts",
+      },
+    ],
   },
 
   // Verification tags (update these with your actual verification codes)
   verification: {
-    // google: "your-google-site-verification-code",
-    // yandex: "your-yandex-verification-code",
-    // bing: "your-bing-verification-code",
+    // google: "your-google-site-verification-code",  ← fill after Search Console setup
+    // yandex: "your-yandex-verification-code",       ← fill after Yandex Webmaster setup
+    // other: { "msvalidate.01": "your-bing-code" },  ← fill after Bing Webmaster setup
   },
 
   // Alternate languages
@@ -135,15 +144,30 @@ export const organizationJsonLd = {
   description:
     "Expert go-to-market strategy, sales enablement, and marketing solutions for B2B technology companies.",
   sameAs: [
-    // Add your social media profiles here
-    // "https://www.linkedin.com/company/nagana-media",
-    // "https://twitter.com/NaganaMedia",
+    "https://www.linkedin.com/company/nagana-media",
+    "https://twitter.com/NaganaMedia",
+    "https://www.instagram.com/naganamedia",
   ],
   contactPoint: {
     "@type": "ContactPoint",
     contactType: "Customer Service",
     url: `${baseUrl}/contact`,
+    email: "contact@naganamedia.com",
+    telephone: "+91-63771-91007",
     availableLanguage: ["English"],
+  },
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "6, Raghu Vihar, Maharani Farm, Durgapura",
+    addressLocality: "Jaipur",
+    addressRegion: "Rajasthan",
+    addressCountry: "IN",
+  },
+  foundingDate: "2020",
+  numberOfEmployees: {
+    "@type": "QuantitativeValue",
+    minValue: 1,
+    maxValue: 10,
   },
   areaServed: {
     "@type": "Place",

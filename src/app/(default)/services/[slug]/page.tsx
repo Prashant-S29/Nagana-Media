@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 import { notFound } from "next/navigation";
 
 // types
@@ -94,6 +95,32 @@ const Service: React.FC<Params> = async ({ params }) => {
   const baseUrl =
     process.env.NEXT_PUBLIC_BASE_URL ?? "https://www.naganamedia.com";
 
+  // Breadcrumb JSON-LD
+  const breadcrumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: baseUrl,
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Services",
+        item: `${baseUrl}/services`,
+      },
+      {
+        "@type": "ListItem",
+        position: 3,
+        name: service.title,
+        item: `${baseUrl}/services/${slug}`,
+      },
+    ],
+  };
+
   // JSON-LD Structured Data for Service
   const serviceJsonLd = {
     "@context": "https://schema.org",
@@ -115,10 +142,15 @@ const Service: React.FC<Params> = async ({ params }) => {
 
   return (
     <>
-      {/* JSON-LD Structured Data */}
+      {/* Service JSON-LD */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceJsonLd) }}
+      />
+      {/* Breadcrumb JSON-LD */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
       />
 
       <div
@@ -126,6 +158,21 @@ const Service: React.FC<Params> = async ({ params }) => {
         className="flex h-[60vh] w-full items-center justify-center bg-gradient-to-r from-[#0c1323] to-[#1e2f45]"
       >
         <div className="w-full sm:text-center">
+          {/* Breadcrumb nav */}
+          <nav
+            aria-label="Breadcrumb"
+            className="mb-4 flex items-center gap-2 text-xs text-white/50 sm:justify-center"
+          >
+            <Link href="/" className="hover:text-white">
+              Home
+            </Link>
+            <span>/</span>
+            <Link href="/services" className="hover:text-white">
+              Services
+            </Link>
+            <span>/</span>
+            <span className="text-white/80">{service.title}</span>
+          </nav>
           <h1 className="text-[40px] font-bold leading-none text-white lg:text-[50px] xl:text-[60px]">
             {service.title}
           </h1>

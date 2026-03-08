@@ -33,9 +33,8 @@ export const generateSeo = ({
   author,
   openGraphType = "website",
 }: Props): Metadata => {
-  // TODO: update this
-  const defaultImage = "";
-  const imageUrl = image ?? defaultImage;
+  const imageUrl = image ?? siteConfig.ogImage.url;
+  const canonicalUrl = url.startsWith("http") ? url : `${siteConfig.url}${url}`;
 
   const metadata: Metadata = {
     title,
@@ -45,34 +44,35 @@ export const generateSeo = ({
       title,
       description,
       siteName: siteConfig.name,
-      url,
-      locale: "en_GB",
+      url: canonicalUrl,
+      locale: "en_US",
       type: openGraphType,
       images: [
         {
           url: imageUrl,
-          width: 640,
-          height: 321,
-          alt: description,
+          width: 1200,
+          height: 630,
+          alt: typeof title === "string" ? title : siteConfig.name,
         },
       ],
     },
     twitter: {
       card: "summary_large_image",
-      site: "@prashant_gigs",
+      site: siteConfig.twitterHandle,
+      creator: siteConfig.twitterHandle,
       title,
       description,
       images: [
         {
           url: imageUrl,
-          width: 641,
-          height: 321,
-          alt: description,
+          width: 1200,
+          height: 630,
+          alt: typeof title === "string" ? title : siteConfig.name,
         },
       ],
     },
     alternates: {
-      canonical: url,
+      canonical: canonicalUrl,
     },
   };
 
