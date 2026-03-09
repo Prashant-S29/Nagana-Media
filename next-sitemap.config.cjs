@@ -2,7 +2,7 @@
 module.exports = {
   siteUrl: process.env.NEXT_PUBLIC_BASE_URL ?? "https://www.naganamedia.com",
   generateRobotsTxt: true,
-  generateIndexSitemap: true,
+  generateIndexSitemap: false,
   exclude: ["/api/*", "/admin/*", "/_next/*"],
   // Robot.txt generation with AI crawler support
   robotsTxtOptions: {
@@ -60,9 +60,6 @@ module.exports = {
         userAgent: "FacebookBot",
         allow: "/",
       },
-    ],
-    additionalSitemaps: [
-      `${process.env.NEXT_PUBLIC_BASE_URL ?? "https://www.naganamedia.com"}/sitemap.xml`,
     ],
   },
   // Priority settings
