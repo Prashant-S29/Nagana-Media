@@ -86,11 +86,11 @@ export const metadata: Metadata = {
     ],
   },
 
-  // Verification tags (update these with your actual verification codes)
+  // Verification tags
   verification: {
-    // google: "your-google-site-verification-code",  ← fill after Search Console setup
-    // yandex: "your-yandex-verification-code",       ← fill after Yandex Webmaster setup
-    // other: { "msvalidate.01": "your-bing-code" },  ← fill after Bing Webmaster setup
+    google: "Et0jrdqsg2x6VW-c8mFI9BHBanLYE_ZGg9JUJWS5bFE",
+    yandex: "6d18dc2247a7304f",
+    // other: { "msvalidate.01": "{{BING_VERIFICATION_CODE}}" }, ← fill after Bing Webmaster setup
   },
 
   // Alternate languages
