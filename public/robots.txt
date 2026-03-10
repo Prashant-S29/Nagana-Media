@@ -46,7 +46,7 @@ User-agent: FacebookBot
 Allow: /
 
 # Host
-Host: https://naganamedia.com
+Host: https://www.naganamedia.com
 
 # Sitemaps
-Sitemap: https://naganamedia.com/sitemap.xml
+Sitemap: https://www.naganamedia.com/sitemap.xml

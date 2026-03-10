@@ -1,6 +1,6 @@
 /** @type {import('next-sitemap').IConfig} */
 module.exports = {
-  siteUrl: process.env.NEXT_PUBLIC_BASE_URL ?? "https://www.naganamedia.com",
+  siteUrl: "https://www.naganamedia.com",
   generateRobotsTxt: true,
   generateIndexSitemap: false,
   exclude: ["/api/*", "/admin/*", "/_next/*"],
