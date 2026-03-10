@@ -5,15 +5,19 @@ interface WhyChooseUsProps {
 
 export const whyChooseUsData: WhyChooseUsProps[] = [
   {
-    title: "Web Development",
+    title: "B2B Content Strategy",
     percentage: 90,
   },
   {
-    title: "Ui/Ux Design",
+    title: "GTM Execution",
+    percentage: 85,
+  },
+  {
+    title: "Sales Enablement",
     percentage: 80,
   },
   {
     title: "Digital Marketing",
-    percentage: 70,
+    percentage: 75,
   },
 ];

@@ -20,14 +20,9 @@ export const Hero: React.FC = () => {
         </h1>
 
         <p className="mt-5 text-sm font-extralight leading-tight text-white sm:text-base">
-          {/* Driving growth for Technology Companies
-          <br /> through Digital Marketing Excellence */}
-          {/* B2B Technology and SaaS companies find it increasingly difficult to
-          reach their customers. We help you plan, create, and execute a
-          strategy that works to make your technology solution relatable for
-          faster adoption. */}
-          We are a B2B agency that helps you plan, create, and execute a
-          strategy to make your technology solution relatable for faster
+          Nagana Media is a B2B marketing agency based in Jaipur, India, helping
+          technology and SaaS companies worldwide build go-to-market strategies,
+          sales enablement programs, and content ecosystems that drive faster
           adoption.
         </p>
 
