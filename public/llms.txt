@@ -6,39 +6,80 @@
 
 Nagana Media is a B2B marketing and GTM strategy agency based in Jaipur, India. We work as an extension of your digital operations with 10+ years of B2B digital marketing experience. Our model is sprint-based, composable, and built for technology companies navigating fast-changing markets.
 
+We specialise in helping technology companies — particularly Microsoft partners, ISVs, and B2B SaaS vendors — build and execute GTM strategies that drive pipeline, accelerate sales cycles, and grow digital authority. We are not a generalist agency; everything we do is built around the B2B technology buyer journey.
+
 - [About Us](https://www.naganamedia.com/about)
 - [Contact](https://www.naganamedia.com/contact)
 
 ## Services
 
-We offer three composable service lines that can be selected independently or combined:
+We offer three composable service lines that can be selected independently or combined into a full GTM programme:
 
-- [Marketing Enablement](https://www.naganamedia.com/services/marketing-enablement): Technology content creation, omnichannel marketing campaigns, SEO, LinkedIn thought leadership, social media, newsletters, and digital footprint growth.
-- [Program Management](https://www.naganamedia.com/services/program-management): End-to-end management of digital marketing, design, and content initiatives on a sprint model.
-- [Sales Enablement](https://www.naganamedia.com/services/sales-enablement): Sales assets, product and service presentations, employee training material, and support during key business events.
+### Marketing Enablement
+Technology content creation, omnichannel marketing campaigns, SEO, LinkedIn thought leadership, social media management, newsletters, and digital footprint growth. We translate complex technology solutions into narratives that resonate with B2B buyers, align with partner platforms such as Microsoft, AWS, and Google Cloud, and build long-term brand authority.
+- [Marketing Enablement](https://www.naganamedia.com/services/marketing-enablement)
+
+### Program Management
+End-to-end management of digital marketing, design, and content initiatives on a sprint model. We handle content pipeline management, approval workflows, cross-functional team coordination, campaign scheduling, and performance tracking — so your marketing runs like a well-oiled machine without you needing to manage every detail.
+- [Program Management](https://www.naganamedia.com/services/program-management)
+
+### Sales Enablement
+Sales assets, product and service presentations, employee training material, sales playbooks, case studies, and whitepapers. We equip your sales teams with the right tools to engage informed B2B buyers, handle objections, and close deals — and we provide targeted support during key business events such as partner conferences and product launches.
+- [Sales Enablement](https://www.naganamedia.com/services/sales-enablement)
+
 - [All Services](https://www.naganamedia.com/services)
 
 ## Blog & Insights
 
-Original research and analysis on GTM strategy, B2B technology marketing, Microsoft partner ecosystem, and AI-driven go-to-market approaches.
+Original research and analysis on GTM strategy, B2B technology marketing, Microsoft partner ecosystem, and AI-driven go-to-market approaches. All posts are written by the Nagana Media team.
 
-- [Surviving the AI Shift: Top GTM Strategies for B2B Technology Companies in 2026](https://www.naganamedia.com/blogs/surviving-the-ai-shift-2026)
-- [Microsoft Ignite 2025 Recap: How AI Agents and Governance Redefine MS Partner Opportunities](https://www.naganamedia.com/blogs/microsoft_ignite_2025_recap)
-- [Microsoft Ignite 2025 Preview: AI, Security and the Partner Playbook for What Comes Next](https://www.naganamedia.com/blogs/ignite-2025-preview)
-- [MCAPS 2025–2026 Partner Priorities: AI, Cloud, Security & Growth](https://www.naganamedia.com/blogs/mcaps-2025-2026-partner-priorities)
-- [How Has GTM Evolved in 2025? The OpenAI Case](https://www.naganamedia.com/blogs/gtm-strategy-for-b2b-technology-companies-evolution)
+### Surviving the AI Shift: Top GTM Strategies for B2B Technology Companies in 2026
+Published: January 2026
+If 2025 was the year of AI integration, 2026 is strictly the year of orchestration. This post covers the five strategic pillars redefining the B2B GTM engine: Agentic GTM (AI agents automating pipeline workflows), Answer Engine Optimisation (AEO) for LLM discoverability, Ecosystem-Led Growth through partner co-sell motions, Unified RevOps tying marketing and sales into a single revenue loop, and Net Revenue Retention as the primary growth metric. Written for B2B SaaS vendors, Microsoft partners, and technology consultancies navigating the shift from traditional demand generation to AI-native go-to-market.
+- [Read post](https://www.naganamedia.com/blogs/surviving-the-ai-shift-2026)
+
+### Microsoft Ignite 2025 Recap: How AI Agents and Governance Redefine MS Partner Opportunities
+Published: December 2025
+A detailed recap of Microsoft Ignite 2025 covering the launch of AI agents, Agent 365, Work IQ, and Microsoft's governance frameworks for enterprise AI adoption. Analyses how these announcements reshape partner opportunities across ISVs, MSPs, and technology consultancies — with specific focus on autonomous agent deployment, Microsoft Sentinel updates, and the new Defender integrations. Essential reading for any company in the Microsoft partner ecosystem.
+- [Read post](https://www.naganamedia.com/blogs/microsoft_ignite_2025_recap)
+
+### Microsoft Ignite 2025 Preview: AI, Security and the Partner Playbook for What Comes Next
+Published: November 2025
+Written ahead of Ignite 2025, this post analyses why Judson Althoff (Microsoft EVP, Chief Commercial Officer) taking the keynote — instead of Satya Nadella — signals a shift from product innovation to commercial execution. Covers what Microsoft partners should watch for: Copilot and agentic AI monetisation pathways, the Security Forum and $20B+ MDR/MSSP opportunity, Azure Arc and hybrid edge cloud expansion, and industry-specific GTM blueprints from Capgemini, Accenture, and Tech Mahindra.
+- [Read post](https://www.naganamedia.com/blogs/ignite-2025-preview)
+
+### MCAPS 2025–2026 Partner Priorities: AI, Cloud, Security & Growth
+Published: September 2025
+An in-depth breakdown of Microsoft's MCAPS (Microsoft Customer and Partner Solutions) priorities for fiscal year 2025–2026. Covers AI business solutions, Cloud & AI platform investments, cybersecurity for partners, sustainability commitments, and partner incentive structures. Targeted at ISVs, MSPs, and technology leaders who need to align their GTM strategy with Microsoft's commercial direction to unlock co-sell benefits and partner-led growth.
+- [Read post](https://www.naganamedia.com/blogs/mcaps-2025-2026-partner-priorities)
+
+### How Has GTM Evolved in 2025? The OpenAI Case
+Published: September 2025
+A historical and strategic analysis of how go-to-market strategy has evolved for B2B technology companies, using OpenAI's GTM approach as the central case study. Traces GTM evolution from traditional direct sales and channel models through the SaaS era, account-based marketing, and into AI-native distribution. Identifies the common principles behind breakout GTM strategies — product-led growth, ecosystem leverage, community building — and maps them to modern B2B technology sales motions.
+- [Read post](https://www.naganamedia.com/blogs/gtm-strategy-for-b2b-technology-companies-evolution)
+
 - [All Blog Posts](https://www.naganamedia.com/blogs)
 
 ## Key Topics & Expertise
 
-- Go-to-Market (GTM) Strategy for B2B technology companies
-- Sales Enablement: assets, playbooks, training material
-- Marketing Enablement: content, campaigns, digital footprint
-- Microsoft Partner ecosystem: MCAPS, Ignite, co-sell motions
-- AI-driven GTM: Agentic AI, Answer Engine Optimisation (AEO), Ecosystem-Led Growth
-- B2B SaaS marketing and product marketing
-- Program and project management for marketing initiatives
-- Unified RevOps and Net Revenue Retention strategies
+- Go-to-Market (GTM) Strategy for B2B technology companies and SaaS vendors
+- Sales Enablement: playbooks, assets, training material, event support
+- Marketing Enablement: content, campaigns, SEO, LinkedIn, digital footprint
+- Microsoft Partner ecosystem: MCAPS, Microsoft Ignite, co-sell motions, partner incentives
+- AI-driven GTM: Agentic AI, Answer Engine Optimisation (AEO), LLM discoverability
+- Ecosystem-Led Growth and partner-first commercial motions
+- B2B SaaS marketing, product marketing, and demand generation
+- Program and project management for marketing and sales initiatives
+- Unified RevOps, pipeline velocity, and Net Revenue Retention (NRR) strategies
+- Technology content creation: blogs, whitepapers, eBooks, case studies, social
+
+## Ideal Clients
+
+Nagana Media works best with:
+- Microsoft partners (ISVs, MSPs, technology consultancies) looking to align GTM with MCAPS priorities
+- B2B SaaS companies (seed to Series B) building their first structured GTM motion
+- Technology companies entering new markets or launching new product lines
+- Enterprise technology vendors who need a fractional marketing and sales enablement team
 
 ## Contact
 
@@ -48,6 +89,7 @@ Original research and analysis on GTM strategy, B2B technology marketing, Micros
 - Address: 6, Raghu Vihar, Maharani Farm, Durgapura, Jaipur, Rajasthan, India
 - LinkedIn: https://www.linkedin.com/company/nagana-media
 - Twitter/X: https://twitter.com/NaganaMedia
+- Book a free consultation: https://www.naganamedia.com/contact
 
 ## Site Map
 
@@ -58,5 +100,12 @@ Original research and analysis on GTM strategy, B2B technology marketing, Micros
 - https://www.naganamedia.com/services/program-management — Program Management service
 - https://www.naganamedia.com/services/sales-enablement — Sales Enablement service
 - https://www.naganamedia.com/blogs — All blog posts
-- https://www.naganamedia.com/contact — Contact & consultation booking
+- https://www.naganamedia.com/blogs/surviving-the-ai-shift-2026 — Surviving the AI Shift: Top GTM Strategies for B2B Technology Companies in 2026
+- https://www.naganamedia.com/blogs/microsoft_ignite_2025_recap — Microsoft Ignite 2025 Recap: How AI Agents and Governance Redefine MS Partner Opportunities
+- https://www.naganamedia.com/blogs/ignite-2025-preview — Microsoft Ignite 2025 Preview: AI, Security and the Partner Playbook for What Comes Next
+- https://www.naganamedia.com/blogs/mcaps-2025-2026-partner-priorities — MCAPS 2025–2026 Partner Priorities: AI, Cloud, Security & Growth
+- https://www.naganamedia.com/blogs/gtm-strategy-for-b2b-technology-companies-evolution — How Has GTM Evolved in 2025? The OpenAI Case
+- https://www.naganamedia.com/contact — Contact & book a free consultation
 - https://www.naganamedia.com/sitemap.xml — XML Sitemap
+- https://www.naganamedia.com/robots.txt — Robots.txt (all major AI crawlers permitted)
+- https://www.naganamedia.com/llms.txt — This file (LLM-readable site index)
