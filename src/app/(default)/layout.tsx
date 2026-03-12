@@ -27,6 +27,13 @@ export default async function RootLayout({
   return (
     <html lang="en" className={`${fonts.outfit.className} antialiased`}>
       <head>
+        {/* llms.txt discovery - AI crawlers find this like RSS feed links */}
+        <link
+          rel="llms"
+          type="text/plain"
+          href="https://www.naganamedia.com/llms.txt"
+          title="LLM-readable site index"
+        />
         {/* Organization Schema - helps LLMs understand your business */}
         <script
           type="application/ld+json"

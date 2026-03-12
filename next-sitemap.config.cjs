@@ -98,7 +98,26 @@ module.exports = {
         disallow: disallowRules,
       },
     ],
+    additionalSitemaps: [],
+    transformRobotsTxt: async (_, robotsTxt) => {
+      return (
+        robotsTxt +
+        "\n# LLMs.txt - machine-readable site index for AI crawlers and LLMs\n" +
+        "LLMs: https://www.naganamedia.com/llms.txt\n"
+      );
+    },
   },
+
+  // Extra paths to include in the sitemap that Next.js doesn't auto-discover
+  // llms.txt is listed here so Google and every sitemap-reading AI bot finds it
+  additionalPaths: async (config) => [
+    {
+      loc: "/llms.txt",
+      changefreq: "weekly",
+      priority: 0.6,
+      lastmod: new Date().toISOString(),
+    },
+  ],
 
   // Default priority / changefreq (overridden per route in transform)
   priority: 0.7,
