@@ -66,6 +66,20 @@ export async function generateMetadata(props: Params): Promise<Metadata> {
     alternates: {
       canonical: serviceUrl,
     },
+
+    // Explicit robots directives - force Google to index these pages
+    robots: {
+      index: true,
+      follow: true,
+      nocache: false,
+      googleBot: {
+        index: true,
+        follow: true,
+        "max-video-preview": -1,
+        "max-image-preview": "large",
+        "max-snippet": -1,
+      },
+    },
   };
 }
 

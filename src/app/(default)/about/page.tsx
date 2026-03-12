@@ -20,17 +20,99 @@ import {
 } from "public/assets/static";
 import Image from "next/image";
 
-export const generateMetadata = () =>
+const baseUrl =
+  process.env.NEXT_PUBLIC_BASE_URL ?? "https://www.naganamedia.com";
+
+export const generateMetadata = (): import("next").Metadata =>
   generateSeo({
-    title: "About Us",
+    title: "About Us | Nagana Media – GTM & B2B Technology Marketing Agency",
     description:
-      "We are Nagana Media and we provide creative digital solutions for modern brands.",
+      "Nagana Media is a B2B marketing and GTM strategy agency with 10+ years of experience helping technology companies plan, create, and execute strategies that accelerate adoption and growth.",
     url: "/about",
+    keywords: [
+      "About Nagana Media",
+      "B2B marketing agency",
+      "GTM strategy agency",
+      "technology marketing",
+      "B2B digital marketing",
+      "go-to-market consultancy",
+    ],
   });
+
+// JSON-LD structured data for About page
+const aboutPageJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "AboutPage",
+  name: "About Nagana Media",
+  url: `${baseUrl}/about`,
+  description:
+    "Nagana Media is a B2B marketing and GTM strategy agency with 10+ years of experience helping technology companies plan, create, and execute strategies that accelerate adoption and growth.",
+  mainEntity: {
+    "@type": "Organization",
+    name: "Nagana Media",
+    url: baseUrl,
+    logo: `${baseUrl}/assets/static/logo.png`,
+    foundingDate: "2020",
+    description:
+      "B2B agency specialising in Go-to-Market (GTM) strategy, sales enablement, and marketing for technology companies.",
+    numberOfEmployees: {
+      "@type": "QuantitativeValue",
+      minValue: 1,
+      maxValue: 10,
+    },
+    areaServed: { "@type": "Place", name: "Worldwide" },
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: "6, Raghu Vihar, Maharani Farm, Durgapura",
+      addressLocality: "Jaipur",
+      addressRegion: "Rajasthan",
+      addressCountry: "IN",
+    },
+    contactPoint: {
+      "@type": "ContactPoint",
+      contactType: "Customer Service",
+      email: "contact@naganamedia.com",
+      telephone: "+91-63771-91007",
+    },
+    knowsAbout: [
+      "Go-to-Market Strategy",
+      "Sales Enablement",
+      "Marketing Enablement",
+      "B2B Technology Marketing",
+      "Program Management",
+      "AI Strategy",
+    ],
+  },
+};
+
+const breadcrumbJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: baseUrl },
+    {
+      "@type": "ListItem",
+      position: 2,
+      name: "About Us",
+      item: `${baseUrl}/about`,
+    },
+  ],
+};
 
 const About: React.FC = () => {
   return (
     <>
+      {/* AboutPage JSON-LD */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(aboutPageJsonLd) }}
+      />
+      {/* Breadcrumb JSON-LD */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
+
       {/* Main Intro */}
       <div
         data-container

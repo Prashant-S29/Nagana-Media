@@ -8,7 +8,7 @@ description: "Fill in your marketing gaps with specialized technology content, m
 
 Marketing enablement is all about making your technology, solutions, and services more relatable for your target audience. Relying on a single channel for marketing is no longer effective—success requires an integrated, multi-touch strategy that creates a cohesive and immersive brand experience.
 
-![Marketing Strategy](/assets/blog/dynamic-routing/cover.jpg)
+<!--![Marketing Strategy](/assets/static/services-cover.jpg)-->
 
 ### 1. Nurture Engine: Building Brand Awareness and Authority
 

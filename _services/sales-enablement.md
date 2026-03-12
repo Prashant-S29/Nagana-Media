@@ -6,7 +6,7 @@ description: "Select our sales support service that comes in to deliver specific
 
 ## Sales Enablement: Driving Awareness, Engagement, and Conversions
 
-![Sales Strategy](/assets/blog/dynamic-routing/cover.jpg)
+<!--![Sales Strategy](/assets/static/services-cover.jpg)-->
 
 Today's sales cycles are no longer linear. Customers are informed, making buying decisions long before engaging with sales teams. To stay ahead, businesses must integrate marketing, advertising, and sales into a cohesive strategy. Our **Marketing & Sales Enablement** services help you bridge this gap, ensuring your brand presence is strong and your sales teams are equipped with the right tools to convert leads into customers.
 
@@ -18,7 +18,7 @@ We ensure that your marketing efforts directly support and enhance your sales st
 - **Customer Journey Mapping:** Develop marketing strategies that match every stage of the sales funnel, from awareness to decision-making.
 - **Omnichannel Engagement:** Utilize LinkedIn, email, social media, and content marketing to engage potential clients at the right time.
 
-![Brand Awareness](/assets/blog/dynamic-routing/cover.jpg)
+![Brand Awareness](/assets/static/services-cover.jpg)
 
 ### 2. Sales Enablement Assets: Empowering Your Sales Team
 
@@ -28,7 +28,7 @@ High-impact marketing materials can transform how your sales team engages with p
 - **Sales Playbooks & Training Materials:** Equip your sales teams with the right knowledge and resources to handle objections and close deals.
 - **Case Studies & Whitepapers:** Build credibility and trust with data-backed success stories that resonate with potential clients.
 
-![Content Strategy](/assets/blog/dynamic-routing/cover.jpg)
+![Content Strategy](/assets/static/services-cover.jpg)
 
 ### 3. Scaling Your Marketing and Sales Programs
 

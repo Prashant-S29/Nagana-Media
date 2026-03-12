@@ -80,12 +80,19 @@ export const generateSeo = ({
     metadata.keywords = keywords;
   }
 
-  if (robots) {
-    metadata.robots = {
-      index: robots.index ?? undefined,
-      follow: robots.follow ?? undefined,
-    };
-  }
+  // Always set explicit robots directives (default: index + follow)
+  metadata.robots = {
+    index: robots?.index ?? true,
+    follow: robots?.follow ?? true,
+    nocache: false,
+    googleBot: {
+      index: robots?.index ?? true,
+      follow: robots?.follow ?? true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  };
 
   if (author) {
     metadata.authors = [{ name: author }];

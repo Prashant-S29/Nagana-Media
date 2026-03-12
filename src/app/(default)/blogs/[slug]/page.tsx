@@ -48,8 +48,10 @@ export async function generateMetadata(props: {
       "B2B Technology",
       "Go-to-Market",
       "AI Strategy",
-      "OpenAI",
-    ].join(", "),
+    ]
+      .filter(Boolean)
+      .join(", "),
+
     authors: [{ name: post.author.name }],
     creator: post.author.name,
     publisher: "Nagana Media",
@@ -93,6 +95,20 @@ export async function generateMetadata(props: {
     // Additional SEO
     alternates: {
       canonical: postUrl,
+    },
+
+    // Explicit robots directives - force Google to index these pages
+    robots: {
+      index: true,
+      follow: true,
+      nocache: false,
+      googleBot: {
+        index: true,
+        follow: true,
+        "max-video-preview": -1,
+        "max-image-preview": "large",
+        "max-snippet": -1,
+      },
     },
 
     // Structured Data

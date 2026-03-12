@@ -93,12 +93,9 @@ export const metadata: Metadata = {
     // other: { "msvalidate.01": "{{BING_VERIFICATION_CODE}}" }, ← fill after Bing Webmaster setup
   },
 
-  // Alternate languages
+  // Canonical for home page (child pages override this via generateMetadata)
   alternates: {
     canonical: baseUrl,
-    languages: {
-      "en-US": baseUrl,
-    },
   },
 
   // Robots

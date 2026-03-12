@@ -3,4 +3,40 @@ Page with redirect,Website,Not Started,7
 Alternative page with proper canonical tag,Website,Not Started,2
 Excluded by ‘noindex’ tag,Website,Not Started,1
 Crawled - currently not indexed,Google systems,Not Started,12
+Discovered – currently not indexed,Google systems,Not Started,1
 Not found (404),Website,N/A,0
+
+
+1. Pages with redirect
+http://naganamedia.com/
+https://naganamedia.com/
+http://www.naganamedia.com/
+https://naganamedia.com/services/marketing-enablement/
+https://www.naganamedia.com/services/marketing-enablement/
+https://naganamedia.com/services/sales-enablement/
+https://www.naganamedia.com/services/sales-enablement/
+
+
+2. Page with redirect
+https://www.naganamedia.com/contact
+https://www.naganamedia.com/services/sales-enablement
+
+3. Excluded by ‘noindex’ tag
+https://www.naganamedia.com/blogs/hello-world
+
+4. Crawled - currently not indexed
+https://www.naganamedia.com/blogs/mcaps-2025-2026-partner-priorities
+https://www.naganamedia.com/services/program-management
+https://www.naganamedia.com/blogs/microsoft_ignite_2025_recap
+https://www.naganamedia.com/_next/static/media/e8f2fbee2754df70-s.p.9b7a96b4.woff2
+https://www.naganamedia.com/blogs/ignite-2025-preview
+https://www.naganamedia.com/_next/static/media/7b0b24f36b1a6d0b-s.p.woff2
+https://www.naganamedia.com/_next/static/media/6c25f6e897d845a3-s.p.woff2
+https://www.naganamedia.com/blogs/gtm-strategy-for-b2b-technology-companies-evolution
+https://www.naganamedia.com/_next/static/media/330d5559b8e2c3d6-s.p.woff2
+https://www.naganamedia.com/_next/static/media/904be59b21bd51cb-s.p.woff2
+https://www.naganamedia.com/blogs/dynamic-routing
+https://www.naganamedia.com/blogs/preview
+
+5. Discovered – currently not indexed
+https://www.naganamedia.com/about

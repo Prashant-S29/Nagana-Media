@@ -6,7 +6,7 @@ description: "Manage your digital marketing, design, and content initiatives wit
 
 ## **Program Management: Streamlining Execution & Maximizing Efficiency**
 
-![Program Management](/assets/blog/dynamic-routing/cover.jpg)
+<!--![Program Management](/assets/static/services-cover.jpg)-->
 
 In today's fast-paced business landscape, executing marketing and sales initiatives requires more than just great ideas—it demands **precision, coordination, and efficiency**. Our **Program Management** services ensure your strategies are executed flawlessly, driving **seamless operations, timely content delivery, and cross-team collaboration**.
 
