@@ -327,7 +327,7 @@ export const siteConfig: SiteConfig = {
   url: "https://www.{{YOUR_DOMAIN}}",        // ← PRODUCTION URL with www
   domain: "{{YOUR_DOMAIN}}",                 // ← no protocol, no www
   ogImage: {
-    url: "https://www.{{YOUR_DOMAIN}}/assets/og-default.png",
+    url: "https://www.{{YOUR_DOMAIN}}/assets/og-default.webp",
     width: 1200,                             // ← must be 1200
     height: 630,                             // ← must be 630
   },
@@ -428,7 +428,7 @@ export const metadata: Metadata = {
     description: "{{DEFAULT_META_DESCRIPTION}}",
     images: [
       {
-        url: `${baseUrl}/assets/og-default.png`,
+        url: `${baseUrl}/assets/og-default.webp`,
         width: 1200,
         height: 630,
         alt: "{{SITE_NAME}} - {{SITE_TAGLINE}}",
@@ -445,7 +445,7 @@ export const metadata: Metadata = {
     description: "{{DEFAULT_META_DESCRIPTION}}",
     images: [
       {
-        url: `${baseUrl}/assets/og-default.png`,
+        url: `${baseUrl}/assets/og-default.webp`,
         width: 1200,
         height: 630,
         alt: "{{SITE_NAME}} - {{SITE_TAGLINE}}",
@@ -482,8 +482,8 @@ export const metadata: Metadata = {
 
   icons: {
     icon: "/favicon.ico",
-    apple: "/assets/apple-touch-icon.png",     // 180×180 PNG
-    shortcut: "/favicon-32x32.png",
+    apple: "/assets/apple-touch-icon.webp",     // 180×180 PNG
+    shortcut: "/favicon-32x32.webp",
   },
 
   manifest: "/manifest.json",
@@ -694,7 +694,7 @@ export const organizationJsonLd = {
   "@type": "Organization",
   name: "{{SITE_NAME}}",
   url: baseUrl,
-  logo: `${baseUrl}/assets/static/logo.png`,
+  logo: `${baseUrl}/assets/static/logo.webp`,
   description: "{{ORGANIZATION_DESCRIPTION}}",
   foundingDate: "{{FOUNDING_YEAR}}",           // e.g. "2020"
   sameAs: [
@@ -752,7 +752,7 @@ export const websiteJsonLd = {
     name: "{{SITE_NAME}}",
     logo: {
       "@type": "ImageObject",
-      url: `${baseUrl}/assets/static/logo.png`,
+      url: `${baseUrl}/assets/static/logo.webp`,
     },
   },
   potentialAction: {
@@ -787,7 +787,7 @@ const articleJsonLd = {
     name: "{{SITE_NAME}}",
     logo: {
       "@type": "ImageObject",
-      url: `${baseUrl}/assets/static/logo.png`,  // must be absolute path, not /logo.png
+      url: `${baseUrl}/assets/static/logo.webp`,  // must be absolute path, not /logo.webp
     },
   },
   mainEntityOfPage: {
@@ -1232,13 +1232,13 @@ Every Markdown blog post should include a full frontmatter block:
 ---
 title: "{{ARTICLE_TITLE}}"
 excerpt: "{{150-160 CHAR META DESCRIPTION — also used as og:description}}"
-coverImage: "/assets/blog/{{SLUG}}/cover.png"
+coverImage: "/assets/blog/{{SLUG}}/cover.webp"
 date: "{{ISO_DATE}}"                           # e.g. "2026-01-22T00:00:00.000Z"
 author:
   name: "{{AUTHOR_NAME}}"
-  picture: "/assets/blog/authors/{{AUTHOR_SLUG}}.jpeg"
+  picture: "/assets/blog/authors/{{AUTHOR_SLUG}}.webp"
 ogImage:
-  url: "/assets/blog/{{SLUG}}/cover.png"
+  url: "/assets/blog/{{SLUG}}/cover.webp"
 metaTitle: "{{SEO_OPTIMISED_TITLE — can differ from display title}}"
 metaDescription: "{{SEO_OPTIMISED_DESCRIPTION}}"
 primaryKeyword: "{{MAIN_TARGET_KEYWORD}}"
@@ -1417,7 +1417,7 @@ const relatedPosts = getRelatedPosts(post, 3);
 2. OG images must be exactly **1200×630**
 3. Use `next/image` for all images — it handles WebP conversion, lazy loading, and responsive `srcSet` automatically
 4. Use `priority` prop on above-the-fold images (hero, banner) to prevent LCP degradation
-5. Name image files descriptively: `gtm-strategy-b2b-2026-cover.png` not `cover.png` or `IMG_1234.jpg`
+5. Name image files descriptively: `gtm-strategy-b2b-2026-cover.webp` not `cover.webp` or `IMG_1234.jpg`
 
 ### Alt Text Guidelines
 
@@ -1435,19 +1435,19 @@ const relatedPosts = getRelatedPosts(post, 3);
 
 ### Logo Path in JSON-LD
 
-A common mistake is referencing `/logo.png` in JSON-LD when the actual file is at `/assets/static/logo.png`. The path in JSON-LD must be an absolute URL pointing to a file that actually exists and returns a 200 response:
+A common mistake is referencing `/logo.webp` in JSON-LD when the actual file is at `/assets/static/logo.webp`. The path in JSON-LD must be an absolute URL pointing to a file that actually exists and returns a 200 response:
 
 ```ts
 // ❌ Wrong — file does not exist at this path
-logo: { "@type": "ImageObject", url: `${baseUrl}/logo.png` }
+logo: { "@type": "ImageObject", url: `${baseUrl}/logo.webp` }
 
 // ✅ Correct — file exists and is accessible
-logo: { "@type": "ImageObject", url: `${baseUrl}/assets/static/logo.png` }
+logo: { "@type": "ImageObject", url: `${baseUrl}/assets/static/logo.webp` }
 ```
 
 Verify with:
 ```bash
-curl -I https://www.{{YOUR_DOMAIN}}/assets/static/logo.png
+curl -I https://www.{{YOUR_DOMAIN}}/assets/static/logo.webp
 # Must return HTTP/2 200
 ```
 
@@ -1552,11 +1552,11 @@ Sitemap: https://www.yourdomain.com/sitemap.xml
 ### Bug 9: Broken Logo URL in Article JSON-LD
 
 ```ts
-// ❌ File does not exist at /logo.png
-publisher: { logo: { url: `${baseUrl}/logo.png` } }
+// ❌ File does not exist at /logo.webp
+publisher: { logo: { url: `${baseUrl}/logo.webp` } }
 
 // ✅ Correct absolute path to actual file
-publisher: { logo: { url: `${baseUrl}/assets/static/logo.png` } }
+publisher: { logo: { url: `${baseUrl}/assets/static/logo.webp` } }
 ```
 
 ### Bug 10: og:locale Inconsistency
@@ -1774,7 +1774,7 @@ Use this as a handoff checklist when implementing SEO in a new Next.js App Route
 
 **Blog Detail Page**
 - [ ] `Article` schema with: `headline`, `description`, `image`, `datePublished`, `dateModified`, `author`, `publisher`, `mainEntityOfPage`, `keywords`, `wordCount`, `timeRequired`
-- [ ] `publisher.logo` path is correct and resolves (common bug: `/logo.png` vs `/assets/static/logo.png`)
+- [ ] `publisher.logo` path is correct and resolves (common bug: `/logo.webp` vs `/assets/static/logo.webp`)
 - [ ] `BreadcrumbList` schema with correct `position` numbers (1, 2, 3...)
 - [ ] Visible `<nav aria-label="Breadcrumb">` matching the JSON-LD breadcrumb
 
@@ -1907,7 +1907,7 @@ curl -s https://www.{{YOUR_DOMAIN}}/sitemap.xml | grep "<loc>"
 curl -s https://www.{{YOUR_DOMAIN}}/llms.txt | head -5
 
 # 8. Logo resolves
-curl -I https://www.{{YOUR_DOMAIN}}/assets/static/logo.png | grep "HTTP"
+curl -I https://www.{{YOUR_DOMAIN}}/assets/static/logo.webp | grep "HTTP"
 
 # 9. OG image resolves
 curl -I "https://www.{{YOUR_DOMAIN}}/api/og?title=Test" | grep "HTTP"

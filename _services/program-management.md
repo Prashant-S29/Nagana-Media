@@ -1,5 +1,5 @@
 ---
-icon: "/assets/static/users.png"
+icon: "/assets/static/users.webp"
 title: "Program Management"
 description: "Manage your digital marketing, design, and content initiatives with ease."
 ---

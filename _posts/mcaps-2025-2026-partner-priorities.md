@@ -1,13 +1,13 @@
 ---
 title: "MCAPS 2025–2026 Partner Priorities: AI, Cloud, Security & Growth"
 excerpt: "Explore Microsoft’s MCAPS 2025–2026 priorities: AI, cloud, security, sustainability, and partner incentives. See what matters most for ISVs, MSPs, and tech leaders."
-coverImage: "/assets/blog/mcaps-2025-2026-partner-priorities/cover.png"
+coverImage: "/assets/blog/mcaps-2025-2026-partner-priorities/cover.webp"
 date: "2025-09-06T05:35:07.322Z"
 author:
   name: Nagana Media
-  picture: "/assets/blog/authors/tim.jpeg"
+  picture: "/assets/blog/authors/tim.webp"
 ogImage:
-  url: "/assets/blog/mcaps-2025-2026-partner-priorities/cover.png"
+  url: "/assets/blog/mcaps-2025-2026-partner-priorities/cover.webp"
 metaTitle: "MCAPS 2025–2026 Partner Priorities: AI, Cloud, Security & Growth"
 metaDescription: "Explore Microsoft’s MCAPS 2025–2026 priorities: AI, cloud, security, sustainability, and partner incentives. See what matters most for ISVs, MSPs, and tech leaders."
 primaryKeyword: "MCAPS 2025-2026 Partner Priorities"
@@ -71,7 +71,7 @@ Microsoft is orienting MCAPS 2025–2026 around a handful of growth engines that
 
 The message is clear: partners who align early to these priorities, whether by embedding Copilot into vertical solutions, modernizing workloads on Azure, or building security-rich services, will be better positioned to capture new revenue streams.
 
-![MCAPS FY26 Solution Areas](/assets/blog/mcaps-2025-2026-partner-priorities/infoOne.png)
+![MCAPS FY26 Solution Areas](/assets/blog/mcaps-2025-2026-partner-priorities/infoOne.webp)
 **Image description:** An infographic summarizing Microsoft’s MCAPS FY26 solution areas — AI Business Solutions, Cloud & AI Platforms, and Security — showing how partners can align their go-to-market motions with Microsoft’s key priorities for the year. Each area includes short highlights on innovation, modernization, and protection.
 
 ### In What Ways Is AI Business Solutions Becoming the Core?
@@ -132,7 +132,7 @@ In the Asia-Pacific, CSP incentives tied to SMB growth will be prominent. In the
 
 In your content, embed GEO keywords (e.g., “EMEA partners,” “APAC incentives,” “U.S. co-sell”) to reflect this regional nuance.
 
-![Microsoft's FY25–26 Partner Acceleration roadmap](/assets/blog/mcaps-2025-2026-partner-priorities/infoTwo.png)
+![Microsoft's FY25–26 Partner Acceleration roadmap](/assets/blog/mcaps-2025-2026-partner-priorities/infoTwo.webp)
 **Image description:** Microsoft’s FY25–26 Partner Acceleration roadmap highlights expanded benefits, new designations, and a unified marketplace experience tailored to regional priorities across EMEA, APAC, and the U.S.
 
 ### Where Does Sustainability & Social Impact Fit Into MCAPS 2025?
@@ -196,7 +196,7 @@ Encourage user-generated content, partner-led blogs, video interviews, and regio
 
 Together, this trifecta- signal scanning, feedback discipline, and community activation. It is how you ensure your guide stays relevant, trusted, and ahead of the curve in FY 26 and beyond.
 
-![Beyond the Guide: How to keep your MCAPS 2025 strategy relevant in FY26 and beyond](/assets/blog/mcaps-2025-2026-partner-priorities/infoThree.png)
+![Beyond the Guide: How to keep your MCAPS 2025 strategy relevant in FY26 and beyond](/assets/blog/mcaps-2025-2026-partner-priorities/infoThree.webp)
 **Image description:** Beyond the Guide: How to keep your MCAPS 2025 strategy relevant in FY26 and beyond through signal scanning, disciplined feedback loops, and community activation.
 
 ## Frequently Asked Questions

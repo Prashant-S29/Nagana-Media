@@ -14,13 +14,13 @@
       "type": "image/x-icon"
     },
     {
-      "src": "/assets/static/logo.png",
+      "src": "/assets/static/logo.webp",
       "sizes": "192x192",
       "type": "image/png",
       "purpose": "any maskable"
     },
     {
-      "src": "/assets/static/logo.png",
+      "src": "/assets/static/logo.webp",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "any maskable"

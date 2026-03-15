@@ -1,5 +1,5 @@
 ---
-icon: "/assets/static/file.png"
+icon: "/assets/static/file.webp"
 title: "Marketing Enablement"
 description: "Fill in your marketing gaps with specialized technology content, marketing initiatives, or scale your digital footprint."
 ---

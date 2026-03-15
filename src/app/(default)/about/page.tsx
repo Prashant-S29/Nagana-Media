@@ -51,7 +51,7 @@ const aboutPageJsonLd = {
     "@type": "Organization",
     name: "Nagana Media",
     url: baseUrl,
-    logo: `${baseUrl}/assets/static/logo.png`,
+    logo: `${baseUrl}/assets/static/logo.webp`,
     foundingDate: "2020",
     description:
       "B2B agency specialising in Go-to-Market (GTM) strategy, sales enablement, and marketing for technology companies.",

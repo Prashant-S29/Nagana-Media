@@ -1,13 +1,13 @@
 ---
 title: "Microsoft Ignite 2025 Recap: How AI Agents and Governance Redefine MS Partner Opportunities"
 excerpt: "Explore Microsoft Ignite 2025 highlights, from AI agents and Agent 365 to Work IQ. Learn how these updates reshape partner opportunities and enterprise AI adoption."
-coverImage: "/assets/blog/microsoft-ignite-2025-recap/cover.png"
+coverImage: "/assets/blog/microsoft-ignite-2025-recap/cover.webp"
 date: "2025-12-04T05:35:07.322Z"
 author:
   name: Nagana Media
-  picture: "/assets/blog/authors/tim.jpeg"
+  picture: "/assets/blog/authors/tim.webp"
 ogImage:
-  url: "/assets/blog/microsoft-ignite-2025-recap/cover.png"
+  url: "/assets/blog/microsoft-ignite-2025-recap/cover.webp"
 metaTitle: "Microsoft Ignite 2025: AI Agents, Governance & Partner Opportunities"
 metaDescription: "Explore Microsoft Ignite 2025 highlights, from AI agents and Agent 365 to Work IQ. Learn how these updates reshape partner opportunities and enterprise AI adoption."
 primaryKeyword: "Microsoft Ignite 2025"
@@ -157,7 +157,7 @@ Being part of this ecosystem gives partners access to:
 
 This aligns perfectly with Microsoft's broader vision of AI agents becoming the default operating layer across Microsoft 365, Azure, Dynamics, and Teams.
 
-![Microsoft AI Agents Architecture](/assets/blog/microsoft-ignite-2025-recap/architecture.png)
+![Microsoft AI Agents Architecture](/assets/blog/microsoft-ignite-2025-recap/architecture.webp)
 **Image description:** Microsoft AI Agents architecture across four layers: Work IQ, agent engine, governance, and app integrations.
 
 ## How to Leverage Microsoft Tools to Build and Scale AI Agent Solutions?
@@ -208,7 +208,7 @@ Meanwhile, Azure Databricks adds the data engineering and MLOps foundation neede
 
 Together, they simplify the entire AI lifecycle from ideation to production.
 
-![Microsoft AI Agent Lifecycle](/assets/blog/microsoft-ignite-2025-recap/lifecycle.png)
+![Microsoft AI Agent Lifecycle](/assets/blog/microsoft-ignite-2025-recap/lifecycle.webp)
 **Image description:** Five-stage Microsoft AI agent lifecycle: build, connect, deploy, govern, and manage.
 
 ## What's the Highlight for Marketplace & Co-Sell at Microsoft Ignite 2025?

@@ -171,7 +171,7 @@ const Post: React.FC<Params> = async ({ params }) => {
       name: "Nagana Media",
       logo: {
         "@type": "ImageObject",
-        url: `${baseUrl}/assets/static/logo.png`,
+        url: `${baseUrl}/assets/static/logo.webp`,
       },
     },
     mainEntityOfPage: {

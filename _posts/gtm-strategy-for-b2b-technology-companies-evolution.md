@@ -1,13 +1,13 @@
 ---
 title: "How Has GTM Evolved in 2025? Open AI Case"
 excerpt: "Explore the evolution of GTM strategy for B2B technology companies, from traditional approaches to modern AI-driven tactics. Learn from OpenAI's success."
-coverImage: "/assets/blog/gtm-strategy-for-b2b-technology-companies-evolution/cover.png"
+coverImage: "/assets/blog/gtm-strategy-for-b2b-technology-companies-evolution/cover.webp"
 date: "2025-09-06T05:35:07.322Z"
 author:
   name: Nagana Media
-  picture: "/assets/blog/authors/tim.jpeg"
+  picture: "/assets/blog/authors/tim.webp"
 ogImage:
-  url: "/assets/blog/gtm-strategy-for-b2b-technology-companies-evolution/cover.png"
+  url: "/assets/blog/gtm-strategy-for-b2b-technology-companies-evolution/cover.webp"
 metaTitle: "How Has GTM Evolved in 2025? Open AI Case"
 metaDescription: "Explore the evolution of GTM strategy for B2B technology companies, from traditional approaches to modern AI-driven tactics. Learn from OpenAI's success."
 primaryKeyword: "GTM Strategy for B2B technology companies"
@@ -43,7 +43,7 @@ For example, the Ford Mustang, the highest-selling sports car in the US in 2024,
 
 That's not the end, though; the concept car did a few laps around the track and managed to reach a promising 120mph. In IT terms, as revolutionary as some crazy 5G download speeds we see today.
 
-![GTM Evolution](/assets/blog/gtm-strategy-for-b2b-technology-companies-evolution/imageOne.png)
+![GTM Evolution](/assets/blog/gtm-strategy-for-b2b-technology-companies-evolution/imageOne.webp)
 **Source:** [IMRRC](https://www.racingarchives.org/blogpost/mustang-prototype-debuts-at-the-glen-in-1962/)
 
 This stunt attracted much attention, exactly what Ford needed to push this concept into production. Cha the Mustang is the longest-running production car in automobile history.
@@ -145,7 +145,7 @@ The same article says that Data diversification is also a huge part of the puzzl
 
 Finally, for technology companies, the concept of Product-Led Growth (PLG) continues to gain traction. This is where the product itself becomes the primary driver of customer acquisition, activation, and retention. According to an article from Asana, think freemium models and free trials that let users experience the value firsthand, leading to organic growth and strong user retention.
 
-![Infographic](/assets/blog/gtm-strategy-for-b2b-technology-companies-evolution/imageTwo.png)
+![Infographic](/assets/blog/gtm-strategy-for-b2b-technology-companies-evolution/imageTwo.webp)
 
 ## What's Next for GTM?
 
@@ -163,7 +163,7 @@ The future of GTM is exciting and, frankly, a bit like a rapidly evolving organi
 
 The core principle will remain to understand your customer deeply, offer exceptional value, and deliver it through the channels and experiences they prefer. The tools and techniques will just get a whole lot smarter.
 
-![Infographic](/assets/blog/gtm-strategy-for-b2b-technology-companies-evolution/imageThree.png)
+![Infographic](/assets/blog/gtm-strategy-for-b2b-technology-companies-evolution/imageThree.webp)
 
 ## 2025 GTM FAQ
 

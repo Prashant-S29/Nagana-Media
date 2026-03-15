@@ -5,26 +5,26 @@ import imageTwo from "./imageTwo.webp";
 import imageThree from "./imageThree.webp";
 import imageFour from "./imageFour.webp";
 
-import whyChooseUsImage from "./whyChooseUs.png";
-import aboutUsImageOne from "./aboutUsOne.png";
-import aboutUsImageTwo from "./aboutUsTwo.png";
-import experienceImage from "./experienceImage.png";
+import whyChooseUsImage from "./whyChooseUs.webp";
+import aboutUsImageOne from "./aboutUsOne.webp";
+import aboutUsImageTwo from "./aboutUsTwo.webp";
+import experienceImage from "./experienceImage.webp";
 
-import aboutUsBannerImage from "./aboutUsBannerImage.png";
-import servicePageBannerImage from "./servicePageBannerImage.png";
-import contactUsImageBanner from "./contactUsImageBanner.png";
+import aboutUsBannerImage from "./aboutUsBannerImage.webp";
+import servicePageBannerImage from "./servicePageBannerImage.webp";
+import contactUsImageBanner from "./contactUsImageBanner.webp";
 
-import abhijeet from "./abhijeet.png";
-// import prashant from "./prashant.png"
-import harshita from "./harshita.png";
-import mohit from "./mohit.png";
-import ashish from "./ashish.png";
+import abhijeet from "./abhijeet.webp";
+// import prashant from "./prashant.webp"
+import harshita from "./harshita.webp";
+import mohit from "./mohit.webp";
+import ashish from "./ashish.webp";
 
-import logo from "./logo.png";
+import logo from "./logo.webp";
 
-import calendar from "./calendar.png";
-import users from "./users.png";
-import file from "./file.png";
+import calendar from "./calendar.webp";
+import users from "./users.webp";
+import file from "./file.webp";
 
 export {
   heroSectionImage,

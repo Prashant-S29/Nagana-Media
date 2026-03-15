@@ -115,7 +115,7 @@ export const metadata: Metadata = {
   // Icons
   icons: {
     icon: "/favicon.ico",
-    apple: "/assets/static/logo.png",
+    apple: "/assets/static/logo.webp",
   },
 
   // Manifest for PWA
@@ -137,7 +137,7 @@ export const organizationJsonLd = {
   "@type": "Organization",
   name: "Nagana Media",
   url: baseUrl,
-  logo: `${baseUrl}/assets/static/logo.png`,
+  logo: `${baseUrl}/assets/static/logo.webp`,
   description:
     "Expert go-to-market strategy, sales enablement, and marketing solutions for B2B technology companies.",
   sameAs: [
@@ -194,7 +194,7 @@ export const websiteJsonLd = {
     name: "Nagana Media",
     logo: {
       "@type": "ImageObject",
-      url: `${baseUrl}/assets/static/logo.png`,
+      url: `${baseUrl}/assets/static/logo.webp`,
     },
   },
   potentialAction: {

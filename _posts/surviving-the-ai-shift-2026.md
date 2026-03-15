@@ -1,13 +1,13 @@
 ---
 title: "Surviving the AI Shift: Top GTM Strategies for B2B Technology Companies in 2026"
 excerpt: "If 2025 was the year of integration, 2026 is the year of orchestration. Discover the five strategic pillars—from AI Agents to Answer Engine Optimization—redefining the B2B GTM engine."
-coverImage: "/assets/blog/surviving-the-ai-shift-2026/cover.png"
+coverImage: "/assets/blog/surviving-the-ai-shift-2026/cover.webp"
 date: "2026-01-22T02:22:00.000Z"
 author:
   name: Nagana Media
-  picture: "/assets/blog/authors/nagana.jpeg"
+  picture: "/assets/blog/authors/nagana.webp"
 ogImage:
-  url: "/assets/blog/surviving-the-ai-shift-2026/cover.png"
+  url: "/assets/blog/surviving-the-ai-shift-2026/cover.webp"
 metaTitle: "2026 B2B GTM Strategies: Moving from Integration to Orchestration"
 metaDescription: "Learn how AI Agents, Ecosystem-Led Growth, and Unified RevOps are transforming B2B Go-To-Market strategies in 2026. Rebuild your engine for the AI-driven reality."
 primaryKeyword: "B2B GTM Strategies 2026"
@@ -100,7 +100,7 @@ The "One Revenue Team" approach demands a unified data architecture. A lead's be
 In a Unified RevOps model, the "Goal: Reduce Reporting Time" field captured by the AI note-taker during the sales call is automatically mapped to the Onboarding Project Plan. The CSM’s first call is: "I know your main goal is speed, let's set up your automated reports first." Time-to-value is halved, and retention is secured.
 
 
-![GTM Evolution](/assets/blog/surviving-the-ai-shift-2026/info_01.png)
+![GTM Evolution](/assets/blog/surviving-the-ai-shift-2026/info_01.webp)
 
 ## How Do You Build a Data-Driven Ideal Customer Profile (ICP)? 
 The concept of the ICP has matured. In the past, "Fintech companies in New York with 50+ employees" was a sufficient definition. Today, that is just a list, not a strategy.

@@ -1,5 +1,5 @@
 ---
-icon: "/assets/static/calendar.png"
+icon: "/assets/static/calendar.webp"
 title: "Sales Enablement"
 description: "Select our sales support service that comes in to deliver specific sales assets during key business events or build internal repository of employee training material."
 ---
