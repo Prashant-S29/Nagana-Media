@@ -28,8 +28,13 @@ export const MobileNav: React.FC = () => {
         asChild
         className="hover:bg-transparent hover:text-white focus:bg-transparent focus:text-white"
       >
-        <Button variant="ghost" size="icon" className="text-white">
-          <MenuIcon />
+        <Button
+          variant="ghost"
+          size="icon"
+          className="text-white"
+          aria-label="Open navigation menu"
+        >
+          <MenuIcon aria-hidden="true" />
         </Button>
       </SheetTrigger>
       <SheetContent>

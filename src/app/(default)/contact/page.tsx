@@ -67,7 +67,7 @@ const Contact: React.FC = () => {
           >
             We are here to help!
           </h2>
-          <p className="mt-5 max-w-[500px] text-base leading-tight text-black/50">
+          <p className="mt-5 max-w-[500px] text-base leading-tight text-body-muted">
             Our dedicated team is ready to provide the answers and support you
             need. Whether it&apos;s a quick question or a detailed concern,
             we&apos;re just a call, email, or chat away. Let us make your
@@ -75,7 +75,7 @@ const Contact: React.FC = () => {
           </p>
           <div className="mt-5 grid grid-cols-1 gap-4 sm:grid-cols-2">
             <div>
-              <p className="text-sm leading-tight text-black/50">Email</p>
+              <p className="text-sm leading-tight text-body-muted">Email</p>
               <p className="font-medium leading-tight text-black">
                 <Link href="mailto:contact@naganamedia.com">
                   contact@naganamedia.com
@@ -83,7 +83,7 @@ const Contact: React.FC = () => {
               </p>
             </div>
             <div>
-              <p className="text-sm leading-tight text-black/50">
+              <p className="text-sm leading-tight text-body-muted">
                 Call For Support
               </p>
               <p className="font-medium leading-tight text-black">
@@ -91,7 +91,7 @@ const Contact: React.FC = () => {
               </p>
             </div>
             <div className="sm:col-span-2">
-              <p className="text-sm leading-tight text-black/50">
+              <p className="text-sm leading-tight text-body-muted">
                 Office Address
               </p>
               <p className="font-medium leading-tight text-black">

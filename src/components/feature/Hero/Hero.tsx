@@ -33,8 +33,7 @@ export const Hero: React.FC = () => {
           <Button variant="link" asChild className="mt-8 text-white">
             <Link href="/llms.txt">Read llms.txt file</Link>
           </Button>
-          
-       </section>
+        </section>
       </div>
       <div className="min-w-[300px] rounded-lg max-[900px]:hidden lg:min-w-[400px]">
         <Image
@@ -42,6 +41,8 @@ export const Hero: React.FC = () => {
           alt="heroImage"
           width={600}
           height={600}
+          priority
+          placeholder="blur"
           className="w-full object-cover"
         />
       </div>

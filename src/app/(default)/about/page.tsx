@@ -145,12 +145,12 @@ const About: React.FC = () => {
           <h2 className="text-[30px] font-bold leading-none sm:leading-tight">
             The 21st century is the era of change, very fast change!
           </h2>
-          <p className="mt-4 text-base leading-tight text-black/50">
+          <p className="mt-4 text-base leading-tight text-body-muted">
             The way of running your business is changing and so is how people
             interact with your business. The old models of selling and marketing
             are out and customers behaviors are getting highly complex
           </p>
-          <p className="mt-1 text-base leading-tight text-black/50">
+          <p className="mt-1 text-base leading-tight text-body-muted">
             Gone are the times, when you relied on a sales executive to educate
             your customers about solutions. The B2B customers of today are
             fairly knowledgable and the majority of them are pretty clear on
@@ -182,7 +182,7 @@ const About: React.FC = () => {
             >
               {data.label}
             </p>
-            <p className="text-center text-sm text-black/50">{data.title}</p>
+            <p className="text-center text-sm text-body-muted">{data.title}</p>
           </div>
         ))}
       </div>
@@ -192,12 +192,12 @@ const About: React.FC = () => {
         <h2 className="text-[30px] font-bold leading-none sm:leading-tight">
           Empowering Growth With Nagana Media
         </h2>
-        <p className="mt-3 leading-tight text-black/50">
+        <p className="mt-3 leading-tight text-body-muted">
           In such a time, you can&apos;t put all your money on one tactic. To
           win, you&apos;ll have to have a holistic view and a vantage point that
           allows you to quickly adjust your strategy and tactics.
         </p>
-        <p className="mt-2 leading-tight text-black/50">
+        <p className="mt-2 leading-tight text-body-muted">
           We offer end-to-end digital marketing services like web development,
           SEO,technology content creation, lead generation, marketing campaigns,
           client reachouts, social media management, and conversion

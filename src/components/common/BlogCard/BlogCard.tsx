@@ -34,7 +34,7 @@ export const BlogCard: React.FC<BlogCardProps> = ({ data }) => {
 
       <div className="flex h-full w-full flex-col justify-between rounded-b-xl bg-[#f9f9f9] px-3 py-3">
         <div>
-          <p className="text-xs text-black/50">
+          <p className="text-body-muted text-xs">
             {formatDate(data.date)} | {data.author.name}
           </p>
           <h3 className="mt-1 text-base font-semibold leading-tight sm:font-medium">
@@ -45,9 +45,10 @@ export const BlogCard: React.FC<BlogCardProps> = ({ data }) => {
         <Button asChild variant="brand" size="sm" className="w-fit">
           <Link
             href={`/blogs/${data.slug}`}
+            aria-label={`Read: ${data.title}`}
             className="mt-3 text-xs font-medium text-brand"
           >
-            Learn More
+            Read Article
           </Link>
         </Button>
       </div>

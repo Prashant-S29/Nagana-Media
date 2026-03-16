@@ -27,7 +27,7 @@ export const ServiceCard: React.FC<ServiceCardProps> = ({ data }) => {
       <div className="flex h-full flex-col justify-between gap-5 pt-3 sm:items-center sm:pt-8">
         <div className="w-full">
           <h2 className="text-lg font-medium sm:text-center">{data.title}</h2>
-          <p className="text-sm text-black/50 sm:text-center">
+          <p className="text-body-muted text-sm sm:text-center">
             {data.description}
           </p>
         </div>
@@ -38,7 +38,12 @@ export const ServiceCard: React.FC<ServiceCardProps> = ({ data }) => {
           size="sm"
           className="w-fit group-hover:bg-brand/90"
         >
-          <Link href={`/services/${data.slug}`}>Learn More</Link>
+          <Link
+            href={`/services/${data.slug}`}
+            aria-label={`Learn more about ${data.title}`}
+          >
+            Learn More
+          </Link>
         </Button>
       </div>
     </div>

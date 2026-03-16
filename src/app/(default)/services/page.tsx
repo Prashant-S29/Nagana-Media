@@ -61,7 +61,7 @@ const Services: React.FC = () => {
         <h2 className="text-[30px] font-bold leading-none sm:text-center sm:leading-tight">
           Flexible Services, Built for B2B Technology
         </h2>
-        <p className="mt-3 leading-tight text-black/50 sm:mt-1 sm:text-center">
+        <p className="mt-3 leading-tight text-body-muted sm:mt-1 sm:text-center">
           Pick the services that fill the gaps in your GTM strategy.{" "}
           <br className="hidden sm:block" />
           From content and campaigns to sales support and program management.
@@ -84,7 +84,7 @@ const Services: React.FC = () => {
         <h2 className="mt-4 text-[30px] font-bold leading-none text-black md:text-[36px]">
           Grow Your Online Presence.
         </h2>
-        {/* <p className="mt-2 text-sm leading-tight text-black/50">
+        {/* <p className="mt-2 text-sm leading-tight text-body-muted">
           Lorem Ipsum is simply dummy text of the printing and typesetting
           industry.
           <br />

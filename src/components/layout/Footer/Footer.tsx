@@ -35,8 +35,16 @@ export const Footer: React.FC = () => {
                   asChild
                   className="group h-7 w-7 rounded-sm bg-white hover:bg-brand"
                 >
-                  <Link href={data.href} target="_blank">
-                    <data.icon className="text-black transition-colors group-hover:text-white" />
+                  <Link
+                    href={data.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Nagana Media on LinkedIn (opens in new tab)"
+                  >
+                    <data.icon
+                      className="text-black transition-colors group-hover:text-white"
+                      aria-hidden="true"
+                    />
                   </Link>
                 </Button>
               ))}

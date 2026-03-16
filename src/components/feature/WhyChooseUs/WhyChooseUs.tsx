@@ -54,6 +54,8 @@ export const WhyChooseUs: React.FC = () => {
           alt="whyChooseUsImage"
           width={600}
           height={600}
+          placeholder="blur"
+          sizes="(max-width: 768px) 100vw, (max-width: 900px) 600px, 600px"
           className="w-full object-cover"
         />
       </div>

@@ -36,6 +36,9 @@ export const WhatWeDo: React.FC = () => {
             alt="whatWeDoImage"
             width={600}
             height={600}
+            priority
+            placeholder="blur"
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 600px"
             className="w-full object-cover"
           />
         </div>
@@ -44,12 +47,12 @@ export const WhatWeDo: React.FC = () => {
           <h2 className="text-[30px] font-bold leading-none sm:leading-tight">
             What we do
           </h2>
-          <p className="mt-2 text-black/50 sm:mt-0">
+          <p className="text-body-muted mt-2 sm:mt-0">
             We identify the right touchpoints for your technology solution to
             create an interlinked, end-to-end, marketing and sales
             operation.{" "}
           </p>
-          <p className="mt-2 text-black/50">
+          <p className="text-body-muted mt-2">
             This encapsulates covering all the tactics and creating integrated
             content and marketing strategy that goes beyond TOFU, MOFU, and BOFU
             content and educates your audience.
@@ -65,7 +68,7 @@ export const WhatWeDo: React.FC = () => {
           Choose what you need, when you need it.
         </h2>
         <div className="mt-5 flex justify-center sm:mt-0">
-          <p className="max-w-[700px] leading-tight text-black/50 sm:text-center">
+          <p className="text-body-muted max-w-[700px] leading-tight sm:text-center">
             Our services allow you high degree of composability and help you
             only select the service that fills in the gaps in your product
             marketing, communication, and GTM strategy.
@@ -92,13 +95,15 @@ export const WhatWeDo: React.FC = () => {
                   alt="imageOne"
                   width={400}
                   height={400}
+                  placeholder="blur"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 400px"
                   className="w-full object-cover"
                 />
               </div>
               <h3 className="mt-3 px-2 text-base font-bold sm:mt-8 sm:px-0 sm:text-xl">
                 360-degree Coverage
               </h3>
-              <p className="px-2 text-sm leading-tight text-black/50 sm:mt-1 sm:px-0 sm:text-base">
+              <p className="text-body-muted px-2 text-sm leading-tight sm:mt-1 sm:px-0 sm:text-base">
                 Cover all the areas of GTM projects, fill all gaps and address
                 all concerns.
               </p>
@@ -111,13 +116,15 @@ export const WhatWeDo: React.FC = () => {
                   alt="imageThree"
                   width={400}
                   height={400}
+                  placeholder="blur"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 400px"
                   className="w-full object-cover"
                 />
               </div>
               <h3 className="mt-3 px-2 text-base font-bold sm:mt-8 sm:px-0 sm:text-xl">
                 Execute on Cue
               </h3>
-              <p className="px-2 text-sm leading-tight text-black/50 sm:mt-1 sm:px-0 sm:text-base">
+              <p className="text-body-muted px-2 text-sm leading-tight sm:mt-1 sm:px-0 sm:text-base">
                 Hire experts who executes marketing & content campaigns on your
                 behalf.
               </p>
@@ -131,13 +138,15 @@ export const WhatWeDo: React.FC = () => {
                   alt="imageTwo"
                   width={400}
                   height={400}
+                  placeholder="blur"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 400px"
                   className="w-full object-cover"
                 />
               </div>
               <h3 className="mt-3 px-2 text-base font-bold sm:mt-8 sm:px-0 sm:text-xl">
                 Flexible Strategy
               </h3>
-              <p className="px-2 text-sm leading-tight text-black/50 sm:mt-1 sm:px-0 sm:text-base">
+              <p className="text-body-muted px-2 text-sm leading-tight sm:mt-1 sm:px-0 sm:text-base">
                 Shift posture swiftly with change in market trends and needs.
               </p>
             </div>
@@ -151,6 +160,8 @@ export const WhatWeDo: React.FC = () => {
                       alt="imageFour"
                       width={400}
                       height={400}
+                      placeholder="blur"
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 400px"
                       className="w-full object-cover"
                     />
                   </div>
@@ -158,20 +169,12 @@ export const WhatWeDo: React.FC = () => {
                 <h3 className="px-2 text-base font-bold sm:mt-8 sm:px-0 sm:text-xl">
                   Scale Quickly
                 </h3>
-                <p className="px-2 text-sm leading-tight text-black/50 sm:mt-1 sm:px-0 sm:text-base">
+                <p className="text-body-muted px-2 text-sm leading-tight sm:mt-1 sm:px-0 sm:text-base">
                   Scales highly integrated marketing and scales initiatives
                   fractionally.
                 </p>
               </div>
             </div>
-
-            {/* <div className="mt-8 hidden justify-end sm:flex">
-              <div className="flex w-[70%] justify-center">
-                <div className="flex aspect-square w-[120px] items-center justify-center rounded-full bg-brand">
-                  <p className="text-lg font-semibold text-white">View All</p>
-                </div>
-              </div>
-            </div> */}
           </div>
         </div>
       </div>
@@ -181,7 +184,7 @@ export const WhatWeDo: React.FC = () => {
             Achieve Consistent Organic Growth
           </h2>
           <div className="mt-3 flex justify-center sm:mt-0">
-            <p className="max-w-[700px] leading-tight text-black/50 sm:text-center">
+            <p className="text-body-muted max-w-[700px] leading-tight sm:text-center">
               We take your technology innovation to the market with design,
               consistent content generation, sustained marketing campaigns, and
               ensuring uniformity across your digital footprint.
