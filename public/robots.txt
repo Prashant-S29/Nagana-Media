@@ -89,11 +89,8 @@ Disallow: /api/
 Disallow: /_next/
 Disallow: /admin
 
-# Host
-Host: https://www.naganamedia.com
-
 # Sitemaps
 Sitemap: https://www.naganamedia.com/sitemap.xml
 
 # LLMs.txt - machine-readable site index for AI crawlers and LLMs
-LLMs: https://www.naganamedia.com/llms.txt
+# LLMs: https://www.naganamedia.com/llms.txt

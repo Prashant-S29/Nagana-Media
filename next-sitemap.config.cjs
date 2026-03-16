@@ -103,7 +103,7 @@ module.exports = {
       return (
         robotsTxt +
         "\n# LLMs.txt - machine-readable site index for AI crawlers and LLMs\n" +
-        "LLMs: https://www.naganamedia.com/llms.txt\n"
+        "# LLMs: https://www.naganamedia.com/llms.txt\n"
       );
     },
   },

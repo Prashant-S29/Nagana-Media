@@ -38,12 +38,7 @@ export const ServiceCard: React.FC<ServiceCardProps> = ({ data }) => {
           size="sm"
           className="w-fit group-hover:bg-brand/90"
         >
-          <Link
-            href={`/services/${data.slug}`}
-            aria-label={`Learn more about ${data.title}`}
-          >
-            Learn More
-          </Link>
+          <Link href={`/services/${data.slug}`}>Learn about {data.title}</Link>
         </Button>
       </div>
     </div>
