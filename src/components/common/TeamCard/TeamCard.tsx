@@ -35,7 +35,7 @@ export const TeamCard: React.FC<TeamCardProps> = ({ data }) => {
         </div>
       </div>
       <h1 className="mt-1 font-semibold text-brand">{data.name}</h1>
-      <p className="text-body-muted text-xs leading-none">{data.designation}</p>
+      <p className="text-xs leading-none text-body-muted">{data.designation}</p>
     </div>
   );
 };

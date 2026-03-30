@@ -23,7 +23,7 @@ export const EngineCard: React.FC<ServiceCardProps> = ({ data }) => {
       <div className="flex h-full flex-col justify-between gap-5 pt-3 sm:items-center sm:pt-8">
         <div className="w-full">
           <h2 className="text-lg font-medium sm:text-center">{data.title}</h2>
-          <p className="text-body-muted text-sm sm:text-center">
+          <p className="text-sm text-body-muted sm:text-center">
             {data.description}
           </p>
         </div>

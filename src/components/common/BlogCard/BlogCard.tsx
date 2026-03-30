@@ -34,7 +34,7 @@ export const BlogCard: React.FC<BlogCardProps> = ({ data }) => {
 
       <div className="flex h-full w-full flex-col justify-between rounded-b-xl bg-[#f9f9f9] px-3 py-3">
         <div>
-          <p className="text-body-muted text-xs">
+          <p className="text-xs text-body-muted">
             {formatDate(data.date)} | {data.author.name}
           </p>
           <h3 className="mt-1 text-base font-semibold leading-tight sm:font-medium">
