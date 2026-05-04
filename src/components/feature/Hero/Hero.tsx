@@ -30,9 +30,9 @@ export const Hero: React.FC = () => {
           <Button variant="brand" asChild className="mt-8">
             <Link href="/contact">Let&apos;s Talk</Link>
           </Button>
-          <Button variant="link" asChild className="mt-8 text-white">
+          {/*<Button variant="link" asChild className="mt-8 text-white">
             <Link href="/llms.txt">Read llms.txt file</Link>
-          </Button>
+          </Button>*/}
         </section>
       </div>
       <div className="min-w-[300px] rounded-lg max-[900px]:hidden lg:min-w-[400px]">
