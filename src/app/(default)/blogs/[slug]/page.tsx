@@ -2,13 +2,10 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import "../../../../styles/globals.css";
-
 // types
 import type { Metadata } from "next";
-
 // styles
 import markdownStyles from "~/styles/markdown-styles.module.css";
-
 // utils
 import {
   getAllPosts,
@@ -18,26 +15,21 @@ import {
 } from "~/utils/api";
 import markdownToHtml from "~/utils/markdownToHtml";
 import { generateSeo } from "~/utils/generateSeo";
-
 // Force static generation - this is critical for crawlers
 export const dynamic = "force-static";
 export const dynamicParams = false;
-
 export async function generateMetadata(props: {
   params: Promise<{ slug: string }>;
 }): Promise<Metadata> {
   const params = await props.params;
   const post = getPostBySlug(params.slug);
-
   if (!post) {
     return notFound();
   }
-
   const baseUrl =
     process.env.NEXT_PUBLIC_BASE_URL ?? "https://www.naganamedia.com";
   const postUrl = `${baseUrl}/blogs/${params.slug}`;
   const ogImageUrl = `${baseUrl}/api/og?title=${encodeURIComponent(post.title)}&excerpt=${encodeURIComponent(post.excerpt)}`;
-
   return {
     title: post.metaTitle ?? `${post.title} | Nagana Media`,
     description: post.metaDescription ?? post.excerpt,
@@ -51,12 +43,10 @@ export async function generateMetadata(props: {
     ]
       .filter(Boolean)
       .join(", "),
-
     authors: [{ name: post.author.name }],
     creator: post.author.name,
     publisher: "Nagana Media",
     category: "Business Strategy",
-
     // Open Graph
     openGraph: {
       title: post.metaTitle ?? post.title,
@@ -82,7 +72,6 @@ export async function generateMetadata(props: {
       publishedTime: post.date,
       authors: [post.author.name],
     },
-
     // Twitter
     twitter: {
       card: "summary_large_image",
@@ -91,12 +80,10 @@ export async function generateMetadata(props: {
       creator: "@NaganaMedia",
       images: [ogImageUrl],
     },
-
     // Additional SEO
     alternates: {
       canonical: postUrl,
     },
-
     // Explicit robots directives - force Google to index these pages
     robots: {
       index: true,
@@ -110,7 +97,6 @@ export async function generateMetadata(props: {
         "max-snippet": -1,
       },
     },
-
     // Structured Data
     other: {
       "article:published_time": post.date,
@@ -123,35 +109,28 @@ export async function generateMetadata(props: {
     },
   };
 }
-
 export async function generateStaticParams() {
   const posts = getAllPosts();
-
   return posts.map((post) => ({
     slug: post.slug,
   }));
 }
-
 interface Params {
   params: Promise<{
     slug: string;
   }>;
 }
-
 const Post: React.FC<Params> = async ({ params }) => {
   const slug = await params;
   const post = getPostBySlug(slug.slug);
-
   if (!post) {
     return notFound();
   }
-
   const content = await markdownToHtml(post.content ?? "");
   const baseUrl =
     process.env.NEXT_PUBLIC_BASE_URL ?? "https://www.naganamedia.com";
   const readingTime = calculateReadingTime(post.content ?? "");
   const relatedPosts = getRelatedPosts(post, 3);
-
   // Article JSON-LD
   const jsonLd = {
     "@context": "https://schema.org",
@@ -183,7 +162,6 @@ const Post: React.FC<Params> = async ({ params }) => {
     wordCount: post.content?.split(" ").length ?? 0,
     timeRequired: `PT${readingTime}M`,
   };
-
   // Breadcrumb JSON-LD
   const breadcrumbJsonLd = {
     "@context": "https://schema.org",
@@ -209,7 +187,6 @@ const Post: React.FC<Params> = async ({ params }) => {
       },
     ],
   };
-
   return (
     <>
       {/* Article JSON-LD */}
@@ -222,7 +199,6 @@ const Post: React.FC<Params> = async ({ params }) => {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
       />
-
       <div
         data-container
         className="flex h-[60vh] w-full items-center justify-center bg-gradient-to-r from-[#0c1323] to-[#1e2f45]"
@@ -256,20 +232,36 @@ const Post: React.FC<Params> = async ({ params }) => {
                 day: "numeric",
               })}
             </span>
-            <span className="text-white/30">·</span>
-            <span className="text-sm">{readingTime} min read</span>
-            {post.primaryKeyword && (
+            {/*<span className="text-white/30">·</span>*/}
+            {/*<span className="text-sm">{readingTime} min read</span>*/}
+            {/*{post.primaryKeyword && (
               <>
                 <span className="text-white/30">·</span>
                 <span className="rounded-full bg-white/10 px-3 py-0.5 text-xs text-white/80">
                   {post.primaryKeyword}
                 </span>
               </>
-            )}
+            )}*/}
+          </div>
+          {/* Author info */}
+          <div className="mt-4 flex items-center justify-center gap-2 text-sm text-white/70">
+            <span>By {post.author.name}</span>
+            {/*{post.author.linkedin && (
+              <>
+                <span className="text-white/30">·</span>
+                <a
+                  href={post.author.linkedin}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-1 text-white/70 underline-offset-2 hover:text-white hover:underline"
+                >
+                  LinkedIn
+                </a>
+              </>
+            )}*/}
           </div>
         </div>
       </div>
-
       <article data-container className="markdown mt-10">
         <Image
           src={post.coverImage}
@@ -280,13 +272,11 @@ const Post: React.FC<Params> = async ({ params }) => {
           className="h-auto w-full rounded-xl"
           priority
         />
-
         <div
           className={`${markdownStyles.markdown} mt-8`}
           dangerouslySetInnerHTML={{ __html: content }}
         />
       </article>
-
       {/* Related Posts */}
       {relatedPosts.length > 0 && (
         <section data-container className="border-t py-12">
@@ -330,5 +320,4 @@ const Post: React.FC<Params> = async ({ params }) => {
     </>
   );
 };
-
 export default Post;

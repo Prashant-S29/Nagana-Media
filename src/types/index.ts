@@ -17,6 +17,7 @@ export type SiteConfig = {
 export interface Author {
   name: string;
   picture: string;
+  // linkedin?: string;
 }
 
 export interface Blog {
