@@ -1,11 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import { Button } from "~/components/ui/button";
-
-// data
 import { NavbarItems } from "./data";
-
-// Components
 import {
   NavigationMenu,
   NavigationMenuItem,
@@ -21,12 +17,11 @@ export const Navbar: React.FC = () => {
   return (
     <div
       data-container
-      className="absolute top-0 z-50 flex h-[100px] w-full items-center justify-between py-4 sm:py-8"
+      className="absolute z-50 flex h-[100px] w-full items-center justify-between py-4 sm:py-8"
     >
       <Link href="/" className="text-white">
         <Image src={logo} alt="logo" width={120} height={50} priority />
       </Link>
-
       <div className="flex items-center gap-2 max-[900px]:hidden">
         <nav className="flex items-center gap-5">
           <NavigationMenu>
@@ -44,7 +39,6 @@ export const Navbar: React.FC = () => {
             </NavigationMenuList>
           </NavigationMenu>
         </nav>
-
         <Button variant="brand" asChild>
           <Link href="/contact">Let&apos;s Talk</Link>
         </Button>

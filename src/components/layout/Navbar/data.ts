@@ -4,10 +4,10 @@ interface NavbarItemProps {
 }
 
 export const NavbarItems: NavbarItemProps[] = [
-  // {
-  //   label: "AI SEO",
-  //   href: "/ai-seo",
-  // },
+  {
+    label: "AI SEO Audit",
+    href: "/ai-seo-audit",
+  },
   {
     label: "Services",
     href: "/services",
