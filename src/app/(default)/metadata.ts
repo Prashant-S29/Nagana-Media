@@ -78,7 +78,7 @@ export const metadata: Metadata = {
     creator: "@NaganaMedia",
     images: [
       {
-        url: `${baseUrl}/assets/static/heroImage.webp`,
+        url: `${baseUrl}/opengraph.webp`,
         width: 1200,
         height: 630,
         alt: "Nagana Media - GTM Strategy & B2B Technology Marketing Experts",

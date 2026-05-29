@@ -59,6 +59,14 @@ export const footerLinksData: FooterLinksProps[] = [
     category: "Our Services",
     links: [
       {
+        label: "AI SEO Audit",
+        href: "/ai-seo-audit",
+      },
+      {
+        label: "AEO & GEO Services",
+        href: "/services",
+      },
+      {
         label: "Marketing Enablement",
         href: "/services/marketing-enablement",
       },
