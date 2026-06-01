@@ -1,11 +1,27 @@
 import { NextResponse } from "next/server";
+import { Redis } from "@upstash/redis";
+import { Resend } from "resend";
+import { render } from "@react-email/components";
+import { z } from "zod";
 import { env } from "~/env";
 import { aiSeoAuditFormSchema } from "~/schema/aiSeoAudit_form.schema";
+import { AiSeoAuditEmail } from "~/components/emails/AiSeoAuditEmail";
 
-// ─── helpers ────────────────────────────────────────────────────────────────
+const redis = new Redis({
+  url: env.UPSTASH_REDIS_REST_URL,
+  token: env.UPSTASH_REDIS_REST_TOKEN,
+});
+
+const resend = new Resend(env.RESEND_API_KEY);
+
+const verifySchema = z.object({
+  email: z.string().email(),
+  otp: z.string().length(6),
+});
+
+// ─── helpers (same as before) ────────────────────────────────────────────────
 
 function formatDate(d: Date): string {
-  // "20 June, 2026"
   return d.toLocaleDateString("en-GB", {
     day: "numeric",
     month: "long",
@@ -14,7 +30,6 @@ function formatDate(d: Date): string {
 }
 
 function formatTime(d: Date): string {
-  // "10:03 AM"
   return d.toLocaleTimeString("en-US", {
     hour: "2-digit",
     minute: "2-digit",
@@ -23,8 +38,6 @@ function formatTime(d: Date): string {
 }
 
 async function getAccessToken(): Promise<string> {
-  // Build a JWT and exchange for an OAuth2 access token using the
-  // service-account credentials stored in env vars.
   const serviceAccountEmail = env.GOOGLE_SERVICE_ACCOUNT_EMAIL!;
   const rawKey = env.GOOGLE_PRIVATE_KEY!.replace(/\\n/g, "\n");
 
@@ -48,7 +61,6 @@ async function getAccessToken(): Promise<string> {
 
   const unsignedToken = `${encode(header)}.${encode(payload)}`;
 
-  // Import the RSA private key
   const pemContents = rawKey
     .replace("-----BEGIN PRIVATE KEY-----", "")
     .replace("-----END PRIVATE KEY-----", "")
@@ -76,7 +88,6 @@ async function getAccessToken(): Promise<string> {
     .replace(/\+/g, "-")
     .replace(/\//g, "_")}`;
 
-  // Exchange JWT for access token
   const tokenRes = await fetch("https://oauth2.googleapis.com/token", {
     method: "POST",
     headers: { "Content-Type": "application/x-www-form-urlencoded" },
@@ -95,26 +106,61 @@ async function getAccessToken(): Promise<string> {
 export async function POST(req: Request) {
   try {
     const body: unknown = await req.json();
-    const parsed = aiSeoAuditFormSchema.safeParse(body);
+    const parsed = verifySchema.safeParse(body);
 
     if (!parsed.success) {
+      return NextResponse.json({ error: "Invalid request" }, { status: 400 });
+    }
+
+    const { email, otp } = parsed.data;
+
+    // ─── 1. Retrieve & verify OTP from Redis ─────────────────────────────
+
+    const stored = await redis.get<{ otp: string; formData: unknown }>(
+      `otp:${email}`,
+    );
+
+    if (!stored) {
       return NextResponse.json(
-        { error: "Invalid form data", issues: parsed.error.flatten() },
+        { error: "OTP expired or not found. Please request a new one." },
         { status: 400 },
       );
     }
 
-    const { name, email, companyWebsite, companyDescription, seoGoals } =
-      parsed.data;
+    const { otp: storedOtp, formData } = stored;
+
+    if (otp !== storedOtp) {
+      return NextResponse.json(
+        { error: "Incorrect OTP. Please try again." },
+        { status: 400 },
+      );
+    }
+
+    // Parse and validate the stored form data
+    const formParsed = aiSeoAuditFormSchema.safeParse(formData);
+    if (!formParsed.success) {
+      return NextResponse.json(
+        { error: "Stored form data is invalid." },
+        { status: 400 },
+      );
+    }
+
+    const { name, companyWebsite, companyDescription, seoGoals } =
+      formParsed.data;
+
+    // ─── 2. Delete OTP from Redis (one-time use) ──────────────────────────
+
+    await redis.del(`otp:${email}`);
+
+    // ─── 3. Append to Google Sheet ────────────────────────────────────────
 
     const now = new Date();
     const date = formatDate(now);
     const time = formatTime(now);
 
     const accessToken = await getAccessToken();
-
     const SPREADSHEET_ID = env.GOOGLE_SPREADSHEET_ID!;
-    const RANGE = "Sheet1!A:G"; // date | time | name | email | website | description | goals
+    const RANGE = "Sheet1!A:G";
 
     const appendRes = await fetch(
       `https://sheets.googleapis.com/v4/spreadsheets/${SPREADSHEET_ID}/values/${RANGE}:append?valueInputOption=USER_ENTERED`,
@@ -149,9 +195,21 @@ export async function POST(req: Request) {
       );
     }
 
+    const { error: resendError } = await resend.emails.send({
+      from: "Nagana Media <info@naganamedia.com>",
+      to: email,
+      subject: "We've received your AI SEO Audit request — Nagana Media",
+      react: AiSeoAuditEmail({ name, companyWebsite }),
+    });
+
+    if (resendError) {
+      console.error("Resend confirmation error:", resendError);
+      // Non-blocking — sheet already saved, don't fail the request
+    }
+
     return NextResponse.json({ success: true }, { status: 200 });
   } catch (err) {
-    console.error("ai-seo-audit route error:", err);
+    console.error("verify-otp route error:", err);
     return NextResponse.json({ error: "Server error" }, { status: 500 });
   }
 }

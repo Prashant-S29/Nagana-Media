@@ -36,6 +36,7 @@ import {
 } from "~/components/ui/accordion";
 import { servicePageBannerImage } from "public/assets/static";
 import { getAllPosts } from "~/utils/api";
+import { AuditStickyButton } from "~/components/feature/AuditStickyButton/AuditStickyButton";
 
 // static
 export const dynamic = "force-static";
@@ -527,12 +528,14 @@ const AiSeoAuditPage: React.FC = () => {
 
   return (
     <>
+      <AuditStickyButton />
       <JsonLdScript data={serviceJsonLd} />
       <JsonLdScript data={faqJsonLd} />
       <JsonLdScript data={breadcrumbJsonLd} />
 
       {/* Hero Banner */}
       <div
+        data-hero 
         data-container
         className="relative flex min-h-[80vh] w-full flex-col items-center justify-center overflow-hidden bg-gradient-to-r from-[#0c1323] to-[#1e2f45] py-[140px]"
       >
