@@ -1,5 +1,5 @@
 ---
-title: "We Asked Claude About Its Own Censorship. It Lied. Then It Didn't | Nagana Media"
+title: "We Asked Claude About Its Own Censorship. It Lied. Then It Didn't"
 excerpt: "Why did Claude Fable 5 go dark? Discover how US export control directives triggered an AI compliance gap and how it impacts your B2B technology strategy."
 coverImage: "/assets/blog/anthropic-fable5-model/cover.webp"
 date: "2026-06-13T00:00:00.000Z"
