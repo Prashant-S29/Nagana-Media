@@ -51,5 +51,12 @@ export default async function markdownToHtml(markdown: any) {
     "",
   );
 
+  // 6) Convert alt text markers like {.infographic} into CSS classes on <img>
+  htmlString = htmlString.replace(
+    /<img([^>]*?)alt="([^"]*?)\s*\{\.([a-z0-9-]+)\}"([^>]*?)>/gi,
+    (_m, before, altText, className, after) =>
+      `<img${before}alt="${altText.trim()}" class="${className}"${after}>`,
+  );
+
   return htmlString;
 }

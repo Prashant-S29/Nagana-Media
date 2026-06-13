@@ -191,24 +191,32 @@
   text-align: center;
 }
 
-/* image inside figure */
-.markdown-figure img,
-.markdown figure img,
 .markdown img {
   display: block;
   margin: 0.5rem auto;
-  max-width: 100%;
+  max-width: 100%; /* full width by default */
   height: auto;
-  border-radius: 0.75rem; /* rounded-xl */
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); /* soft shadow */
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
   transition: transform 0.3s ease;
 }
 
-.markdown-figure img:hover,
+/* Infographics — 80% on lg+, full width below */
+.markdown img.infographic {
+  max-width: 100%; /* mobile: full width */
+}
+
+@media (min-width: 1024px) {
+  .markdown img.infographic {
+    max-width: 80%;
+  }
+}
+
+/*.markdown-figure img:hover,
 .markdown figure img:hover,
 .markdown img:hover {
   transform: scale(1.02);
-}
+}*/
 
 /* caption text */
 .markdown-figcaption,
