@@ -1,5 +1,5 @@
 ---
-title: "Claude Fable 5 & Export Controls: AI Denials Explained | Nagana Media"
+title: "We Asked Claude About Its Own Censorship. It Lied. Then It Didn't | Nagana Media"
 excerpt: "Why did Claude Fable 5 go dark? Discover how US export control directives triggered an AI compliance gap and how it impacts your B2B technology strategy."
 coverImage: "/assets/blog/anthropic-fable5-model/cover.webp"
 date: "2026-06-13T00:00:00.000Z"
@@ -13,8 +13,6 @@ metaDescription: "Why did Claude Fable 5 go dark? Discover how US export control
 primaryKeyword: "Claude Fable 5"
 secondaryKeywords: ["AI export controls", "geopolitical risk AI", "Anthropic compliance", "AI model transparency", "B2B AI strategy"]
 ---
-
-We Asked Claude About Its Own Censorship. It Lied. Then It Didn't.
 
 What one AI conversation taught us about geopolitical risk, model transparency, and why expert guidance matters more than ever in the age of frontier AI.
 
