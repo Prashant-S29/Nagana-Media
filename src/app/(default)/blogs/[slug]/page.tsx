@@ -201,7 +201,7 @@ const Post: React.FC<Params> = async ({ params }) => {
       />
       <div
         data-container
-        className="flex h-[60vh] w-full items-center justify-center bg-gradient-to-r from-[#0c1323] to-[#1e2f45]"
+        className="flex min-h-[60vh] w-full items-center justify-center bg-gradient-to-r from-[#0c1323] to-[#1e2f45]"
       >
         <div className="px-4 text-center">
           {/* Breadcrumb nav for humans */}
