@@ -2,8 +2,8 @@ backend:
   name: github
   repo: Prashant-S29/Nagana-Media
   branch: main
-  base_url: http://localhost:3000
-  site_domain: localhost:3000
+  base_url: https://www.naganamedia.com
+  site_domain: www.naganamedia.com
   auth_endpoint: api/decap/auth
   auth_scope: repo
   use_graphql: true
@@ -17,8 +17,8 @@ backend:
 
 publish_mode: editorial_workflow
 
-site_url: http://localhost:3000
-display_url: http://localhost:3000
+site_url: https://www.naganamedia.com
+display_url: https://www.naganamedia.com
 logo:
   src: /assets/static/logo.webp
   show_in_header: true

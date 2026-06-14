@@ -1,13 +1,47 @@
-// Real publish dates for blog posts (used for accurate lastmod)
-/** @type {Record<string, string>} */
-const postDates = {
-  "/blogs/surviving-the-ai-shift-2026": "2026-01-22T02:22:00.000Z",
-  "/blogs/microsoft_ignite_2025_recap": "2025-12-04T05:35:07.322Z",
-  "/blogs/ignite-2025-preview": "2025-11-18T05:35:07.322Z",
-  "/blogs/mcaps-2025-2026-partner-priorities": "2025-09-06T05:35:07.322Z",
-  "/blogs/gtm-strategy-for-b2b-technology-companies-evolution":
-    "2025-09-06T05:35:07.322Z",
+const fs = require("fs");
+const path = require("path");
+const matter = require("gray-matter");
+
+const postsDirectory = path.join(process.cwd(), "_posts");
+
+const normalizeDate = (date) => {
+  if (date instanceof Date) {
+    return date.toISOString();
+  }
+
+  if (typeof date === "string") {
+    return date;
+  }
+
+  return new Date().toISOString();
 };
+
+const getBlogSitemapEntries = () => {
+  if (!fs.existsSync(postsDirectory)) {
+    return [];
+  }
+
+  return fs
+    .readdirSync(postsDirectory)
+    .filter((file) => file.endsWith(".md"))
+    .map((file) => {
+      const slug = file.replace(/\.md$/, "");
+      const fileContents = fs.readFileSync(path.join(postsDirectory, file), "utf8");
+      const { data } = matter(fileContents);
+
+      return {
+        loc: `/blogs/${slug}`,
+        changefreq: "weekly",
+        priority: 0.9,
+        lastmod: normalizeDate(data.date),
+      };
+    });
+};
+
+/** @type {Record<string, string>} */
+const postDates = Object.fromEntries(
+  getBlogSitemapEntries().map((entry) => [entry.loc, entry.lastmod]),
+);
 
 const disallowRules = ["/api/", "/_next/", "/admin"];
 
@@ -108,9 +142,11 @@ module.exports = {
     },
   },
 
-  // Extra paths to include in the sitemap that Next.js doesn't auto-discover
-  // llms.txt is listed here so Google and every sitemap-reading AI bot finds it
+  // Extra paths to include in the sitemap that Next.js doesn't auto-discover.
+  // Blog paths are derived from _posts so CMS-created posts are always listed.
+  // llms.txt is listed here so Google and every sitemap-reading AI bot finds it.
   additionalPaths: async (config) => [
+    ...getBlogSitemapEntries(),
     {
       loc: "/llms.txt",
       changefreq: "weekly",

@@ -16,6 +16,36 @@ export function getServiceSlugs() {
   return fs.readdirSync(servicesDirectory);
 }
 
+const normalizeDate = (date: unknown) => {
+  if (date instanceof Date) {
+    return date.toISOString();
+  }
+
+  if (typeof date === "string") {
+    return date;
+  }
+
+  return new Date().toISOString();
+};
+
+const normalizeStringList = (value: unknown): string[] | undefined => {
+  if (!Array.isArray(value)) {
+    return undefined;
+  }
+
+  return value.filter((item): item is string => typeof item === "string");
+};
+
+function normalizePostData(data: Record<string, unknown>, slug: string, content: string): Blog {
+  return {
+    ...data,
+    slug,
+    content,
+    date: normalizeDate(data.date),
+    secondaryKeywords: normalizeStringList(data.secondaryKeywords),
+  } as Blog;
+}
+
 export function getPostBySlug(slug: string): Blog | null {
   try {
     const realSlug = slug.replace(/\.md$/, "");
@@ -28,7 +58,7 @@ export function getPostBySlug(slug: string): Blog | null {
     const fileContents = fs.readFileSync(fullPath, "utf8");
     const { data, content } = matter(fileContents);
 
-    return { ...data, slug: realSlug, content } as Blog;
+    return normalizePostData(data, realSlug, content);
   } catch (error) {
     console.error(`Error loading post ${slug}:`, error);
     return null;
@@ -60,7 +90,10 @@ export function getAllPosts(): Blog[] {
     .map((slug) => getPostBySlug(slug))
     .filter((post): post is Blog => post !== null)
     // sort posts by date in descending order
-    .sort((post1, post2) => (post1.date > post2.date ? -1 : 1));
+    .sort(
+      (post1, post2) =>
+        new Date(post2.date).getTime() - new Date(post1.date).getTime(),
+    );
   return posts;
 }
 
