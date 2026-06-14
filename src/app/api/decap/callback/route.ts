@@ -110,7 +110,9 @@ export async function GET(request: Request) {
 
   if (provider !== "github") {
     return htmlResponse(
-      callbackHtml("error", { error: `Unsupported OAuth provider: ${provider}` }),
+      callbackHtml("error", {
+        error: `Unsupported OAuth provider: ${provider}`,
+      }),
       400,
     );
   }
@@ -135,19 +137,22 @@ export async function GET(request: Request) {
   const siteOrigin = getSiteOrigin(request);
   const redirectUri = `${siteOrigin}/api/decap/callback?provider=github`;
 
-  const tokenResponse = await fetch("https://github.com/login/oauth/access_token", {
-    method: "POST",
-    headers: {
-      accept: "application/json",
-      "content-type": "application/json",
+  const tokenResponse = await fetch(
+    "https://github.com/login/oauth/access_token",
+    {
+      method: "POST",
+      headers: {
+        accept: "application/json",
+        "content-type": "application/json",
+      },
+      body: JSON.stringify({
+        client_id: clientId,
+        client_secret: clientSecret,
+        code,
+        redirect_uri: redirectUri,
+      }),
     },
-    body: JSON.stringify({
-      client_id: clientId,
-      client_secret: clientSecret,
-      code,
-      redirect_uri: redirectUri,
-    }),
-  });
+  );
 
   const tokenData = (await tokenResponse.json()) as GitHubTokenResponse;
 
@@ -156,11 +161,14 @@ export async function GET(request: Request) {
       callbackHtml("error", {
         error: tokenData.error ?? "github_token_exchange_failed",
         error_description:
-          tokenData.error_description ?? "Could not exchange GitHub OAuth code.",
+          tokenData.error_description ??
+          "Could not exchange GitHub OAuth code.",
       }),
       400,
     );
   }
 
-  return htmlResponse(callbackHtml("success", { token: tokenData.access_token }));
+  return htmlResponse(
+    callbackHtml("success", { token: tokenData.access_token }),
+  );
 }

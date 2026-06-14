@@ -4,6 +4,10 @@ const matter = require("gray-matter");
 
 const postsDirectory = path.join(process.cwd(), "_posts");
 
+/**
+ * @param {Date | string | unknown} date
+ * @returns {string}
+ */
 const normalizeDate = (date) => {
   if (date instanceof Date) {
     return date.toISOString();
@@ -26,7 +30,10 @@ const getBlogSitemapEntries = () => {
     .filter((file) => file.endsWith(".md"))
     .map((file) => {
       const slug = file.replace(/\.md$/, "");
-      const fileContents = fs.readFileSync(path.join(postsDirectory, file), "utf8");
+      const fileContents = fs.readFileSync(
+        path.join(postsDirectory, file),
+        "utf8",
+      );
       const { data } = matter(fileContents);
 
       return {

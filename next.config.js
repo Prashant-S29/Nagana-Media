@@ -97,7 +97,10 @@ const nextConfig = {
           },
 
           // Security — keep pop-up support for Decap CMS GitHub OAuth.
-          { key: "Cross-Origin-Opener-Policy", value: "same-origin-allow-popups" },
+          {
+            key: "Cross-Origin-Opener-Policy",
+            value: "same-origin-allow-popups",
+          },
 
           // Security — prevent MIME-type sniffing
           { key: "X-Content-Type-Options", value: "nosniff" },

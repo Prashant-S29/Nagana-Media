@@ -535,7 +535,7 @@ const AiSeoAuditPage: React.FC = () => {
 
       {/* Hero Banner */}
       <div
-        data-hero 
+        data-hero
         data-container
         className="relative flex min-h-[80vh] w-full flex-col items-center justify-center overflow-hidden bg-gradient-to-r from-[#0c1323] to-[#1e2f45] py-[140px]"
       >

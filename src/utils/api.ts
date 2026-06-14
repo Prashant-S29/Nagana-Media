@@ -36,7 +36,11 @@ const normalizeStringList = (value: unknown): string[] | undefined => {
   return value.filter((item): item is string => typeof item === "string");
 };
 
-function normalizePostData(data: Record<string, unknown>, slug: string, content: string): Blog {
+function normalizePostData(
+  data: Record<string, unknown>,
+  slug: string,
+  content: string,
+): Blog {
   return {
     ...data,
     slug,
