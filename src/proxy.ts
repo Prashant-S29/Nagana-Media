@@ -40,6 +40,11 @@ export function proxy(request: NextRequest) {
   // Add security headers
   const response = NextResponse.next();
 
+  if (pathname.startsWith("/admin") || pathname.startsWith("/api/")) {
+    response.headers.set("X-Robots-Tag", "noindex, nofollow");
+    return response;
+  }
+
   // Help crawlers understand the canonical URL
   response.headers.set("X-Robots-Tag", "index, follow");
 

@@ -15,7 +15,7 @@ import "./src/env.js";
 const cspDirectives = [
   "default-src 'self'",
   // Next.js inline scripts + PostHog recorder needs unsafe-inline / unsafe-eval
-  "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://us-assets.i.posthog.com https://www.googletagmanager.com",
+  "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://us-assets.i.posthog.com https://www.googletagmanager.com https://unpkg.com",
   "style-src 'self' 'unsafe-inline'",
   // blob: and data: are required by next/image and some rich-text renderers
   "img-src 'self' data: blob: https:",
@@ -23,7 +23,7 @@ const cspDirectives = [
   // PostHog API calls go through our /ingest proxy (same origin) —
   // the direct PostHog host is kept as a fallback for the first request
   // before the proxy is ready.
-  "connect-src 'self' https://us.i.posthog.com https://us-assets.i.posthog.com",
+  "connect-src 'self' blob: https://us.i.posthog.com https://us-assets.i.posthog.com https://api.github.com https://unpkg.com",
   // Calendly embed (src/components/feature/CalendlyFormEmbbed/)
   "frame-src 'self' https://calendly.com",
   // Prevent DOM-based XSS — remove if PostHog or other scripts use innerHTML
@@ -96,8 +96,8 @@ const nextConfig = {
             value: cspDirectives,
           },
 
-          // Security — COOP prevents cross-origin pop-up access (issue 3.3)
-          { key: "Cross-Origin-Opener-Policy", value: "same-origin" },
+          // Security — keep pop-up support for Decap CMS GitHub OAuth.
+          { key: "Cross-Origin-Opener-Policy", value: "same-origin-allow-popups" },
 
           // Security — prevent MIME-type sniffing
           { key: "X-Content-Type-Options", value: "nosniff" },
@@ -123,6 +123,23 @@ const nextConfig = {
             value:
               "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
           },
+        ],
+      },
+
+      // Decap CMS admin + GitHub OAuth popup need opener access so the
+      // callback window can pass the GitHub token back to /admin.
+      {
+        source: "/admin/:path*",
+        headers: [
+          { key: "Cross-Origin-Opener-Policy", value: "unsafe-none" },
+          { key: "X-Robots-Tag", value: "noindex, nofollow" },
+        ],
+      },
+      {
+        source: "/api/decap/:path*",
+        headers: [
+          { key: "Cross-Origin-Opener-Policy", value: "unsafe-none" },
+          { key: "X-Robots-Tag", value: "noindex, nofollow" },
         ],
       },
 
@@ -182,14 +199,20 @@ const nextConfig = {
   //
   // The PostHogProvider is updated to send events to `api_host: "/ingest"`.
   async rewrites() {
+    const adminRewrite = {
+      source: "/admin",
+      destination: "/admin/index.html",
+    };
+
     // Only proxy PostHog in production. In local dev the Next.js server tries
     // to reach PostHog's US servers from the machine's network and times out
     // (ETIMEDOUT). The PostHogProvider falls back to the direct host in dev.
     if (process.env.NODE_ENV !== "production") {
-      return [];
+      return [adminRewrite];
     }
 
     return [
+      adminRewrite,
       {
         source: "/ingest/static/:path*",
         destination: "https://us-assets.i.posthog.com/static/:path*",

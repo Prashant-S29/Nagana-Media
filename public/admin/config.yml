@@ -1,0 +1,139 @@
+backend:
+  name: github
+  repo: Prashant-S29/Nagana-Media
+  branch: main
+  base_url: http://localhost:3000
+  site_domain: localhost:3000
+  auth_endpoint: api/decap/auth
+  auth_scope: repo
+  use_graphql: true
+  squash_merges: true
+  commit_messages:
+    create: "cms: create {{collection}} {{slug}}"
+    update: "cms: update {{collection}} {{slug}}"
+    delete: "cms: delete {{collection}} {{slug}}"
+    uploadMedia: "cms: upload media {{path}}"
+    deleteMedia: "cms: delete media {{path}}"
+
+publish_mode: editorial_workflow
+
+site_url: http://localhost:3000
+display_url: http://localhost:3000
+logo:
+  src: /assets/static/logo.webp
+  show_in_header: true
+
+media_folder: public/assets/blog/uploads
+public_folder: /assets/blog/uploads
+
+slug:
+  encoding: ascii
+  clean_accents: true
+  sanitize_replacement: "-"
+
+search: true
+show_preview_links: true
+
+collections:
+  - name: blogs
+    label: Blogs
+    label_singular: Blog
+    description: "Create, edit, review, and publish SEO-focused blog posts. Existing markdown posts in _posts are editable here."
+    folder: _posts
+    create: true
+    delete: true
+    extension: md
+    format: yaml-frontmatter
+    slug: "{{slug}}"
+    preview_path: "blogs/{{slug}}"
+    summary: "{{title}} — {{date}}"
+    sortable_fields: ["date", "title", "commit_date", "commit_author"]
+    view_groups:
+      - label: Year
+        field: date
+        pattern: "\\d{4}"
+    fields:
+      - label: Title
+        name: title
+        widget: string
+        hint: "Main H1 title shown on the blog page. Also used to create the filename/slug for new posts."
+        pattern: [".{10,}", "Title should be at least 10 characters."]
+
+      - label: Excerpt
+        name: excerpt
+        widget: text
+        hint: "Short summary used on cards and as fallback SEO description. Keep it useful and click-worthy."
+        pattern: [".{50,}", "Excerpt should be at least 50 characters."]
+
+      - label: Cover Image
+        name: coverImage
+        widget: image
+        hint: "Main image shown at the top of the blog and on blog cards. Uploads are stored in public/assets/blog/uploads."
+
+      - label: Publish Date
+        name: date
+        widget: datetime
+        date_format: "YYYY-MM-DD"
+        time_format: "HH:mm:ss"
+        format: "YYYY-MM-DDTHH:mm:ss.SSS[Z]"
+        picker_utc: true
+        hint: "Used for sorting blogs, Article schema, and publish metadata."
+
+      - label: Author
+        name: author
+        widget: object
+        collapsed: true
+        fields:
+          - label: Name
+            name: name
+            widget: string
+            default: Nagana Media
+          - label: Picture
+            name: picture
+            widget: image
+            default: /assets/blog/authors/nagana.webp
+            hint: "Author image path. Existing default is /assets/blog/authors/nagana.webp."
+
+      - label: Open Graph Image
+        name: ogImage
+        widget: object
+        collapsed: true
+        hint: "Social sharing image. Usually this can be the same as the cover image."
+        fields:
+          - label: URL
+            name: url
+            widget: image
+            required: false
+            hint: "Optional. If unsure, use the same image as Cover Image."
+
+      - label: Meta Title
+        name: metaTitle
+        widget: string
+        required: false
+        hint: "SEO field saved to markdown frontmatter. Recommended: 50-60 characters. If empty, the blog title is used."
+
+      - label: Meta Description
+        name: metaDescription
+        widget: text
+        required: false
+        hint: "SEO field saved to markdown frontmatter. Recommended: 140-160 characters. If empty, the excerpt is used."
+
+      - label: Primary Keyword
+        name: primaryKeyword
+        widget: string
+        required: false
+
+      - label: Secondary Keywords
+        name: secondaryKeywords
+        widget: list
+        required: false
+        collapsed: false
+        field:
+          label: Keyword
+          name: keyword
+          widget: string
+
+      - label: Blog Content
+        name: body
+        widget: markdown
+        hint: "Use the toolbar for headings, links, lists, quotes, and images. This saves as markdown, but you do not need to edit raw files."
