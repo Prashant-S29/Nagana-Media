@@ -73,7 +73,7 @@ Start here before touching any content or community strategy:
 1. Run 15 buyer-intent prompts across ChatGPT and Perplexity. Use the most common commercial intent triggers: "best CRM for [your primary vertical]," "compare [your brand] vs [HubSpot/Salesforce/Pipedrive]," "[your ICP job title] CRM recommendations 2026," "CRM for [specific use case]." Record whether your brand appears, in what position, and with what description. That gap is your AI SEO brief.
 2. Audit your G2 and Capterra profiles for outcome specificity. Read your G2 product description as if you were an AI platform deciding whether to cite it. Does it contain specific outcomes, named verticals, and integration signals? If it reads like a brochure, rewrite it with the same answer-first discipline as your best-performing blog content.
 3. Map your top five ICP segments to missing answer capsules. For each segment, ask: Does our website have a page that answers "best CRM for [this ICP]" in the first two sentences? If not, those missing pages are your five highest-priority content gaps.
-4. Identify three community surfaces where your buyers ask real questions. Reddit communities, LinkedIn group discussions, and YouTube comment threads where CRM buyers evaluate tools. Start with genuine participation — answering real questions from named experts at your company — before any content strategy is in place.
+4. Identify three community surfaces where your buyers ask real questions. Reddit communities, LinkedIn group discussions, and YouTube comment threads where CRM buyers evaluate tools. Start with genuine participation - answering real questions from named experts at your company - before any content strategy is in place.
 
 ## Frequently Asked Questions
 

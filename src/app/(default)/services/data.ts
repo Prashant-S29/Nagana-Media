@@ -9,7 +9,7 @@ export const ExperienceData: ExperienceDataProps[] = [
     percentage: 90,
     title: "Creative Approach",
     description:
-      "We craft original, high-intent content tailored to B2B technology audiences — turning complex solutions into compelling narratives that resonate across every stage of the buyer journey.",
+      "We craft original, high-intent content tailored to B2B technology audiences - turning complex solutions into compelling narratives that resonate across every stage of the buyer journey.",
   },
   {
     percentage: 80,

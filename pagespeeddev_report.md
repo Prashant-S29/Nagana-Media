@@ -1,4 +1,4 @@
-# naganamedia.com — PageSpeed Insights Full Audit Report
+# naganamedia.com - PageSpeed Insights Full Audit Report
 
 **Date:** March 17, 2026  
 **Tool:** Google PageSpeed Insights (Lighthouse 13.0.1)  
@@ -32,7 +32,7 @@
 ### 1.1 LCP Image Has Wrong Loading Attributes
 
 **Affects:** Desktop (heroImage) + Mobile (whatWeDoImage)  
-**Impact:** Critical — responsible for most of the LCP regression  
+**Impact:** Critical - responsible for most of the LCP regression  
 
 **Problem:**  
 Both the desktop and mobile LCP elements are Next.js `<Image>` components that have been left with `loading="lazy"` and no `fetchpriority` hint. This causes the browser to discover the image late in the loading waterfall, creating a **resource load delay of 630ms on desktop and 1,340ms on mobile** before the image even begins downloading.
@@ -50,8 +50,8 @@ LCP breakdown for mobile (`whatWeDoImage`):
 - Element render delay: 30ms
 
 **File locations:**
-- Desktop LCP: `src/components/feature/Hero/Hero.tsx` — the `heroImage`
-- Mobile LCP: `src/components/feature/WhatWeDo/WhatWeDo.tsx` — the `whatWeDoImage`
+- Desktop LCP: `src/components/feature/Hero/Hero.tsx` - the `heroImage`
+- Mobile LCP: `src/components/feature/WhatWeDo/WhatWeDo.tsx` - the `whatWeDoImage`
 
 **Fix:**
 
@@ -110,12 +110,12 @@ In `WhatWeDo.tsx`, find the whatWeDoImage and apply the same change:
 ### 1.2 Render-Blocking CSS Requests
 
 **Affects:** Desktop (210ms savings) + Mobile (540ms savings)  
-**Impact:** High — delays First Contentful Paint and LCP  
+**Impact:** High - delays First Contentful Paint and LCP  
 
 **Problem:**  
 Two CSS chunks are blocking the initial render of the page:
-- `chunks/d33c20b6a4b21442.css` — 8.6 KiB, 525ms on desktop / 640ms on mobile
-- `chunks/ad0aaad9becdb438.css` — 1.9 KiB, 514ms on desktop / 622ms on mobile
+- `chunks/d33c20b6a4b21442.css` - 8.6 KiB, 525ms on desktop / 640ms on mobile
+- `chunks/ad0aaad9becdb438.css` - 1.9 KiB, 514ms on desktop / 622ms on mobile
 
 These are part of Next.js's automatic CSS chunking but are sitting on the critical path.
 
@@ -144,7 +144,7 @@ export default nextConfig;
 > ```bash
 > npm install critters
 > ```
-> This project uses `npm@10.8.3` as the package manager — always use `npm install`, not `yarn` or `pnpm`.
+> This project uses `npm@10.8.3` as the package manager - always use `npm install`, not `yarn` or `pnpm`.
 
 Additionally, ensure your global CSS in `src/styles/globals.css` only contains truly critical styles. Move any styles that are only needed below the fold into separate component-level CSS modules.
 
@@ -153,22 +153,22 @@ Additionally, ensure your global CSS in `src/styles/globals.css` only contains t
 ### 1.3 PostHog Third-Party Scripts on Critical Path
 
 **Affects:** Desktop + Mobile  
-**Impact:** High — 132 KiB of blocking scripts, 650ms LCP savings from preconnect alone  
+**Impact:** High - 132 KiB of blocking scripts, 650ms LCP savings from preconnect alone  
 
 **Problem:**  
 5 PostHog scripts are loading eagerly on every page load with very short cache TTLs (4h and 5m). They occupy the main thread for 40–48ms and block LCP discovery. No preconnect hints exist for the PostHog domains.
 
 Scripts loading on critical path:
-- `/static/posthog-recorder.js` — 89 KiB (4h cache)
-- `/static/surveys.js` — 32 KiB (5m cache)
-- `/static/dead-clicks-autocapture.js` — 6 KiB (4h cache)
-- `/static/web-vitals.js` — 3 KiB (5m cache)
-- `/config.js` — 1 KiB (5m cache)
+- `/static/posthog-recorder.js` - 89 KiB (4h cache)
+- `/static/surveys.js` - 32 KiB (5m cache)
+- `/static/dead-clicks-autocapture.js` - 6 KiB (4h cache)
+- `/static/web-vitals.js` - 3 KiB (5m cache)
+- `/config.js` - 1 KiB (5m cache)
 
 **File:** `src/utils/postHogProvider.tsx`  
 **Package:** `posthog-js@1.255.1` (already installed)
 
-**Fix — Part A: Add preconnect hints**
+**Fix - Part A: Add preconnect hints**
 
 In `src/app/(default)/layout.tsx`, add to the `<head>`:
 ```tsx
@@ -179,14 +179,14 @@ In `src/app/(default)/layout.tsx`, add to the `<head>`:
 </head>
 ```
 
-**Fix — Part B: Defer PostHog initialization until after TTI**
+**Fix - Part B: Defer PostHog initialization until after TTI**
 
 Update `src/utils/postHogProvider.tsx` to initialize PostHog only after the page is fully interactive:
 
 ```tsx
 'use client';
 
-// posthog-js@1.255.1 — already in package.json, no new install needed
+// posthog-js@1.255.1 - already in package.json, no new install needed
 import posthog from 'posthog-js';
 import { PostHogProvider as PHProvider } from 'posthog-js/react';
 import { useEffect, useState } from 'react';
@@ -225,19 +225,19 @@ export function PostHogProvider({ children }: { children: React.ReactNode }) {
 
 ---
 
-### 1.4 Unused JavaScript — 185 KiB Savings
+### 1.4 Unused JavaScript - 185 KiB Savings
 
 **Affects:** Desktop + Mobile  
-**Impact:** High — inflates initial JS parse/execute time  
+**Impact:** High - inflates initial JS parse/execute time  
 
 **Problem:**  
 Two first-party JS chunks contain large amounts of unused code:
-- `chunks/85e6ed1fa4093a86.js` — 127 KiB total, 77 KiB unused
-- `chunks/1c9669fd87998ca9.js` — 69 KiB total, 26 KiB unused
+- `chunks/85e6ed1fa4093a86.js` - 127 KiB total, 77 KiB unused
+- `chunks/1c9669fd87998ca9.js` - 69 KiB total, 26 KiB unused
 
 PostHog also ships unused JS:
-- `posthog-recorder.js` — 88 KiB total, 56 KiB unused
-- `surveys.js` — 31 KiB total, 25 KiB unused
+- `posthog-recorder.js` - 88 KiB total, 56 KiB unused
+- `surveys.js` - 31 KiB total, 25 KiB unused
 
 **Fix:**
 
@@ -247,7 +247,7 @@ PostHog also ships unused JS:
 npm install @next/bundle-analyzer
 ```
 
-In `next.config.js` — note this project uses `"type": "module"`, so use ESM syntax:
+In `next.config.js` - note this project uses `"type": "module"`, so use ESM syntax:
 ```js
 // next.config.js
 import bundleAnalyzer from '@next/bundle-analyzer';
@@ -272,7 +272,7 @@ Run: `ANALYZE=true npm run build`
 // src/app/(default)/page.tsx
 import dynamic from 'next/dynamic';
 
-// These components are below the fold — safe to lazy load
+// These components are below the fold - safe to lazy load
 const Testimonial = dynamic(
   () => import('@/components/feature/Testimonial'),
   { ssr: false }
@@ -303,7 +303,7 @@ posthog.init(key, {
 
 ---
 
-### 1.5 Legacy JavaScript — 43 KiB Savings
+### 1.5 Legacy JavaScript - 43 KiB Savings
 
 **Affects:** Desktop + Mobile  
 **Impact:** Medium  
@@ -349,7 +349,7 @@ not dead
 > 0.5%
 ```
 
-In `next.config.js`, explicitly enable modern JS output — remember ESM syntax since `"type": "module"` is set:
+In `next.config.js`, explicitly enable modern JS output - remember ESM syntax since `"type": "module"` is set:
 ```js
 // next.config.js
 /** @type {import('next').NextConfig} */
@@ -367,10 +367,10 @@ export default nextConfig;
 
 ---
 
-### 1.6 Oversized Images — 83 KiB Savings (Desktop)
+### 1.6 Oversized Images - 83 KiB Savings (Desktop)
 
 **Affects:** Desktop only  
-**Impact:** Medium — LCP and FCP improvement  
+**Impact:** Medium - LCP and FCP improvement  
 
 **Problem:**  
 5 images are being served at their full source resolution but displayed at much smaller dimensions:
@@ -418,7 +418,7 @@ Add the `sizes` prop to every Next.js `<Image>` component so it requests the cor
 ### 1.7 No Preconnect Hints for Any External Origin
 
 **Affects:** Desktop + Mobile  
-**Impact:** Medium — saves 300–650ms per origin on first connection  
+**Impact:** Medium - saves 300–650ms per origin on first connection  
 
 **Problem:**  
 No `<link rel="preconnect">` hints exist for any third-party origin. The browser wastes time doing DNS lookup + TCP + TLS handshake for PostHog origins at the point they're first needed.
@@ -451,12 +451,12 @@ export default function Layout({ children }: { children: React.ReactNode }) {
 ### 1.8 Short Cache Lifetimes on PostHog Assets
 
 **Affects:** Desktop + Mobile  
-**Impact:** Medium — affects repeat visits  
+**Impact:** Medium - affects repeat visits  
 
 **Problem:**  
 PostHog's CDN serves its scripts with very short cache TTLs:
-- `surveys.js` and `web-vitals.js` — only **5 minutes**
-- `posthog-recorder.js` and `dead-clicks-autocapture.js` — only **4 hours**
+- `surveys.js` and `web-vitals.js` - only **5 minutes**
+- `posthog-recorder.js` and `dead-clicks-autocapture.js` - only **4 hours**
 
 Users revisiting the site re-download 132 KiB on nearly every visit.
 
@@ -464,7 +464,7 @@ Users revisiting the site re-download 132 KiB on nearly every visit.
 
 This is controlled by PostHog's CDN and cannot be changed directly. The best mitigation is to **self-host PostHog's scripts** through your Next.js app's API routes or via a proxy, which lets you set your own cache headers.
 
-Alternatively, in `next.config.js`, add headers and rewrites to proxy PostHog assets — using ESM syntax (required because `"type": "module"` is set in `package.json`):
+Alternatively, in `next.config.js`, add headers and rewrites to proxy PostHog assets - using ESM syntax (required because `"type": "module"` is set in `package.json`):
 
 ```js
 // next.config.js
@@ -500,7 +500,7 @@ const nextConfig = {
 export default nextConfig;
 ```
 
-> **Note:** The project already has a `next-sitemap.config.cjs` file using CommonJS format — that file is fine as-is because it uses the `.cjs` extension explicitly. Only `next.config.js` needs to use ESM `export default` syntax.
+> **Note:** The project already has a `next-sitemap.config.cjs` file using CommonJS format - that file is fine as-is because it uses the `.cjs` extension explicitly. Only `next.config.js` needs to use ESM `export default` syntax.
 
 Then update the PostHog init to use your proxy:
 ```tsx
@@ -547,7 +547,7 @@ Use `<link rel="preload">` for the most critical CSS chunk in your layout:
 ### 1.10 Logo Image Has `loading="lazy"`
 
 **Affects:** Desktop + Mobile  
-**Impact:** Low-Medium — causes layout shift (CLS 0.003 on desktop)  
+**Impact:** Low-Medium - causes layout shift (CLS 0.003 on desktop)  
 
 **Problem:**  
 The logo image in the Navbar is using `loading="lazy"`, which causes it to be treated as an unsized image element during initial render, contributing to the desktop CLS score of 0.003.
@@ -571,10 +571,10 @@ The logo image in the Navbar is using `loading="lazy"`, which causes it to be tr
 
 ## 2. Accessibility Issues
 
-### 2.1 Desktop Navigation List Structure Broken (Desktop only — biggest a11y issue)
+### 2.1 Desktop Navigation List Structure Broken (Desktop only - biggest a11y issue)
 
 **Affects:** Desktop only  
-**Impact:** Critical — directly causes the 79 accessibility score  
+**Impact:** Critical - directly causes the 79 accessibility score  
 
 **Problem:**  
 The desktop navigation renders a `<ul>` element (from Radix UI's `NavigationMenu`) but the immediate children are `<div>` elements instead of `<li>` elements. This breaks the semantic HTML contract that screen readers rely on to announce and navigate lists.
@@ -723,10 +723,10 @@ The LinkedIn icon link in the footer or contact section has no accessible text. 
 
 ---
 
-### 2.4 Low Colour Contrast — `text-black/50` Used Everywhere
+### 2.4 Low Colour Contrast - `text-black/50` Used Everywhere
 
 **Affects:** Desktop + Mobile  
-**Impact:** High — affects dozens of elements across the page  
+**Impact:** High - affects dozens of elements across the page  
 
 **Problem:**  
 The Tailwind class `text-black/50` (rgba(0,0,0,0.5)) on a white background gives a contrast ratio of approximately **3.9:1**, which fails WCAG AA for normal text (requires 4.5:1) and fails for large text at smaller sizes.
@@ -740,16 +740,16 @@ Failing elements include:
 
 Additionally, the **"Let's Talk"** CTA button fails contrast (likely cyan text on a dark/coloured background).
 
-**File:** Multiple — primarily in `src/components/feature/` components and `tailwind.config.ts`
+**File:** Multiple - primarily in `src/components/feature/` components and `tailwind.config.ts`
 
-**Fix — Global approach:**
+**Fix - Global approach:**
 
 In `tailwind.config.ts`, define a semantic colour alias:
 ```ts
 theme: {
   extend: {
     colors: {
-      'body-muted': '#6b7280',  // gray-500 — 4.6:1 contrast on white, passes AA
+      'body-muted': '#6b7280',  // gray-500 - 4.6:1 contrast on white, passes AA
     },
   },
 },
@@ -783,7 +783,7 @@ For the "Let's Talk" button, check the button variant in `src/components/ui/butt
 
 **File:** `src/components/common/ServiceCard/ServiceCard.tsx`, `src/components/common/BlogCard/BlogCard.tsx`
 
-**Fix Option A — Change link text directly:**
+**Fix Option A - Change link text directly:**
 ```tsx
 // ServiceCard.tsx
 <Link href={`/services/${slug}`}>
@@ -796,7 +796,7 @@ For the "Let's Talk" button, check the button variant in `src/components/ui/butt
 </Link>
 ```
 
-**Fix Option B — Use aria-label while keeping visual text:**
+**Fix Option B - Use aria-label while keeping visual text:**
 ```tsx
 <Link
   href={`/services/${slug}`}
@@ -810,10 +810,10 @@ Option A is preferred as it benefits both SEO and accessibility.
 
 ---
 
-### 2.6 Logo Image Has `loading="lazy"` — Unsized Image Element (CLS)
+### 2.6 Logo Image Has `loading="lazy"` - Unsized Image Element (CLS)
 
 **Affects:** Desktop (CLS 0.003)  
-**Impact:** Low — causes minor layout shift  
+**Impact:** Low - causes minor layout shift  
 
 Already covered in **1.10** above. The logo, heroImage, and whatWeDoImage are all flagged as "unsized image elements" contributing to layout shift because lazy-loaded images don't reserve space until they load.
 
@@ -823,15 +823,15 @@ Already covered in **1.10** above. The logo, heroImage, and whatWeDoImage are al
 
 ## 3. Best Practices Issues
 
-### 3.1 Browser Console Error — `llms.txt` Returns 404
+### 3.1 Browser Console Error - `llms.txt` Returns 404
 
 **Affects:** Desktop + Mobile  
-**Impact:** Medium — console errors indicate unresolved problems  
+**Impact:** Medium - console errors indicate unresolved problems  
 
 **Problem:**  
 The site is requesting `/llms.txt` as part of Next.js router prefetching (`_rsc=1r34m`), but the server responds with `404 Not Found`. This error appears in the browser console and is flagged by Lighthouse.
 
-Interestingly, the file `public/llms.txt` **does exist** in the project tree — so this is likely a deployment issue where the file hasn't been deployed, or a Next.js App Router RSC (React Server Component) conflict.
+Interestingly, the file `public/llms.txt` **does exist** in the project tree - so this is likely a deployment issue where the file hasn't been deployed, or a Next.js App Router RSC (React Server Component) conflict.
 
 **Fix:**
 
@@ -882,7 +882,7 @@ No `Content-Security-Policy` header is set in enforcement mode. This leaves the 
 
 **Fix:**
 
-Add security headers in `next.config.js` — using ESM `export default` syntax required by `"type": "module"`:
+Add security headers in `next.config.js` - using ESM `export default` syntax required by `"type": "module"`:
 
 ```js
 // next.config.js
@@ -978,10 +978,10 @@ If PostHog or other third-party scripts use DOM APIs, this may require testing b
 
 ## 4. SEO Issues
 
-### 4.1 Links Do Not Have Descriptive Text — 6 Links
+### 4.1 Links Do Not Have Descriptive Text - 6 Links
 
 **Affects:** Desktop + Mobile  
-**Impact:** High — directly hurts SEO score  
+**Impact:** High - directly hurts SEO score  
 
 Already covered in **2.5** above. Descriptive link text is both an accessibility requirement and an SEO signal. Google uses link anchor text to understand the content of the destination page.
 
@@ -998,10 +998,10 @@ Already covered in **2.5** above. Descriptive link text is both an accessibility
 
 ---
 
-### 4.2 robots.txt Is Not Valid — 1 Error
+### 4.2 robots.txt Is Not Valid - 1 Error
 
 **Affects:** Desktop + Mobile  
-**Impact:** High — can affect crawling and indexing  
+**Impact:** High - can affect crawling and indexing  
 
 **Problem:**  
 The `robots.txt` file contains an unknown directive on line 99:
@@ -1232,7 +1232,7 @@ This is the most aggressive PostHog optimization and would likely push the mobil
 
 ### 5.10 Enable Vercel Edge Caching / CDN Headers for Static Assets
 
-If deployed on Vercel, ensure static assets in `public/` have long-lived cache headers. Add to `next.config.js` — using ESM `export default`:
+If deployed on Vercel, ensure static assets in `public/` have long-lived cache headers. Add to `next.config.js` - using ESM `export default`:
 
 ```js
 // next.config.js
@@ -1241,7 +1241,7 @@ const nextConfig = {
   async headers() {
     return [
       {
-        // public/assets/ — team images, blog covers, static images
+        // public/assets/ - team images, blog covers, static images
         source: '/assets/(.*)',
         headers: [
           {
@@ -1269,7 +1269,7 @@ export default nextConfig;
 
 ---
 
-## Summary — Priority Fix Order
+## Summary - Priority Fix Order
 
 | # | Issue | Devices | Effort | Score impact |
 |---|---|---|---|---|
@@ -1282,8 +1282,8 @@ export default nextConfig;
 | 7 | Add CSP + COOP security headers | Both | 1 hr | Best Practices +4 |
 | 8 | Add `aria-label` to icon buttons + LinkedIn link | Both | 20 min | Accessibility +3 |
 | 9 | Fix oversized images with `sizes` prop | Desktop | 30 min | Performance +1 |
-| 10 | Legacy JS — update browserslist target | Both | 15 min | Performance +1 |
-| 11 | Unused JS — dynamic imports | Both | 2–3 hrs | Performance +1–2 |
+| 10 | Legacy JS - update browserslist target | Both | 15 min | Performance +1 |
+| 11 | Unused JS - dynamic imports | Both | 2–3 hrs | Performance +1–2 |
 | 12 | Self-host / proxy PostHog scripts | Both | 2 hrs | Performance +2, Best Practices +1 |
 | 13 | Add JSON-LD structured data | Both | 1 hr | SEO bonus (rich results) |
 | 14 | Add `placeholder="blur"` to images | Both | 30 min | CLS improvement |
@@ -1291,5 +1291,5 @@ export default nextConfig;
 
 ---
 
-*Report generated from PageSpeed Insights analysis — Mar 17, 2026*  
+*Report generated from PageSpeed Insights analysis - Mar 17, 2026*  
 *Codebase: naganamedia_website (Next.js 16.0.10, React 19.2.3, Tailwind CSS 3.4.3, Radix UI, posthog-js 1.255.1, TypeScript 5.5.3, Node package manager: npm 10.8.3)*

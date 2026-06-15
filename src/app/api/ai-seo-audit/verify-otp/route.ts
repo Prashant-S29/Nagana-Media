@@ -198,13 +198,13 @@ export async function POST(req: Request) {
     const { error: resendError } = await resend.emails.send({
       from: "Nagana Media <info@naganamedia.com>",
       to: email,
-      subject: "We've received your AI SEO Audit request — Nagana Media",
+      subject: "We've received your AI SEO Audit request - Nagana Media",
       react: AiSeoAuditEmail({ name, companyWebsite }),
     });
 
     if (resendError) {
       console.error("Resend confirmation error:", resendError);
-      // Non-blocking — sheet already saved, don't fail the request
+      // Non-blocking - sheet already saved, don't fail the request
     }
 
     return NextResponse.json({ success: true }, { status: 200 });

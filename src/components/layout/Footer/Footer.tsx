@@ -17,6 +17,38 @@ export const Footer: React.FC = () => {
 
   return (
     <footer data-container className="bg-[#262626]">
+      <section className="border-b border-white/20 bg-[#262626] py-16 text-white lg:py-20">
+        <div className={`grid gap-8 lg:grid-cols-[1fr_auto] lg:items-center`}>
+          <div>
+            <h2
+              className={`text-[34px] leading-[1.05] tracking-tight text-white md:text-[44px]`}
+            >
+              Measure your AI visibility.
+              <br />
+              Then fix what's missing.
+            </h2>
+            <p className="mt-4 max-w-2xl text-sm leading-7 text-white/70">
+              Start with a free AI SEO audit. Know exactly where your brand is
+              invisible across ChatGPT, Perplexity, Google AI Mode, Claude,
+              Gemini, and Microsoft Copilot - and what to do about it.
+            </p>
+          </div>
+          <div className="flex flex-col gap-3 sm:flex-row lg:flex-col">
+            <Link
+              href="/ai-seo-audit"
+              className="rounded-md bg-white px-7 py-3 text-center text-sm font-bold tracking-wide text-[#111827]"
+            >
+              Get a Free AI Audit →
+            </Link>
+            <Link
+              href="/contact"
+              className="rounded-md border border-white/40 px-7 py-3 text-center text-sm font-bold tracking-wide text-white"
+            >
+              Talk to the Team
+            </Link>
+          </div>
+        </div>
+      </section>
       <div className="flex flex-col sm:flex-row">
         <div className="mt-9 w-full border-white/20 pr-8 sm:mt-0 sm:max-w-[300px] sm:border-r sm:py-9">
           <div className="">

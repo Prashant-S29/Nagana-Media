@@ -1,6 +1,6 @@
 ---
 title: "Surviving the AI Shift: Top GTM Strategies for B2B Technology Companies in 2026"
-excerpt: "If 2025 was the year of integration, 2026 is the year of orchestration. Discover the five strategic pillars—from AI Agents to Answer Engine Optimization—redefining the B2B GTM engine."
+excerpt: "If 2025 was the year of integration, 2026 is the year of orchestration. Discover the five strategic pillars-from AI Agents to Answer Engine Optimization-redefining the B2B GTM engine."
 coverImage: "/assets/blog/surviving-the-ai-shift-2026/cover.webp"
 date: "2026-01-22T02:22:00.000Z"
 author:

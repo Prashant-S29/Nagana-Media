@@ -1,6 +1,6 @@
 ---
 title: "Why Technology B2B Messaging Fails in an AI-First World"
-excerpt: "Most technology B2B messaging was built for buyers who click. In 2026, shortlists form inside ChatGPT, Gemini, and Perplexity before a vendor is ever contacted. Here is why SaaS, ERP, CRM, and iPaaS companies go invisible in AI search — and how to fix it."
+excerpt: "Most technology B2B messaging was built for buyers who click. In 2026, shortlists form inside ChatGPT, Gemini, and Perplexity before a vendor is ever contacted. Here is why SaaS, ERP, CRM, and iPaaS companies go invisible in AI search - and how to fix it."
 coverImage: "/assets/blog/technology-b2b-messaging-fails-ai-world/cover.webp"
 date: "2026-05-10T05:35:07.322Z"
 author:
@@ -9,7 +9,7 @@ author:
 ogImage:
   url: "/assets/blog/technology-b2b-messaging-fails-ai-world/cover.webp"
 metaTitle: "Why Technology B2B Messaging Fails in an AI-First World"
-metaDescription: "Most technology B2B messaging was built for buyers who click. In 2026, shortlists form inside ChatGPT, Gemini, and Perplexity before a vendor is ever contacted. Here is why SaaS, ERP, CRM, and iPaaS companies go invisible in AI search — and how to fix it."
+metaDescription: "Most technology B2B messaging was built for buyers who click. In 2026, shortlists form inside ChatGPT, Gemini, and Perplexity before a vendor is ever contacted. Here is why SaaS, ERP, CRM, and iPaaS companies go invisible in AI search - and how to fix it."
 primaryKeyword: "Technology B2B Messaging"
 secondaryKeywords: ["AI Search Visibility", "B2B SaaS Messaging", "AEO", "GEO", "Generative Engine Optimization"]
 ---

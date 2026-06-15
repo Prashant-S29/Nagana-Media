@@ -122,7 +122,7 @@ Underlying all of this is a structural issue that neither a content calendar nor
 
 AI systems cite brands they can clearly identify as **entities**: a consistent name, a defined area of expertise, verifiable credentials, and coherent mentions across authoritative sources. When these signals are absent or contradictory, AI systems cannot confidently include your brand in a synthesized answer, regardless of how strong your product actually is.
 
-Only **11% of B2B brands** have the majority of their content AI-discovery ready. For most companies, this is not a content quality problem. It is a content architecture problem. The information exists somewhere—it has simply never been structured in a way that makes it machine-readable, consistent, and citable.
+Only **11% of B2B brands** have the majority of their content AI-discovery ready. For most companies, this is not a content quality problem. It is a content architecture problem. The information exists somewhere-it has simply never been structured in a way that makes it machine-readable, consistent, and citable.
 
 Forrester recommends expanding the scope of SEO into **Generative Engine Optimization**, including building FAQs, comparison pages, and expert content that aligns with the types of prompts AI systems are likely to receive from business users. That is entity work. It is the foundational layer that determines whether your brand shows up in the AI-mediated research process, where perception is now built.
 

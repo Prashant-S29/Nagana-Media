@@ -178,7 +178,7 @@ module.exports = {
       };
     }
 
-    // Individual blog posts — use real publish date for lastmod
+    // Individual blog posts - use real publish date for lastmod
     if (path.includes("/blogs/") && path !== "/blogs") {
       const publishDate = postDates[path];
       return {

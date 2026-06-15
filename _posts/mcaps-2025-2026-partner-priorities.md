@@ -28,7 +28,7 @@ In our latest breakdown, we cover:
 
 - Why AI business solutions now sit at the core of MCAPS priorities
 - How security and compliance requirements will redefine partner operations
-- Where regional programs (U.S., EMEA, APAC) are diverging—and how to capitalize
+- Where regional programs (U.S., EMEA, APAC) are diverging-and how to capitalize
 - A readiness checklist designed for executive planning
 
 This isn’t about reacting to Microsoft’s strategy. It’s about positioning your organization to lead in it.
@@ -72,7 +72,7 @@ Microsoft is orienting MCAPS 2025–2026 around a handful of growth engines that
 The message is clear: partners who align early to these priorities, whether by embedding Copilot into vertical solutions, modernizing workloads on Azure, or building security-rich services, will be better positioned to capture new revenue streams.
 
 ![MCAPS FY26 Solution Areas](/assets/blog/mcaps-2025-2026-partner-priorities/infoOne.webp)
-**Image description:** An infographic summarizing Microsoft’s MCAPS FY26 solution areas — AI Business Solutions, Cloud & AI Platforms, and Security — showing how partners can align their go-to-market motions with Microsoft’s key priorities for the year. Each area includes short highlights on innovation, modernization, and protection.
+**Image description:** An infographic summarizing Microsoft’s MCAPS FY26 solution areas - AI Business Solutions, Cloud & AI Platforms, and Security - showing how partners can align their go-to-market motions with Microsoft’s key priorities for the year. Each area includes short highlights on innovation, modernization, and protection.
 
 ### In What Ways Is AI Business Solutions Becoming the Core?
 
@@ -110,7 +110,7 @@ Security is no longer a back-office safeguard; it’s the front line of Microsof
 
 Microsoft’s Secure Future Initiative underscores this proactive approach, where identity, data, and systems are protected by design rather than defended after the fact.
 
-Two forces stand out for leaders: the rise of quantum-safe cryptography and the growing compliance burden around regulated industries and cross-border data. Both will directly shape customer expectations and partner accountability. Microsoft recently added ML-KEM (a lattice-based, post-quantum key encapsulation algorithm) and other PQC (Post-Quantum Cryptography) algorithms into its SymCrypt library—used in Windows, Azure, Microsoft 365, and other core services—to begin protecting apps and data from future quantum threats.
+Two forces stand out for leaders: the rise of quantum-safe cryptography and the growing compliance burden around regulated industries and cross-border data. Both will directly shape customer expectations and partner accountability. Microsoft recently added ML-KEM (a lattice-based, post-quantum key encapsulation algorithm) and other PQC (Post-Quantum Cryptography) algorithms into its SymCrypt library-used in Windows, Azure, Microsoft 365, and other core services-to begin protecting apps and data from future quantum threats.
 
 Operationally, Microsoft is tightening requirements in Partner Center. Multifactor authentication (MFA) becomes mandatory for all access on August 30, 2025, and API calls that bypass MFA will be blocked beginning April 1, 2026. The message is straightforward: your security posture isn’t just a best practice, it’s a prerequisite to compete. For partners aiming to lead in MCAPS, investing early in next-gen security isn’t optional; it’s the price of admission.
 
@@ -225,7 +225,7 @@ Partners will increasingly be evaluated by net new cloud consumption, solution a
 
 1. MCAPS Start for Partners: post-event (includes FY26 solution areas and event details).
    [https://partner.microsoft.com/blog/article/mcaps-start-for-partners-2025-post-event](https://partner.microsoft.com/blog/article/mcaps-start-for-partners-2025-post-event)
-2. MCAPS Start for Partners — Incentives & investments details (enterprise investment +20%, Copilot funding +50%, Azure incentives +70%).
+2. MCAPS Start for Partners - Incentives & investments details (enterprise investment +20%, Copilot funding +50%, Azure incentives +70%).
    [https://partner.microsoft.com/en-us/blog/article/mcaps-start-for-partners-2025-post-event](https://partner.microsoft.com/en-us/blog/article/mcaps-start-for-partners-2025-post-event)
 3. New fiscal year, new partner investments: designations and specializations (Copilot, Clinical Applications, Sovereign Cloud; new designations).
    [https://partner.microsoft.com/en-us/blog/article/new-benefits-designations-specializations](https://partner.microsoft.com/en-us/blog/article/new-benefits-designations-specializations)
@@ -237,7 +237,7 @@ Partners will increasingly be evaluated by net new cloud consumption, solution a
    [https://news.microsoft.com/build-2025/](https://news.microsoft.com/build-2025/)
 7. Microsoft Fabric updates (July 2025 feature summaries; Cosmos DB in Fabric preview; Copilot integration notes).
    [https://learn.microsoft.com/en-us/fabric/fundamentals/whats-new](https://learn.microsoft.com/en-us/fabric/fundamentals/whats-new)
-8. Microsoft for Sustainability — What's new and 2025 Environmental Sustainability Report.
+8. Microsoft for Sustainability - What's new and 2025 Environmental Sustainability Report.
    [https://learn.microsoft.com/en-us/industry/sustainability/whats-new-2025-09](https://learn.microsoft.com/en-us/industry/sustainability/whats-new-2025-09)
 9. MCAPS Start for Partners content hub / collection (session recordings, playbooks).
    [https://partner.microsoft.com/asset/collection/mcaps-start-for-partners](https://partner.microsoft.com/asset/collection/mcaps-start-for-partners)

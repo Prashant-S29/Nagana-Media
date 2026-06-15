@@ -428,23 +428,23 @@ For Microsoft partners, this moment presents a rare, high-impact opportunity.
 
 Enterprises will need guidance at every stage, from identifying the right workflows for automation to building custom agents to setting guardrails that ensure safe and compliant adoption. They will also look for long-term partners who can help them manage these AI workers with the same rigor as any mission-critical system.
 
-Ignite 2025 set the foundation. Now, it's partners who will bring this future to life — helping organizations everywhere unlock new levels of efficiency, intelligence, and resilience.
+Ignite 2025 set the foundation. Now, it's partners who will bring this future to life - helping organizations everywhere unlock new levels of efficiency, intelligence, and resilience.
 
 The era of autonomous AI agents has begun. And for Microsoft partners, the opportunity has never been greater.
 
 ## References
 
-1. "Microsoft Ignite 2025: Copilot and agents built to power the Frontier Firm" — Microsoft 365 blog  
+1. "Microsoft Ignite 2025: Copilot and agents built to power the Frontier Firm" - Microsoft 365 blog  
    [https://www.microsoft.com/en-us/microsoft-365/blog/2025/11/18/microsoft-ignite-2025-copilot-and-agents-built-to-power-the-frontier-firm/?utm_source=chatgpt.com](https://www.microsoft.com/en-us/microsoft-365/blog/2025/11/18/microsoft-ignite-2025-copilot-and-agents-built-to-power-the-frontier-firm/?utm_source=chatgpt.com)
 
 2. "Introducing Microsoft Agent 365" – official Microsoft blog post  
    [https://www.microsoft.com/en-us/microsoft-365/blog/2025/11/18/microsoft-agent-365-the-control-plane-for-ai-agents/?utm_source=chatgpt.com](https://www.microsoft.com/en-us/microsoft-365/blog/2025/11/18/microsoft-agent-365-the-control-plane-for-ai-agents/?utm_source=chatgpt.com)
 
-3. "The complete lifecycle of AI on display at Ignite 2025" — Microsoft blog  
+3. "The complete lifecycle of AI on display at Ignite 2025" - Microsoft blog  
    [https://blogs.microsoft.com/blog/2025/11/18/from-idea-to-deployment-the-complete-lifecycle-of-ai-on-display-at-ignite-2025/?utm_source=chatgpt.com](https://blogs.microsoft.com/blog/2025/11/18/from-idea-to-deployment-the-complete-lifecycle-of-ai-on-display-at-ignite-2025/?utm_source=chatgpt.com)
 
-4. "Ignite 2025: Windows at the frontier of work" — Windows Blog  
+4. "Ignite 2025: Windows at the frontier of work" - Windows Blog  
    [https://blogs.windows.com/windowsexperience/2025/11/18/ignite-2025-windows-at-the-frontier-of-work/?utm_source=chatgpt.com](https://blogs.windows.com/windowsexperience/2025/11/18/ignite-2025-windows-at-the-frontier-of-work/?utm_source=chatgpt.com)
 
-5. "Ambient & Autonomous Security for the Agentic Era" — Microsoft Security Blog  
+5. "Ambient & Autonomous Security for the Agentic Era" - Microsoft Security Blog  
    [https://www.microsoft.com/en-us/security/blog/2025/11/18/ambient-and-autonomous-security-for-the-agentic-era/?utm_source=chatgpt.com](https://www.microsoft.com/en-us/security/blog/2025/11/18/ambient-and-autonomous-security-for-the-agentic-era/?utm_source=chatgpt.com)

@@ -23,7 +23,7 @@ export default async function RootLayout({
           origin) so preconnect hints to posthog.com are wasted. We only
           keep them for local dev where the proxy is disabled.
           In prod the browser already has a connection open to your own
-          domain — no hint needed.
+          domain - no hint needed.
         */}
         {process.env.NODE_ENV !== "production" && (
           <>

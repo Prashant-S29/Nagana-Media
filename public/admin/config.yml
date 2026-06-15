@@ -46,7 +46,7 @@ collections:
     format: yaml-frontmatter
     slug: "{{slug}}"
     preview_path: "blogs/{{slug}}"
-    summary: "{{title}} — {{date}}"
+    summary: "{{title}} - {{date}}"
     sortable_fields: ["date", "title", "commit_date", "commit_author"]
     view_groups:
       - label: Year

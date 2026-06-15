@@ -17,7 +17,7 @@ export const Navbar: React.FC = () => {
   return (
     <div
       data-container
-      className="absolute z-50 flex h-[100px] w-full items-center justify-between py-4 sm:py-8"
+      className="absolute top-0 z-50 flex h-[100px] w-full items-center justify-between py-4 sm:py-8"
     >
       <Link href="/" className="text-white">
         <Image src={logo} alt="logo" width={120} height={50} priority />

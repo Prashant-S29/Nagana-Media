@@ -34,7 +34,7 @@ export function PostHogProvider({ children }: { children: React.ReactNode }) {
     if (posthog.__loaded) return;
 
     const init = () => {
-      // Double-check inside the callback — idle callback can fire late
+      // Double-check inside the callback - idle callback can fire late
       if (posthog.__loaded) return;
 
       posthog.init(env.NEXT_PUBLIC_POSTHOG_KEY, {
@@ -70,7 +70,7 @@ export function PostHogProvider({ children }: { children: React.ReactNode }) {
     }
   }, []);
 
-  // ✅ Always render PHProvider — never gate children behind `initialized`.
+  // ✅ Always render PHProvider - never gate children behind `initialized`.
   // PHProvider is safe to render before posthog.init() completes; it holds
   // calls in a queue and flushes them once the SDK is ready.
   return (
