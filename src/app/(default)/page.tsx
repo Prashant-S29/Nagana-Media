@@ -218,12 +218,36 @@ const services = [
 ];
 
 const platforms = [
-  ["ChatGPT", "Cited in vendor comparisons and category queries"],
-  ["Perplexity", "Ranked in live deep-research answers"],
-  ["Google AI Mode", "Featured in AI Overview blocks"],
-  ["Claude", "Surfaced in technical and strategic queries"],
-  ["Gemini", "Integrated across Google Search and Workspace"],
-  ["Microsoft Copilot", "Present in enterprise buying research"],
+  [
+    "ChatGPT",
+    "/assets/static/openai.svg",
+    "Cited in vendor comparisons and category queries",
+  ],
+  [
+    "Perplexity",
+    "/assets/static/perplexity.svg",
+    "Ranked in live deep-research answers",
+  ],
+  [
+    "Google AI Mode",
+    "/assets/static/google-mode.svg",
+    "Featured in AI Overview blocks",
+  ],
+  [
+    "Claude",
+    "/assets/static/claude.svg",
+    "Surfaced in technical and strategic queries",
+  ],
+  [
+    "Gemini",
+    "/assets/static/gemini.svg",
+    "Integrated across Google Search and Workspace",
+  ],
+  [
+    "Microsoft Copilot",
+    "/assets/static/copilot.svg",
+    "Present in enterprise buying research",
+  ],
 ];
 
 const faqs = [
@@ -699,10 +723,11 @@ const Home: React.FC = () => {
               </div>
             </div>
             <div className="grid gap-px overflow-hidden rounded-xl border border-white/10 bg-white/10 sm:grid-cols-2">
-              {platforms.map(([name, body]) => (
+              {platforms.map(([name, icon, body]) => (
                 <div key={name} className="bg-[#062D3A] p-5">
-                  <p className={`text-sm text-brand`}>{name}</p>
-                  <p className="mt-2 text-sm leading-6 text-white/75">{body}</p>
+                  <Image src={icon!} alt="icon" width={30} height={30} />
+                  <p className={`mt-2 text-sm text-brand`}>{name}</p>
+                  <p className="text-sm text-white/75">{body}</p>
                 </div>
               ))}
             </div>
