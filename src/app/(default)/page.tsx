@@ -21,6 +21,7 @@ import { getAllPosts } from "~/utils/api";
 export const dynamic = "force-static";
 
 const baseUrl = "https://www.naganamedia.com";
+const homepageDateModified = "2026-06-16";
 
 export const metadata: Metadata = {
   title: {
@@ -246,12 +247,25 @@ const faqs = [
     q: "What does a Nagana Media AI visibility audit include?",
     a: "The free audit covers AI citation mapping across six platforms, competitor citation analysis, technical crawlability, schema and entity audit, content structure review, and a 90-day roadmap.",
   },
+  {
+    q: "How does Nagana Media improve lead acquisition?",
+    a: "We improve lead acquisition by aligning AI search visibility, buyer-intent content, landing pages, and sales enablement assets around the questions your ideal customers ask before they contact sales.",
+  },
+  {
+    q: "Which industries does Nagana Media serve?",
+    a: "Nagana Media works with complex B2B technology companies, including SaaS, fintech, enterprise software, iPaaS, ERP, CRM, supply chain technology, and identity technology brands.",
+  },
+  {
+    q: "What is the Resonance Framework?",
+    a: "The Resonance Framework is Nagana Media's four-stage system - Discover, Clarify, Activate, and Scale - for making complex technology companies easier for buyers and AI systems to understand, cite, and choose.",
+  },
 ];
 
 const organizationJsonLd = {
   "@context": "https://schema.org",
   "@type": "Organization",
   name: "Nagana Media",
+  dateModified: homepageDateModified,
   alternateName: "Naganarai Media Tech Private Limited",
   url: baseUrl,
   description:
@@ -279,6 +293,25 @@ const faqJsonLd = {
     name: faq.q,
     acceptedAnswer: { "@type": "Answer", text: faq.a },
   })),
+};
+
+const webPageJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  name: "Nagana Media - AI-Powered GTM Intelligence for B2B Technology Companies",
+  url: baseUrl,
+  description: metadata.description,
+  dateModified: homepageDateModified,
+  isPartOf: {
+    "@type": "WebSite",
+    name: "Nagana Media",
+    url: baseUrl,
+  },
+  about: {
+    "@type": "Organization",
+    name: "Nagana Media",
+    url: baseUrl,
+  },
 };
 
 function JsonLdScript({ data }: { data: object }) {
@@ -325,6 +358,7 @@ const Home: React.FC = () => {
   return (
     <>
       <JsonLdScript data={organizationJsonLd} />
+      <JsonLdScript data={webPageJsonLd} />
       <JsonLdScript data={faqJsonLd} />
 
       <main id="main-content">
@@ -426,7 +460,7 @@ const Home: React.FC = () => {
         <section className="py-20 lg:py-24">
           <div className={containerClass}>
             <div className="mx-auto max-w-3xl text-center">
-              <h2 className={titleClass}>The Resonance Framework</h2>
+              <h2 className={titleClass}>The Resonance Framework™</h2>
               <p className="mx-auto mt-4 max-w-xl text-base text-body-muted">
                 A four-stage system that takes B2B technology companies from
                 unclear and invisible to authoritative and AI-cited.
@@ -485,18 +519,28 @@ const Home: React.FC = () => {
               </div>
               <div className="mt-8 space-y-5">
                 {[
-                  "AI-Native, Not AI-Assisted",
-                  "B2B Technology Only",
-                  "Strategy and Execution",
+                  {
+                    title: "AI-Native, Not AI-Assisted",
+                    body: "We don't use AI to write faster. We optimize your content to be cited by AI systems: ChatGPT, Perplexity, Google AI Mode, Claude, and Gemini.",
+                  },
+                  {
+                    title: "B2B Technology Only",
+                    body: "No lifestyle brands, no DTC, no generalist clients. We specialize in complex, long-cycle B2B technology: SaaS, fintech, enterprise software, iPaaS, ERP, and CRM.",
+                  },
+                  {
+                    title: "Strategy and Execution",
+                    body: "Senior-level thinking plus hands-on delivery. No junior handoffs, no padded retainers; composable engagements that fill your actual gaps.",
+                  },
                 ].map((item) => (
-                  <div key={item} className="flex gap-3">
+                  <div key={item.title} className="flex gap-3">
                     <span className="mt-1 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-[#EAF8FD] text-brand">
                       <Check className="h-3 w-3" />
                     </span>
                     <p className="text-sm leading-6 text-body-muted">
-                      <strong className="block text-[#111827]">{item}</strong>
-                      Senior-level thinking plus hands-on delivery for complex
-                      B2B technology teams.
+                      <strong className="block text-[#111827]">
+                        {item.title}
+                      </strong>
+                      {item.body}
                     </p>
                   </div>
                 ))}

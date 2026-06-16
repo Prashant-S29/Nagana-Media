@@ -43,7 +43,9 @@ export const dynamic = "force-static";
 
 // metadata
 
-const baseUrl = "https://www.naganamedia.com";
+const baseUrl =
+  process.env.NEXT_PUBLIC_BASE_URL ?? "https://www.naganamedia.com";
+const isStaging = baseUrl.includes("staging.");
 const pageUrl = `${baseUrl}/ai-seo-audit`;
 
 export const generateMetadata = (): Metadata => ({
@@ -105,12 +107,12 @@ export const generateMetadata = (): Metadata => ({
     ],
   },
   robots: {
-    index: true,
-    follow: true,
-    nocache: false,
+    index: !isStaging,
+    follow: !isStaging,
+    nocache: isStaging,
     googleBot: {
-      index: true,
-      follow: true,
+      index: !isStaging,
+      follow: !isStaging,
       "max-video-preview": -1,
       "max-image-preview": "large",
       "max-snippet": -1,

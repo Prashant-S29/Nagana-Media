@@ -1,19 +1,14 @@
 import React from "react";
 import Link from "next/link";
 
-// icons
-import { SendArrowIcon } from "~/icons";
-
 // data
 import { footerLinksData, footerSocialGridData } from "./data";
 
 // components
 import { Button } from "~/components/ui/button";
-import { Input } from "~/components/ui/input";
-import { getAllServices } from "~/utils/api";
 
 export const Footer: React.FC = () => {
-  const allServices = getAllServices();
+  const currentYear = new Date().getFullYear();
 
   return (
     <footer data-container className="bg-[#262626]">
@@ -105,28 +100,21 @@ export const Footer: React.FC = () => {
           <div className="w-full pb-5 sm:max-w-[250px] sm:py-9">
             <div className="w-full rounded-lg bg-[#3c3c3c] px-5 py-4">
               <h3 className="leading-tight text-white sm:text-xs">
-                Subscribe for latest updates and exclusive offers!
+                Ready to improve your AI visibility?
               </h3>
-              <div className="relative">
-                <Input
-                  placeholder="Your Email"
-                  className="mt-3 bg-white text-xs placeholder:text-black/70"
-                />
-                <div className="absolute right-0 top-0 p-1">
-                  <Button
-                    size="icon"
-                    className="h-7 w-7 bg-brand hover:bg-brand"
-                  >
-                    <SendArrowIcon className="text-white" />
-                  </Button>
-                </div>
-              </div>
+              <p className="mt-2 text-xs leading-5 text-white/70">
+                Start with a free AI SEO audit and get a clear roadmap for what
+                to fix next.
+              </p>
+              <Button asChild variant="brand" size="sm" className="mt-4">
+                <Link href="/ai-seo-audit">Get a Free Audit</Link>
+              </Button>
             </div>
           </div>
         </div>
       </div>
       <div className="flex w-full items-center justify-center border-t border-white/20 py-4 text-xs text-white/70">
-        <p className="">&copy; Copyright 2025. All rights reserved.</p>
+        <p className="">&copy; Copyright {currentYear}. All rights reserved.</p>
       </div>
     </footer>
   );

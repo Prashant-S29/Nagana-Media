@@ -51,7 +51,7 @@ export const WhyChooseUs: React.FC = () => {
       <div className="w-full min-w-full overflow-hidden rounded-lg sm:min-w-[350px]">
         <Image
           src={whyChooseUsImage}
-          alt="whyChooseUsImage"
+          alt="B2B technology marketing pillars for content strategy and GTM execution"
           width={600}
           height={600}
           placeholder="blur"

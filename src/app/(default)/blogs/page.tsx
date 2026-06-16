@@ -30,7 +30,7 @@ const Blogs: React.FC = () => {
       >
         <Image
           src={servicePageBannerImage}
-          alt="servicePageBannerImage"
+          alt="Nagana Media blog insights for AI search and B2B technology marketing"
           fill
           className="w-full object-cover"
         />

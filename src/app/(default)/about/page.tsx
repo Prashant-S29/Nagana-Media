@@ -120,7 +120,7 @@ const About: React.FC = () => {
       >
         <Image
           src={aboutUsBannerImage}
-          alt="aboutUsBannerImage"
+          alt="About Nagana Media B2B technology marketing agency"
           fill
           className="w-full object-cover"
         />
@@ -161,7 +161,7 @@ const About: React.FC = () => {
           <div className="relative z-10 aspect-square w-[300px] overflow-hidden rounded-full bg-[#f4f4f4]">
             <Image
               src={aboutUsImageOne}
-              alt="aboutUsImageOne"
+              alt="Nagana Media team approach to technology marketing strategy"
               fill
               className="w-full object-cover"
             />
@@ -208,7 +208,7 @@ const About: React.FC = () => {
             <div className="relative z-10 aspect-square w-[300px] overflow-hidden rounded-full bg-[#f4f4f4]">
               <Image
                 src={aboutUsImageTwo}
-                alt="aboutUsImageTwo"
+                alt="Nagana Media integrated digital marketing and sales enablement support"
                 fill
                 className="w-full object-cover"
               />

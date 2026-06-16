@@ -26,7 +26,7 @@ export const BlogCard: React.FC<BlogCardProps> = ({ data }) => {
       <div className="relative min-h-[200px] w-full overflow-hidden rounded-t-xl">
         <Image
           src={data.coverImage}
-          alt="blogImage"
+          alt={data.title}
           fill
           className="object-cover object-top"
         />

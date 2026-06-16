@@ -33,7 +33,7 @@ const Contact: React.FC = () => {
       >
         <Image
           src={contactUsImageBanner}
-          alt="contactUsImageBanner"
+          alt="Contact Nagana Media for a B2B technology marketing consultation"
           fill
           className="w-full object-cover"
         />

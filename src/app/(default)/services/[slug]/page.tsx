@@ -27,6 +27,7 @@ export async function generateMetadata(props: Params): Promise<Metadata> {
 
   const baseUrl =
     process.env.NEXT_PUBLIC_BASE_URL ?? "https://www.naganamedia.com";
+  const isStaging = baseUrl.includes("staging.");
   const serviceUrl = `${baseUrl}/services/${params.slug}`;
 
   return {
@@ -69,12 +70,12 @@ export async function generateMetadata(props: Params): Promise<Metadata> {
 
     // Explicit robots directives - force Google to index these pages
     robots: {
-      index: true,
-      follow: true,
-      nocache: false,
+      index: !isStaging,
+      follow: !isStaging,
+      nocache: isStaging,
       googleBot: {
-        index: true,
-        follow: true,
+        index: !isStaging,
+        follow: !isStaging,
         "max-video-preview": -1,
         "max-image-preview": "large",
         "max-snippet": -1,

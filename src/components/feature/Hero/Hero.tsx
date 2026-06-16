@@ -42,7 +42,7 @@ export const Hero: React.FC = () => {
       <div className="min-w-[300px] rounded-lg max-[900px]:hidden lg:min-w-[400px]">
         <Image
           src={heroSectionImage}
-          alt="heroImage"
+          alt="Nagana Media helps B2B technology companies make complex products resonate"
           width={600}
           height={600}
           priority

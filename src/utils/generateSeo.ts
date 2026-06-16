@@ -34,12 +34,14 @@ export const generateSeo = ({
   openGraphType = "website",
 }: Props): Metadata => {
   const imageUrl = image ?? siteConfig.ogImage.url;
-  const canonicalUrl = url.startsWith("http") ? url : `${siteConfig.url}${url}`;
+  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL ?? siteConfig.url;
+  const isStaging = baseUrl.includes("staging.");
+  const canonicalUrl = url.startsWith("http") ? url : `${baseUrl}${url}`;
 
   const metadata: Metadata = {
     title,
     description,
-    metadataBase: new URL(siteConfig.url),
+    metadataBase: new URL(baseUrl),
     openGraph: {
       title,
       description,
@@ -80,14 +82,17 @@ export const generateSeo = ({
     metadata.keywords = keywords;
   }
 
+  const shouldIndex = isStaging ? false : (robots?.index ?? true);
+  const shouldFollow = isStaging ? false : (robots?.follow ?? true);
+
   // Always set explicit robots directives (default: index + follow)
   metadata.robots = {
-    index: robots?.index ?? true,
-    follow: robots?.follow ?? true,
-    nocache: false,
+    index: shouldIndex,
+    follow: shouldFollow,
+    nocache: isStaging,
     googleBot: {
-      index: robots?.index ?? true,
-      follow: robots?.follow ?? true,
+      index: shouldIndex,
+      follow: shouldFollow,
       "max-video-preview": -1,
       "max-image-preview": "large",
       "max-snippet": -1,

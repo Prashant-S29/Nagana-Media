@@ -39,7 +39,7 @@ const Services: React.FC = () => {
       >
         <Image
           src={servicePageBannerImage}
-          alt="servicePageBannerImage"
+          alt="Nagana Media B2B technology marketing services"
           fill
           className="w-full object-cover"
         />
