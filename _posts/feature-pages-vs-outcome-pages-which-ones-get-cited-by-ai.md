@@ -20,7 +20,6 @@ secondaryKeywords:
   - ChatGPT
   - Perplexity
 ---
-## Feature Pages vs Outcome Pages: Which Ones Actually Get Cited by AI Platforms?
 I spent a chunk of last year rewriting product pages for a client, and the thing that stuck with me wasn't the AEO data, though that part mattered too. It was sitting in a room with their product marketer, watching her read the existing page aloud and just... stop. Mid-sentence. "Wait," she said, "I don't actually know what this means, and I wrote half of it."
 That page had been live for two years.
 ### What Is a Feature Page, and What Is an Outcome Page?
