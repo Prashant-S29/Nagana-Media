@@ -78,7 +78,7 @@ The risk is usually the opposite of what teams assume. Specific, accurate compli
 
 ### What is the fastest fintech AEO win for a company that has never done this before?
 
-Restructure the compliance and certifications section of the website from a row of logos into a page where each certification answers a direct question, "Does this platform support [specific regulation]?", with a clear yes and what it covers. This is usually a content restructuring task, not a new content creation task, and it directly targets the procurement-grade queries fintech buyers are most likely to run in AI platforms.
+Restructure the compliance and certifications section of the website from a row of logos into a page where each certification answers a direct question, "Does this platform support \[specific regulation]?", with a clear yes and what it covers. This is usually a content restructuring task, not a new content creation task, and it directly targets the procurement-grade queries fintech buyers are most likely to run in AI platforms.
 
 ### How does the EU AI Act affect fintech content strategy?
 
