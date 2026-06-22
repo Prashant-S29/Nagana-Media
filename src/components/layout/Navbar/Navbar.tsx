@@ -17,10 +17,10 @@ export const Navbar: React.FC = () => {
   return (
     <div
       data-container
-      className="absolute z-50 flex h-[100px] w-full items-center justify-between py-4 sm:py-8"
+      className="absolute top-0 z-50 flex h-[100px] w-full items-center justify-between py-4 sm:py-8"
     >
       <Link href="/" className="text-white">
-        <Image src={logo} alt="logo" width={120} height={50} priority />
+        <Image src={logo} alt="Nagana Media logo" width={120} height={50} priority />
       </Link>
       <div className="flex items-center gap-2 max-[900px]:hidden">
         <nav className="flex items-center gap-5">
@@ -40,7 +40,9 @@ export const Navbar: React.FC = () => {
           </NavigationMenu>
         </nav>
         <Button variant="brand" asChild>
-          <Link href="/contact">Let&apos;s Talk</Link>
+          <Link href="/contact" data-cta="navbar|Let's Talk">
+            Let&apos;s Talk
+          </Link>
         </Button>
       </div>
       <nav className="hidden max-[900px]:block">

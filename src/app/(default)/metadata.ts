@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 
 const baseUrl =
   process.env.NEXT_PUBLIC_BASE_URL ?? "https://www.naganamedia.com";
+const isStaging = baseUrl.includes("staging.");
 
 export const viewport: Viewport = {
   width: "device-width",
@@ -100,12 +101,12 @@ export const metadata: Metadata = {
 
   // Robots
   robots: {
-    index: true,
-    follow: true,
-    nocache: false,
+    index: !isStaging,
+    follow: !isStaging,
+    nocache: isStaging,
     googleBot: {
-      index: true,
-      follow: true,
+      index: !isStaging,
+      follow: !isStaging,
       "max-video-preview": -1,
       "max-image-preview": "large",
       "max-snippet": -1,
@@ -138,6 +139,7 @@ export const organizationJsonLd = {
   name: "Nagana Media",
   url: baseUrl,
   logo: `${baseUrl}/assets/static/logo.webp`,
+  dateModified: "2026-06-16",
   description:
     "Expert go-to-market strategy, sales enablement, and marketing solutions for B2B technology companies.",
   sameAs: [
@@ -189,6 +191,7 @@ export const websiteJsonLd = {
   url: baseUrl,
   description:
     "Expert go-to-market strategy, sales enablement, and marketing solutions for B2B technology companies.",
+  dateModified: "2026-06-16",
   publisher: {
     "@type": "Organization",
     name: "Nagana Media",

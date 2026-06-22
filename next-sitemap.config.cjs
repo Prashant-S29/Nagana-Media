@@ -178,7 +178,7 @@ module.exports = {
       };
     }
 
-    // Individual blog posts — use real publish date for lastmod
+    // Individual blog posts - use real publish date for lastmod
     if (path.includes("/blogs/") && path !== "/blogs") {
       const publishDate = postDates[path];
       return {
@@ -219,8 +219,22 @@ module.exports = {
       };
     }
 
-    // About & Contact
-    if (path === "/about" || path === "/contact") {
+    // AI SEO Audit - key conversion / landing page
+    if (path === "/ai-seo-audit") {
+      return {
+        loc: path,
+        changefreq: "monthly",
+        priority: 0.8,
+        lastmod: new Date().toISOString(),
+      };
+    }
+
+    // About, Contact & Meet the Experts
+    if (
+      path === "/about" ||
+      path === "/contact" ||
+      path === "/meet-the-experts"
+    ) {
       return {
         loc: path,
         changefreq: "monthly",

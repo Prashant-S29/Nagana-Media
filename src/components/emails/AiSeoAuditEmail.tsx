@@ -27,7 +27,7 @@ export const AiSeoAuditEmail: React.FC<AiSeoAuditEmailProps> = ({
     <Html lang="en">
       <Head />
       <Preview>
-        We&apos;ve received your AI SEO Audit request — Nagana Media
+        We&apos;ve received your AI SEO Audit request - Nagana Media
       </Preview>
       <Body style={styles.body}>
         <Container style={styles.container}>

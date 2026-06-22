@@ -33,7 +33,7 @@ export const WhatWeDo: React.FC = () => {
         <div className="block h-full w-full rounded-lg sm:min-w-[300px] lg:min-w-[400px]">
           <Image
             src={whatWeDoImage}
-            alt="whatWeDoImage"
+            alt="B2B marketing strategy planning for complex technology companies"
             width={600}
             height={600}
             priority
@@ -92,7 +92,7 @@ export const WhatWeDo: React.FC = () => {
               <div className="max-h-[200px] w-full overflow-hidden rounded-xl sm:max-h-[400px] sm:w-[70%]">
                 <Image
                   src={imageOne}
-                  alt="imageOne"
+                  alt="360-degree GTM coverage across marketing and sales programs"
                   width={400}
                   height={400}
                   placeholder="blur"
@@ -113,7 +113,7 @@ export const WhatWeDo: React.FC = () => {
               <div className="max-h-[200px] w-full overflow-hidden rounded-xl sm:max-h-[300px]">
                 <Image
                   src={imageThree}
-                  alt="imageThree"
+                  alt="Marketing and content execution support for B2B technology teams"
                   width={400}
                   height={400}
                   placeholder="blur"
@@ -135,7 +135,7 @@ export const WhatWeDo: React.FC = () => {
               <div className="max-h-[200px] w-full overflow-hidden rounded-xl sm:max-h-[300px]">
                 <Image
                   src={imageTwo}
-                  alt="imageTwo"
+                  alt="Flexible GTM strategy adapted to changing market needs"
                   width={400}
                   height={400}
                   placeholder="blur"
@@ -157,7 +157,7 @@ export const WhatWeDo: React.FC = () => {
                   <div className="max-h-[200px] w-full overflow-hidden rounded-xl sm:max-h-[400px]">
                     <Image
                       src={imageFour}
-                      alt="imageFour"
+                      alt="Scalable integrated marketing programs for B2B technology growth"
                       width={400}
                       height={400}
                       placeholder="blur"

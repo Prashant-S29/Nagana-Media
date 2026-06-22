@@ -5,16 +5,18 @@ import { PostHogProvider as PHProvider } from "posthog-js/react";
 import { useEffect } from "react";
 import { usePathname, useSearchParams } from "next/navigation";
 import { env } from "~/env";
+import { AnalyticsListeners } from "./AnalyticsListeners";
 
 // ─── Page-view tracker ───────────────────────────────────────────────────────
-// Separated so it can be wrapped in <Suspense> if needed (useSearchParams
-// requirement in Next.js App Router).
+// We capture pageviews manually because the App Router does client-side
+// navigations that PostHog's default listener can miss. Wrapped in its own
+// component so the `useSearchParams` Suspense requirement stays isolated.
 function PostHogPageView() {
   const pathname = usePathname();
   const searchParams = useSearchParams();
 
   useEffect(() => {
-    if (!pathname) return;
+    if (!pathname || !posthog.__loaded) return;
 
     let url = window.location.origin + pathname;
     const search = searchParams.toString();
@@ -27,55 +29,38 @@ function PostHogPageView() {
 }
 
 // ─── Provider ────────────────────────────────────────────────────────────────
+// Standard, direct initialisation. The previous version proxied through a
+// `/ingest` rewrite and deferred init by 3s via requestIdleCallback, which
+// prevented events from ever reaching the dashboard. We now init immediately
+// against the configured PostHog host with autocapture + session replay on.
 export function PostHogProvider({ children }: { children: React.ReactNode }) {
   useEffect(() => {
-    // Guard: don't re-init if already loaded (handles React strict-mode
-    // double-invoke without breaking production).
-    if (posthog.__loaded) return;
+    if (posthog.__loaded) return; // strict-mode double-invoke guard
 
-    const init = () => {
-      // Double-check inside the callback — idle callback can fire late
-      if (posthog.__loaded) return;
-
-      posthog.init(env.NEXT_PUBLIC_POSTHOG_KEY, {
-        api_host:
-          process.env.NODE_ENV === "production"
-            ? "/ingest"
-            : (env.NEXT_PUBLIC_POSTHOG_HOST ?? "https://us.i.posthog.com"),
-        ui_host: "https://us.posthog.com",
-        // We fire pageviews manually in PostHogPageView above
-        capture_pageview: false,
-        person_profiles: "identified_only",
-        disable_surveys: true,
-        disable_session_recording: process.env.NODE_ENV !== "production",
-        defaults: "2025-05-24",
-        enable_heatmaps: true,
-      });
-    };
-
-    if (typeof window === "undefined") return;
-
-    if ("requestIdleCallback" in window) {
-      (
-        window as Window & {
-          requestIdleCallback: (
-            cb: () => void,
-            opts?: { timeout: number },
-          ) => void;
-        }
-      ).requestIdleCallback(init, { timeout: 3000 });
-    } else {
-      const timer = setTimeout(init, 3000);
-      return () => clearTimeout(timer);
-    }
+    posthog.init(env.NEXT_PUBLIC_POSTHOG_KEY, {
+      api_host: env.NEXT_PUBLIC_POSTHOG_HOST ?? "https://us.i.posthog.com",
+      ui_host: "https://us.posthog.com",
+      // Autocapture clicks / inputs / form submits for journey analysis.
+      autocapture: true,
+      // We fire pageviews manually in PostHogPageView; capture leaves so we
+      // can measure time-on-page and drop-off.
+      capture_pageview: false,
+      capture_pageleave: true,
+      person_profiles: "identified_only",
+      disable_surveys: true,
+      // Record sessions in production only (avoids noise from local dev).
+      disable_session_recording: process.env.NODE_ENV !== "production",
+      enable_heatmaps: true,
+      loaded: (ph) => {
+        if (process.env.NODE_ENV === "development") ph.debug();
+      },
+    });
   }, []);
 
-  // ✅ Always render PHProvider — never gate children behind `initialized`.
-  // PHProvider is safe to render before posthog.init() completes; it holds
-  // calls in a queue and flushes them once the SDK is ready.
   return (
     <PHProvider client={posthog}>
       <PostHogPageView />
+      <AnalyticsListeners />
       {children}
     </PHProvider>
   );

@@ -11,7 +11,9 @@ const buttonVariants = cva(
       variant: {
         default:
           "bg-primary text-primary-foreground shadow hover:bg-primary/90",
-        brand: "bg-brand text-primary-foreground shadow hover:bg-brand/90",
+        // Deeper teal (not the light-cyan accent) so white text clears WCAG AA
+        // contrast - the light `bg-brand` failed the PageSpeed a11y audit.
+        brand: "bg-[#0D7A9E] text-white shadow hover:bg-[#0b6c8c]",
         destructive:
           "bg-destructive text-destructive-foreground shadow-sm hover:bg-destructive/90",
         outline:

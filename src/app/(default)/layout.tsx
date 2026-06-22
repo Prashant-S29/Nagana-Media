@@ -18,21 +18,12 @@ export default async function RootLayout({
   return (
     <html lang="en" className={`${fonts.outfit.className} antialiased`}>
       <head>
-        {/*
-          In production, PostHog traffic is proxied through /ingest (same
-          origin) so preconnect hints to posthog.com are wasted. We only
-          keep them for local dev where the proxy is disabled.
-          In prod the browser already has a connection open to your own
-          domain — no hint needed.
-        */}
-        {process.env.NODE_ENV !== "production" && (
-          <>
-            <link rel="preconnect" href="https://us.i.posthog.com" />
-            <link rel="preconnect" href="https://us-assets.i.posthog.com" />
-            <link rel="dns-prefetch" href="https://us.i.posthog.com" />
-            <link rel="dns-prefetch" href="https://us-assets.i.posthog.com" />
-          </>
-        )}
+        {/* PostHog is loaded directly from its host, so warm the connection
+            early on every environment to reduce analytics latency. */}
+        <link rel="preconnect" href="https://us.i.posthog.com" />
+        <link rel="preconnect" href="https://us-assets.i.posthog.com" />
+        <link rel="dns-prefetch" href="https://us.i.posthog.com" />
+        <link rel="dns-prefetch" href="https://us-assets.i.posthog.com" />
         <link
           rel="llms"
           type="text/plain"
