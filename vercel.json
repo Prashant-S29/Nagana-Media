@@ -1,5 +1,4 @@
 {
-  "buildCommand": "next build && next-sitemap --config next-sitemap.config.cjs",
   "git": {
     "deploymentEnabled": {
       "main": true,
