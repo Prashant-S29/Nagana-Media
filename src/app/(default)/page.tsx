@@ -409,12 +409,14 @@ const Home: React.FC = () => {
                 <Link
                   className="rounded-md bg-brand px-7 py-3 font-medium text-[#062D3A] hover:bg-brand"
                   href="/ai-seo-audit"
+                  data-cta="home-hero|Get a Free AI Visibility Audit"
                 >
                   Get a Free AI Visibility Audit
                 </Link>
                 <Link
                   className="rounded-md border border-white/50 px-7 py-3 font-medium text-white"
                   href="/services"
+                  data-cta="home-hero|Explore Services"
                 >
                   Explore Services
                 </Link>
@@ -675,6 +677,7 @@ const Home: React.FC = () => {
                 <div>
                   <Link
                     href="/ai-seo-audit"
+                    data-cta="home-audit-callout|Get a Free AI SEO Audit"
                     className="mt-5 inline-block text-sm font-semibold text-brand"
                   >
                     Get a Free AI SEO Audit →
@@ -710,7 +713,8 @@ const Home: React.FC = () => {
               <div className="mt-7 flex flex-wrap gap-3">
                 <Link
                   href="/ai-seo-audit"
-                  className="rounded-md bg-brand px-7 py-3 text-sm font-bold tracking-wide text-white"
+                  data-cta="home-audit-section|Get a Free Audit"
+                  className="rounded-md bg-[#0D7A9E] px-7 py-3 text-sm font-bold tracking-wide text-white hover:bg-[#0b6c8c]"
                 >
                   Get a Free Audit
                 </Link>
@@ -725,7 +729,12 @@ const Home: React.FC = () => {
             <div className="grid gap-px overflow-hidden rounded-xl border border-white/10 bg-white/10 sm:grid-cols-2">
               {platforms.map(([name, icon, body]) => (
                 <div key={name} className="bg-[#062D3A] p-5">
-                  <Image src={icon!} alt="icon" width={30} height={30} />
+                  <Image
+                    src={icon!}
+                    alt={`${name} logo`}
+                    width={30}
+                    height={30}
+                  />
                   <p className={`mt-2 text-sm text-brand`}>{name}</p>
                   <p className="text-sm text-white/75">{body}</p>
                 </div>
@@ -794,6 +803,7 @@ const Home: React.FC = () => {
               </div>
               <Link
                 href="/ai-seo-audit"
+                data-cta="home-final|Get a Free AI SEO Audit"
                 className="mt-7 block rounded-md bg-brand px-7 py-3 text-center font-semibold tracking-wide text-[#062D3A]"
               >
                 Get a Free AI SEO Audit →

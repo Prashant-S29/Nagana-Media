@@ -39,7 +39,7 @@ const Contact: React.FC = () => {
         />
 
         <h1 className="z-10 text-[40px] font-bold leading-none text-white lg:text-center lg:text-[50px] xl:text-[60px]">
-          Book a free consultation
+          Let&apos;s talk
         </h1>
 
         <p className="z-10 mt-2 text-base font-light leading-tight text-white sm:mt-3 sm:text-base">
@@ -47,7 +47,9 @@ const Contact: React.FC = () => {
         </p>
 
         <Button variant="brand" asChild className="z-10 mt-5">
-          <Link href="#contact-form">Book a Call</Link>
+          <Link href="#contact-form" data-cta="contact-hero|Send a Message">
+            Send a Message
+          </Link>
         </Button>
       </div>
 

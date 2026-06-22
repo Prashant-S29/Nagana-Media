@@ -54,7 +54,11 @@ export const MobileNav: React.FC = () => {
             </li>
           ))}
           <li>
-            <Link href="/contact" onClick={() => setIsOpen(false)}>
+            <Link
+              href="/contact"
+              data-cta="mobile-nav|Contact Us"
+              onClick={() => setIsOpen(false)}
+            >
               Contact Us
             </Link>
           </li>

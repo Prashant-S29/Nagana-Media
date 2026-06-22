@@ -20,6 +20,7 @@ import {
 import { Input } from "~/components/ui/input";
 import { Textarea } from "~/components/ui/textarea";
 import { Button } from "~/components/ui/button";
+import { track, identify } from "~/utils/analytics";
 
 type Step = "form" | "otp" | "success";
 
@@ -54,6 +55,11 @@ export const AiSeoAuditForm: React.FC = () => {
     return () => clearTimeout(t);
   }, [resendCooldown]);
 
+  // Fire once when the user first reaches the form (funnel entry point).
+  useEffect(() => {
+    track("audit_form_started");
+  }, []);
+
   // ─── Step 1: Submit form → send OTP ──────────────────────────────────────
 
   const onSubmit = async (values: AiSeoAuditFormValues) => {
@@ -75,7 +81,9 @@ export const AiSeoAuditForm: React.FC = () => {
       setSubmittedName(values.name);
       setResendCooldown(30);
       setStep("otp");
+      track("audit_otp_requested", { email: values.email });
     } catch (err) {
+      track("audit_failed", { stage: "send-otp" });
       setFormError(
         err instanceof Error
           ? err.message
@@ -152,8 +160,12 @@ export const AiSeoAuditForm: React.FC = () => {
         throw new Error(data.error ?? "Verification failed");
       }
 
+      identify(submittedEmail, { name: submittedName });
+      track("audit_otp_verified", { email: submittedEmail });
+      track("audit_submitted", { email: submittedEmail });
       setStep("success");
     } catch (err) {
+      track("audit_failed", { stage: "verify-otp" });
       setOtpError(
         err instanceof Error
           ? err.message

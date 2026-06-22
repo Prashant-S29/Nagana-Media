@@ -31,12 +31,14 @@ export const Footer: React.FC = () => {
           <div className="flex flex-col gap-3 sm:flex-row lg:flex-col">
             <Link
               href="/ai-seo-audit"
+              data-cta="footer|Get a Free AI Audit"
               className="rounded-md bg-white px-7 py-3 text-center text-sm font-bold tracking-wide text-[#111827]"
             >
               Get a Free AI Audit →
             </Link>
             <Link
               href="/contact"
+              data-cta="footer|Talk to the Team"
               className="rounded-md border border-white/40 px-7 py-3 text-center text-sm font-bold tracking-wide text-white"
             >
               Talk to the Team
@@ -106,8 +108,10 @@ export const Footer: React.FC = () => {
                 Start with a free AI SEO audit and get a clear roadmap for what
                 to fix next.
               </p>
-              <Button asChild variant="brand" size="sm" className="mt-4">
-                <Link href="/ai-seo-audit">Get a Free Audit</Link>
+              <Button asChild variant="default" size="sm" className="mt-4">
+                <Link href="/ai-seo-audit" data-cta="footer-card|Get a Free Audit">
+                  Get a Free Audit
+                </Link>
               </Button>
             </div>
           </div>

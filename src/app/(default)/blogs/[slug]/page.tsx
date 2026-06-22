@@ -202,27 +202,27 @@ const Post: React.FC<Params> = async ({ params }) => {
       />
       <div
         data-container
-        className="flex min-h-[60vh] w-full items-center justify-center bg-gradient-to-r from-[#0c1323] to-[#1e2f45]"
+        className="flex min-h-[60vh] w-full flex-col items-center justify-center bg-gradient-to-r from-[#0c1323] to-[#1e2f45] pb-16 pt-[120px] sm:pt-[140px]"
       >
-        <div className="px-4 text-center">
+        <div className="w-full px-4 text-center">
           {/* Breadcrumb nav for humans */}
           <nav
             aria-label="Breadcrumb"
-            className="mb-4 flex items-center justify-center gap-2 text-xs text-white/50"
+            className="mb-4 flex flex-wrap items-center justify-center gap-x-2 gap-y-1 text-xs text-white/50"
           >
             <Link href="/" className="hover:text-white">
               Home
             </Link>
-            <span>/</span>
+            <span aria-hidden="true">/</span>
             <Link href="/blogs" className="hover:text-white">
               Blogs
             </Link>
-            <span>/</span>
-            <span className="line-clamp-1 max-w-[200px] text-white/80">
+            <span aria-hidden="true">/</span>
+            <span className="line-clamp-1 max-w-[160px] text-white/80 sm:max-w-[280px]">
               {post.title}
             </span>
           </nav>
-          <h1 className="mx-auto mt-2 max-w-4xl text-[32px] font-bold leading-tight text-white lg:text-center lg:text-[50px] xl:text-[60px]">
+          <h1 className="mx-auto mt-2 max-w-4xl text-balance break-words text-[28px] font-bold leading-tight text-white sm:text-[32px] lg:text-center lg:text-[50px] xl:text-[60px]">
             {post.title}
           </h1>
           <div className="mt-6 flex items-center justify-center gap-4 text-gray-300">

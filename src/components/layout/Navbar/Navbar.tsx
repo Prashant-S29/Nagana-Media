@@ -40,7 +40,9 @@ export const Navbar: React.FC = () => {
           </NavigationMenu>
         </nav>
         <Button variant="brand" asChild>
-          <Link href="/contact">Let&apos;s Talk</Link>
+          <Link href="/contact" data-cta="navbar|Let's Talk">
+            Let&apos;s Talk
+          </Link>
         </Button>
       </div>
       <nav className="hidden max-[900px]:block">

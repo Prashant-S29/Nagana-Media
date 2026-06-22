@@ -779,7 +779,7 @@ const AiSeoAuditPage: React.FC = () => {
                   key={section.title}
                   className="grid gap-4 rounded-lg border bg-white p-5 shadow-sm sm:grid-cols-[44px_1fr]"
                 >
-                  <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-brand text-sm font-semibold text-white">
+                  <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-[#0D7A9E] text-sm font-semibold text-white">
                     {index + 1}
                   </div>
                   <div>

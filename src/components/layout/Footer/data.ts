@@ -41,14 +41,10 @@ export const footerLinksData: FooterLinksProps[] = [
         label: "About Us",
         href: "/about",
       },
-      // {
-      //   label: "Help Center",
-      //   href: "/",
-      // },
-      // {
-      //   label: "Projects",
-      //   href: "/",
-      // },
+      {
+        label: "Meet the Experts",
+        href: "/meet-the-experts",
+      },
       {
         label: "News and Blogs",
         href: "/blogs",
