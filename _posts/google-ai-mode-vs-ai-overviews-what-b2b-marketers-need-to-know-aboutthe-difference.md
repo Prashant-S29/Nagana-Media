@@ -74,34 +74,30 @@ For AI Mode eligibility, write for the follow-up question, not justthe headline 
 
 ## Frequently Asked Questions
 
-Are Google AI Overviews and Google AI Mode the same thing?
+**1. Are Google AI Overviews and Google AI Mode the same thing?**
 
 No, though they're related and increasingly connected. AI Overviewsare the automatic AI summaries that appear inline within standardGoogle search results for certain queries. AI Mode is a separate,dedicated chat-style search experience that users actively choose toenter. As of May 2026, Google announced plans to merge them into oneunified AI search experience, but as of this writing, the twosurfaces still behave differently in terms of triggers, format, andthe content signals that earn citation in each.
 
-Why does a page that appears in AI Overviews often not appear inAI Mode for the same search?
+**2. Why does a page that appears in AI Overviews often not appear inAI Mode for the same search?**
 
 Research shows only about a 15% overlap between the two surfaces foridentical queries. This happens because AI Overviews correlate moststrongly with traditional search rankings, while AI Mode draws moreindependently and weights different signals, like demonstratedfirst-hand expertise and content depth that goes beyond what themodel could already generate on its own.
 
-Does Google AI Mode hurt website traffic for B2B companies?
+**3. Does Google AI Mode hurt website traffic for B2B companies?**
 
 It depends on the content type. Generic, fully-answerable content,basic definitions, simple how-tos, is at genuine risk of losingclicks, since AI Mode can often answer it completely without sendingthe user anywhere. Specific, detailed, practitioner-level contenttends to gain visibility, because it contains insight or depth thatAI Mode has to cite rather than synthesize independently.
 
-What is query fan-out and why does it matter for content strategy?
+**4. What is query fan-out and why does it matter for content strategy?**
 
 Query fan-out is the process where Google AI Mode decomposes a singleuser question into multiple parallel sub-queries, up to 16, thatsearch simultaneously across different angles of the topic beforebeing synthesized into one answer. For content strategy, this means asingle article needs to anticipate and answer the relatedsub-questions a buyer would naturally have, not just the headlinequestion, to be pulled into more of those parallel searches.
 
-Should B2B marketers optimize differently for AI Overviews versusAI Mode?
+**5. Should B2B marketers optimize differently for AI Overviews versusAI Mode?**
 
 Yes, at least for now, even with the surfaces moving toward a merge.AI Overview optimization looks closest to strong traditional SEO:clear structure, direct answers, freshness, and content that alreadyranks well organically. AI Mode optimization requires more depth andspecificity, anticipating follow-up questions and providingpractitioner-level detail that a generic synthesized answer couldn'treplicate on its own.
 
 ## References
 
 * Discovered Labs, Google AI Mode and the May 2026 Search Update: <https://discoveredlabs.com/blog/google-ai-mode-may-2026-search-update>
-
 * Green Flag Digital, Google AI Overviews vs AI Mode vs Gemini, May 2026 I/O merge announcement: [https://greenflagdigital.com/learning-ai/google-ai-overviews-vs-ai-mode-vs-gemini/](https://www.google.com/search?q=https%3A%2F%2Fgreenflagdigital.com%2Flearning-ai%2Fgoogle-ai-overviews-vs-ai-mode-vs-gemini%2F)
-
 * Yotpo, Google AI Mode vs Traditional Search: A Guide for Brands: [https://www.yotpo.com/blog/google-ai-mode-vs-traditional-search/](https://www.google.com/search?q=https%3A%2F%2Fwww.yotpo.com%2Fblog%2Fgoogle-ai-mode-vs-traditional-search%2F)
-
 * Orange MonkE, How to Optimize Content for Google AI Overviews and AI Mode 2026, SE Ranking citation overlap data: [https://orangemonke.com/blogs/google-ai-overviews-ai-mode/](https://www.google.com/search?q=https%3A%2F%2Forangemonke.com%2Fblogs%2Fgoogle-ai-overviews-ai-mode%2F)
-
 * Eisterix, Google AI Mode for Marketers 2026: [https://eisterix.com/google-ai-mode-for-marketers-2026/](https://www.google.com/search?q=https%3A%2F%2Feisterix.com%2Fgoogle-ai-mode-for-marketers-2026%2F)
