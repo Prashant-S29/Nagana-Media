@@ -3,7 +3,8 @@ import type { NextRequest } from "next/server";
 
 export function proxy(request: NextRequest) {
   const { hostname, pathname } = request.nextUrl;
-  const isStaging = hostname.startsWith("staging.") || hostname.includes("vercel.app");
+  const isStaging =
+    hostname.startsWith("staging.") || hostname.includes("vercel.app");
 
   // Log AI crawler visits (optional - useful for monitoring)
   const userAgent = request.headers.get("user-agent") ?? "";
@@ -41,7 +42,11 @@ export function proxy(request: NextRequest) {
   // Add security headers
   const response = NextResponse.next();
 
-  if (pathname.startsWith("/admin") || pathname.startsWith("/api/") || isStaging) {
+  if (
+    pathname.startsWith("/admin") ||
+    pathname.startsWith("/api/") ||
+    isStaging
+  ) {
     response.headers.set("X-Robots-Tag", "noindex, nofollow");
     return response;
   }

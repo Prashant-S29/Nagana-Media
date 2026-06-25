@@ -1,25 +1,22 @@
-import React from "react";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 
-// types
 import type { Metadata } from "next";
+import type { ReactNode } from "react";
 
-// styles
 import markdownStyles from "~/styles/markdown-styles.module.css";
 
-// utils
-import { getAllServices, getServiceBySlug } from "~/utils/api";
-import markdownToHtml from "~/utils/markdownToHtml";
-import { generateSeo } from "~/utils/generateSeo";
+import { getServiceBySlug } from "~/data/services";
 
-// Force static generation - critical for SEO and LLM crawlers
 export const dynamic = "force-static";
-export const dynamicParams = false;
 
-export async function generateMetadata(props: Params): Promise<Metadata> {
-  const params = await props.params;
-  const service = getServiceBySlug(params.slug);
+type ServicePageShellProps = {
+  slug: string;
+  children: ReactNode;
+};
+
+export function generateServiceMetadata(slug: string): Metadata {
+  const service = getServiceBySlug(slug);
 
   if (!service) {
     return notFound();
@@ -28,7 +25,7 @@ export async function generateMetadata(props: Params): Promise<Metadata> {
   const baseUrl =
     process.env.NEXT_PUBLIC_BASE_URL ?? "https://www.naganamedia.com";
   const isStaging = baseUrl.includes("staging.");
-  const serviceUrl = `${baseUrl}/services/${params.slug}`;
+  const serviceUrl = `${baseUrl}/services/${slug}`;
 
   return {
     title: `${service.title} | Nagana Media Services`,
@@ -44,8 +41,6 @@ export async function generateMetadata(props: Params): Promise<Metadata> {
     creator: "Nagana Media",
     publisher: "Nagana Media",
     category: "Business Services",
-
-    // Open Graph
     openGraph: {
       title: service.title,
       description: service.description,
@@ -54,21 +49,15 @@ export async function generateMetadata(props: Params): Promise<Metadata> {
       type: "website",
       locale: "en_US",
     },
-
-    // Twitter
     twitter: {
       card: "summary_large_image",
       title: service.title,
       description: service.description,
       creator: "@NaganaMedia",
     },
-
-    // Additional SEO
     alternates: {
       canonical: serviceUrl,
     },
-
-    // Explicit robots directives - force Google to index these pages
     robots: {
       index: !isStaging,
       follow: !isStaging,
@@ -84,33 +73,16 @@ export async function generateMetadata(props: Params): Promise<Metadata> {
   };
 }
 
-export async function generateStaticParams() {
-  const services = getAllServices();
-
-  return services.map((service) => ({
-    slug: service.slug,
-  }));
-}
-
-interface Params {
-  params: Promise<{
-    slug: string;
-  }>;
-}
-
-const Service: React.FC<Params> = async ({ params }) => {
-  const slug = (await params).slug;
+export function ServicePageShell({ slug, children }: ServicePageShellProps) {
   const service = getServiceBySlug(slug);
 
   if (!service) {
     return notFound();
   }
 
-  const content = await markdownToHtml(service.content || "");
   const baseUrl =
     process.env.NEXT_PUBLIC_BASE_URL ?? "https://www.naganamedia.com";
 
-  // Breadcrumb JSON-LD
   const breadcrumbJsonLd = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
@@ -136,7 +108,6 @@ const Service: React.FC<Params> = async ({ params }) => {
     ],
   };
 
-  // JSON-LD Structured Data for Service
   const serviceJsonLd = {
     "@context": "https://schema.org",
     "@type": "Service",
@@ -157,12 +128,10 @@ const Service: React.FC<Params> = async ({ params }) => {
 
   return (
     <>
-      {/* Service JSON-LD */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceJsonLd) }}
       />
-      {/* Breadcrumb JSON-LD */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
@@ -170,10 +139,9 @@ const Service: React.FC<Params> = async ({ params }) => {
 
       <div
         data-container
-        className="flex h-[60vh] w-full items-center justify-center bg-gradient-to-r from-[#0c1323] to-[#1e2f45]"
+        className="flex min-h-[60vh] w-full items-center justify-center bg-gradient-to-r from-[#0c1323] to-[#1e2f45]"
       >
         <div className="w-full sm:text-center">
-          {/* Breadcrumb nav */}
           <nav
             aria-label="Breadcrumb"
             className="mb-4 flex items-center gap-2 text-xs text-white/50 sm:justify-center"
@@ -198,13 +166,8 @@ const Service: React.FC<Params> = async ({ params }) => {
         </div>
       </div>
       <article data-container className="mt-10">
-        <div
-          className={markdownStyles.markdown}
-          dangerouslySetInnerHTML={{ __html: content }}
-        />
+        <div className={markdownStyles.markdown}>{children}</div>
       </article>
     </>
   );
-};
-
-export default Service;
+}

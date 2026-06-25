@@ -109,7 +109,10 @@ export const Footer: React.FC = () => {
                 to fix next.
               </p>
               <Button asChild variant="default" size="sm" className="mt-4">
-                <Link href="/ai-seo-audit" data-cta="footer-card|Get a Free Audit">
+                <Link
+                  href="/ai-seo-audit"
+                  data-cta="footer-card|Get a Free Audit"
+                >
                   Get a Free Audit
                 </Link>
               </Button>

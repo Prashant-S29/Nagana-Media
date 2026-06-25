@@ -35,7 +35,10 @@ export function AnalyticsListeners() {
         track("cta_click", {
           location: location || undefined,
           label: label || cta.textContent?.trim().slice(0, 60) || undefined,
-          href: cta.getAttribute("href") ?? anchor?.getAttribute("href") ?? undefined,
+          href:
+            cta.getAttribute("href") ??
+            anchor?.getAttribute("href") ??
+            undefined,
           path: pathname,
         });
       }

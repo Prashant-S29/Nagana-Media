@@ -2,18 +2,23 @@ import fs from "fs";
 import { join } from "path";
 import matter from "gray-matter";
 
+// data
+import {
+  getServiceBySlug as getStaticServiceBySlug,
+  services,
+} from "~/data/services";
+
 // types
 import type { Blog, Service } from "~/types";
 
 const postsDirectory = join(process.cwd(), "_posts");
-const servicesDirectory = join(process.cwd(), "_services");
 
 export function getPostSlugs() {
   return fs.readdirSync(postsDirectory);
 }
 
 export function getServiceSlugs() {
-  return fs.readdirSync(servicesDirectory);
+  return services.map((service) => service.slug);
 }
 
 const normalizeDate = (date: unknown) => {
@@ -70,22 +75,7 @@ export function getPostBySlug(slug: string): Blog | null {
 }
 
 export function getServiceBySlug(slug: string): Service | null {
-  try {
-    const realSlug = slug.replace(/\.md$/, "");
-    const fullPath = join(servicesDirectory, `${realSlug}.md`);
-
-    if (!fs.existsSync(fullPath)) {
-      return null;
-    }
-
-    const fileContents = fs.readFileSync(fullPath, "utf8");
-    const { data, content } = matter(fileContents);
-
-    return { ...data, slug: realSlug, content } as Service;
-  } catch (error) {
-    console.error(`Error loading service ${slug}:`, error);
-    return null;
-  }
+  return getStaticServiceBySlug(slug.replace(/\.md$/, ""));
 }
 
 export function getAllPosts(): Blog[] {
@@ -102,10 +92,6 @@ export function getAllPosts(): Blog[] {
 }
 
 export function getAllServices(): Service[] {
-  const slugs = getServiceSlugs();
-  const services = slugs
-    .map((slug) => getServiceBySlug(slug))
-    .filter((service): service is Service => service !== null);
   return services;
 }
 

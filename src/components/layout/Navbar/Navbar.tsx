@@ -20,7 +20,13 @@ export const Navbar: React.FC = () => {
       className="absolute top-0 z-50 flex h-[100px] w-full items-center justify-between py-4 sm:py-8"
     >
       <Link href="/" className="text-white">
-        <Image src={logo} alt="Nagana Media logo" width={120} height={50} priority />
+        <Image
+          src={logo}
+          alt="Nagana Media logo"
+          width={120}
+          height={50}
+          priority
+        />
       </Link>
       <div className="flex items-center gap-2 max-[900px]:hidden">
         <nav className="flex items-center gap-5">
