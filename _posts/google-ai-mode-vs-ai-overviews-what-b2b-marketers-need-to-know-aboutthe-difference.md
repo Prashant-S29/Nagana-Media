@@ -1,6 +1,6 @@
 ---
-title: "Google AI Mode vs AI Overviews: What B2B Marketers Need to Know Aboutthe
-  Difference"
+title: "Google AI Mode vs AI Overviews: What B2B Marketers Need to Know About
+  the Difference"
 excerpt: Pages that appear in AI Overviews have only a 15% chance of also
   showing up in AI Mode for the same query. Treat them as one thing and you're
   optimizing for half the problem
