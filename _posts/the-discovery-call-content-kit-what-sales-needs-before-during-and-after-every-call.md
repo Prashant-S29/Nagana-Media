@@ -7,7 +7,7 @@ excerpt: 82% of B2B decision-makers say reps arrive unprepared. 60% of sales
 coverImage: /assets/blog/uploads/discovery-call-content-kit.webp
 date: 2026-07-03T07:06:00.000Z
 author:
-  name: Sai Archit
+  name: Sai Archith
   picture: /assets/blog/authors/nagana.webp
 metaTitle: "The Discovery Call Content Kit: What Sales Needs Before, During, and
   After Every Call"
