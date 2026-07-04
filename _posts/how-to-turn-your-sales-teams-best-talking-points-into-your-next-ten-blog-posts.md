@@ -6,7 +6,7 @@ excerpt: Your best content is already being created. It is happening in
 coverImage: /assets/blog/uploads/b11t3-sales-talking-points-10-blogs.webp
 date: 2026-07-04T09:29:00.000Z
 author:
-  name: Nagana Media
+  name: Abhijeet Singh
   picture: /assets/blog/authors/nagana.webp
 metaTitle: How to Turn Your Sales Team's Best Talking Points Into Your Next Ten Blog Posts
 metaDescription: Your best content is already being created. It is happening in
