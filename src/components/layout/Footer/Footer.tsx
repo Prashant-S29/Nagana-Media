@@ -44,10 +44,12 @@ export const Footer: React.FC = () => {
               Talk to the Team
             </Link>
           </div>
+
+
         </div>
       </section>
-      <div className="flex flex-col sm:flex-row">
-        <div className="mt-9 w-full border-white/20 pr-8 sm:mt-0 sm:max-w-[300px] sm:border-r sm:py-9">
+      <div className="flex flex-col md:flex-row">
+        <div className="mt-9 w-full border-white/20 pr-8 md:mt-0  md:max-w-[300px] md:border-r md:py-9">
           <div className="">
             <p className="text-lg font-semibold text-white">Nagana Media</p>
 
@@ -78,12 +80,13 @@ export const Footer: React.FC = () => {
                 </Button>
               ))}
             </div>
+
           </div>
         </div>
-        <div className="flex w-full flex-col gap-8 sm:flex-row sm:pl-8">
-          <div className="flex w-full flex-row gap-8 sm:pl-8">
+        <div className="flex w-full flex-col gap-8 md:flex-row md:pl-8">
+          <div className="grid w-full grid-cols-2 sm:grid-cols-3 md:grid-cols-2 lg:grid-cols-3 gap-8 md:pl-8 py-9">
             {footerLinksData.map((data, index) => (
-              <div key={index} className="mt-9 min-w-fit">
+              <div key={index} >
                 <h3 className="text-sm font-medium text-white">
                   {data.category}
                 </h3>
@@ -99,7 +102,7 @@ export const Footer: React.FC = () => {
               </div>
             ))}
           </div>
-          <div className="w-full pb-5 sm:max-w-[250px] sm:py-9">
+          <div className="w-full pb-5 2xl:block max-[500px]:block hidden sm:max-w-[250px] sm:py-9">
             <div className="w-full rounded-lg bg-[#3c3c3c] px-5 py-4">
               <h3 className="leading-tight text-white sm:text-xs">
                 Ready to improve your AI visibility?
