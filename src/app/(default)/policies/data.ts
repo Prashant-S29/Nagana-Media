@@ -11,265 +11,265 @@ export interface PolicyDocument {
 }
 
 export const policies = [
-  {
-    slug: "privacy-compliance-audit",
-    title: "Privacy Compliance Audit",
-    sourceFile: "policies/Nagana_Media_Compliance_Audit09072026.docx",
-    description:
-      "Nagana Media currently operates naganamedia.com and processes personal data of website visitors, prospects, and B2B clients across India, the EU, and the United States, but has no published privacy policy, cookie consent",
-    blocks: [
-      {
-        type: "paragraph",
-        text: "GDPR (EU) · DPDP Act (India) · US State Privacy Laws (CCPA/CPRA and peers)",
-      },
-      {
-        type: "paragraph",
-        text: "Prepared for Naganarai Media Tech Pvt. Ltd. (Nagana Media) — July 2026",
-      },
-      {
-        type: "paragraph",
-        text: "1. Executive Summary",
-      },
-      {
-        type: "paragraph",
-        text: "Nagana Media currently operates naganamedia.com and processes personal data of website visitors, prospects, and B2B clients across India, the EU, and the United States, but has no published privacy policy, cookie consent mechanism, terms of service, or grievance/contact-handling process. This creates simultaneous exposure under three regimes at once: the EU General Data Protection Regulation (GDPR), India's Digital Personal Data Protection Act 2023 (DPDP Act) together with its 2025 Rules, and the patchwork of US state privacy laws led by California's CCPA/CPRA.",
-      },
-      {
-        type: "paragraph",
-        text: "The good news: because Nagana Media is an early-stage agency without large-scale data processing, the fix is primarily documentation, consent tooling, and process discipline rather than deep re-engineering. This audit identifies the gaps, explains why each regime applies, and lays out a prioritized remediation roadmap. The companion documents (Privacy Policy, Terms of Service, Cookie Policy, and a Data Processing Agreement template) operationalize the fixes.",
-      },
-      {
-        type: "paragraph",
-        text: "This audit and the accompanying documents are prepared to a high operational standard but do not constitute legal advice. DPDP Rules were only finalized in 2025 and enforcement guidance is still developing; California and other US state laws change most legislative sessions. Have an India-qualified counsel review the Privacy Policy and Grievance Officer designation, and consider a one-time review by US/EU counsel before heavy EU/US sales activity, especially once you sign your first EU enterprise client (e.g., Spherity).",
-      },
-      {
-        type: "paragraph",
-        text: "2. Why All Three Regimes Apply Simultaneously",
-      },
-      {
-        type: "paragraph",
-        text: "2.1 GDPR — extraterritorial reach",
-      },
-      {
-        type: "paragraph",
-        text: "GDPR applies not because Nagana Media has an EU office, but under Article 3(2): it applies to any organization, anywhere, that offers goods or services to individuals in the EU, or monitors their behavior (e.g., via analytics cookies on the website). Marketing content, audits, and consulting services pitched to EU-based contacts (Spherity in Germany is the clearest example already in your pipeline) trigger this.",
-      },
-      {
-        type: "paragraph",
-        text: "2.2 DPDP Act — home jurisdiction",
-      },
-      {
-        type: "paragraph",
-        text: "The DPDP Act applies to processing of digital personal data within India, and also to processing outside India if it relates to offering goods or services to persons in India. As an Indian-incorporated company (Naganarai Media Tech Pvt. Ltd., Jaipur), Nagana Media is squarely a Data Fiduciary under this law for any personal data it collects from Indian residents (employees, Indian vendors, Indian site visitors) and is expected to demonstrate compliance regardless of company size — there is no small-business carve-out for the core obligations, only for a narrower set of exemptions the government may notify for specific categories.",
-      },
-      {
-        type: "paragraph",
-        text: "2.3 US state laws — client-side exposure",
-      },
-      {
-        type: "paragraph",
-        text: "CCPA/CPRA and sibling state laws (Virginia's VCDPA, Colorado's CPA, Connecticut's CTDPA, Utah's UCPA, and newer ones like Texas TDPSA and Oregon OCPA) apply based on thresholds tied to revenue or volume of consumer data processed (commonly $25M+ annual revenue, or processing 50,000–100,000+ consumers'/devices' data annually, or deriving 50%+ revenue from selling personal data). Nagana Media, as a small agency, likely falls below every one of these thresholds today. However, two things matter here: first, thresholds change as you grow and as you close larger US clients; second, and more immediately, US enterprise buyers (the ones you are targeting, per your own positioning against Microsoft/IBM-caliber vendors) now expect CCPA-equivalent controls as a baseline vendor trust signal even when not legally mandated. Building to that standard now removes a future gap and shortens security/legal review cycles in enterprise sales.",
-      },
-      {
-        type: "paragraph",
-        text: "3. Applicability Matrix",
-      },
-      {
-        type: "table",
-        rows: [
-          ["Trigger", "GDPR", "DPDP Act", "US State Laws"],
-          [
-            "Legal basis for applying to Nagana Media today",
-            "Art. 3(2) — targeting/monitoring EU individuals via website + EU prospects",
-            "Territorial + nationality — Indian entity processing Indian & any digital personal data",
-            "Not yet at statutory thresholds; adopting voluntarily for enterprise credibility",
-          ],
-          [
-            "Consent standard",
-            "Opt-in, granular, freely given, withdrawable",
-            "Free, specific, informed, unambiguous; Consent Manager for scaled processing",
-            "Opt-out model (right to opt out of sale/share/targeted ads), plus opt-in for sensitive data & minors",
-          ],
-          [
-            "Core individual rights",
-            "Access, rectification, erasure, portability, restriction, objection",
-            "Access, correction, erasure, grievance redressal, nomination (post-death)",
-            "Know, delete, correct, opt-out, non-discrimination, portability",
-          ],
-          [
-            "Mandatory role/contact",
-            "Data Protection Officer (only if core activities require large-scale monitoring — not yet triggered for you)",
-            "Grievance Officer — mandatory, name + contact must be published",
-            "No mandated role at current scale; publish a privacy contact regardless",
-          ],
-          [
-            "Breach notification",
-            "Supervisory authority within 72 hours where feasible; affected individuals if high risk",
-            "Data Protection Board of India + affected Data Principals, per Rules",
-            "Varies by state; typically 'without unreasonable delay' to affected residents and AG",
-          ],
-          [
-            "Cross-border transfer mechanism",
-            "Standard Contractual Clauses / adequacy for transfers out of EEA",
-            "Permitted by default except to government-blacklisted countries (none notified as of writing)",
-            "No transfer restriction regime; contractual flow-down via DPA still best practice",
-          ],
-        ],
-      },
-      {
-        type: "paragraph",
-        text: "4. Current-State Findings (Gaps)",
-      },
-      {
-        type: "paragraph",
-        text: "Confirmed via site review. All of the following are currently absent from naganamedia.com:",
-      },
-      {
-        type: "paragraph",
-        text: "No Privacy Policy page or link anywhere on the site.",
-      },
-      {
-        type: "paragraph",
-        text: "No Cookie Policy, and no cookie consent banner — despite the site setting analytics/tracking cookies on load, which is a live violation under both GDPR (ePrivacy) and CPRA (no opt-out mechanism for tracking).",
-      },
-      {
-        type: "paragraph",
-        text: "No Terms of Service governing use of the site or the boundaries of service engagements.",
-      },
-      {
-        type: "paragraph",
-        text: "No footer legal links (Privacy / Terms / Cookies) — the baseline trust signal enterprise buyers scan for in seconds.",
-      },
-      {
-        type: "paragraph",
-        text: "No disclosure language on the contact/lead form about what happens to submitted data, retention, or right to withdraw.",
-      },
-      {
-        type: "paragraph",
-        text: "No named Grievance Officer or privacy contact — a hard DPDP requirement, not just best practice.",
-      },
-      {
-        type: "paragraph",
-        text: "No Record of Processing Activities (ROPA) — an internal document, not published, but expected under GDPR accountability principles and useful for your own operational clarity as you scale Hivig alongside Nagana Media.",
-      },
-      {
-        type: "paragraph",
-        text: "No Data Processing Agreement (DPA) template for clients or subprocessors (e.g., whatever email, CRM, or analytics tools you use) — needed both to flow down obligations to your vendors and to hand to enterprise clients who will ask for one during procurement/security review.",
-      },
-      {
-        type: "paragraph",
-        text: "No documented data retention schedule (how long lead-form submissions, contracts, or analytics data are kept).",
-      },
-      {
-        type: "paragraph",
-        text: "No process for handling a data subject/data principal access or deletion request if one arrives.",
-      },
-      {
-        type: "paragraph",
-        text: "5. Remediation Roadmap",
-      },
-      {
-        type: "paragraph",
-        text: "Tier 1 — Immediate (this week, blocking for any EU/US outreach)",
-      },
-      {
-        type: "paragraph",
-        text: "Publish Privacy Policy, Terms of Service, and Cookie Policy pages (drafts provided as companion documents).",
-      },
-      {
-        type: "paragraph",
-        text: "Add footer links to all three on every page (Prashant).",
-      },
-      {
-        type: "paragraph",
-        text: "Install a cookie consent banner (CookieYes, as already planned) configured for opt-in in EU/UK traffic and opt-out/GPC recognition for California traffic — most consent tools support geo-aware modes; verify this in CookieYes's plan tier.",
-      },
-      {
-        type: "paragraph",
-        text: "Add a one-line data-use disclosure + checkbox on the contact/lead form, linking to the Privacy Policy.",
-      },
-      {
-        type: "paragraph",
-        text: "Designate a named Grievance Officer (can be you, Abhijeet, initially) with a published email and response-time commitment — DPDP requires this to be identifiable, not just 'contact us'.",
-      },
-      {
-        type: "paragraph",
-        text: "Tier 2 — 30 days",
-      },
-      {
-        type: "paragraph",
-        text: "Stand up a lightweight ROPA: one internal spreadsheet listing what personal data you collect (site visitors, leads, clients, employees), why, where it's stored, who has access, and how long it's kept.",
-      },
-      {
-        type: "paragraph",
-        text: "Draft and adopt a Data Processing Agreement template to send to any subprocessor (hosting, email, CRM, analytics) and to offer clients who request one during vendor security review.",
-      },
-      {
-        type: "paragraph",
-        text: "Confirm which of your tools (analytics, email, CRM, hosting) store data outside India/EU, and note the transfer basis for each in the ROPA — this is mostly a documentation exercise, not a re-platforming one.",
-      },
-      {
-        type: "paragraph",
-        text: "Write and internally circulate a one-page breach response checklist: who to notify, within what timeframe, under which law, based on whose data was affected.",
-      },
-      {
-        type: "paragraph",
-        text: "Tier 3 — 60–90 days",
-      },
-      {
-        type: "paragraph",
-        text: "If naganamedia.com or Hivig site traffic from California, Virginia, or Colorado grows meaningfully, add a 'Do Not Sell or Share My Personal Information' / Global Privacy Control (GPC) recognition mechanism, even ahead of hitting statutory thresholds — this is the single most visible trust signal to US enterprise security teams.",
-      },
-      {
-        type: "paragraph",
-        text: "Before finalizing any contract with an EU client like Spherity, confirm whether Nagana Media needs an EU Article 27 representative (required if you have no EU establishment but regularly offer services to EU data subjects at scale — for a single client relationship this is often not yet triggered, but revisit as EU client count grows).",
-      },
-      {
-        type: "paragraph",
-        text: "Set an annual review cadence for all three policies — tie it to your existing content calendar rhythm so it doesn't get lost.",
-      },
-      {
-        type: "paragraph",
-        text: "Once Hivig launches (target October 2026), replicate the same policy stack for the Hivig domain rather than assuming the Nagana Media policies cover it — they are legally distinct offerings even if commonly owned.",
-      },
-      {
-        type: "paragraph",
-        text: "6. What 'On Par with Microsoft/IBM' Actually Means at Your Scale",
-      },
-      {
-        type: "paragraph",
-        text: "Enterprise vendors like Microsoft and IBM signal trust through three things you can replicate cheaply: (1) policies that are specific rather than templated boilerplate — naming your actual data flows, not generic placeholder language; (2) a visible, responsive privacy contact rather than a black hole; and (3) a willingness to sign a DPA without friction when a client's procurement team asks. You do not need a dedicated privacy team or a trust-center microsite to hit this bar — you need the four documents in this package published, linked, and kept current, plus a habit of saying yes quickly when a client's security questionnaire lands in your inbox.",
-      },
-      {
-        type: "paragraph",
-        text: "7. Companion Documents",
-      },
-      {
-        type: "paragraph",
-        text: "The following are provided as separate Word documents, ready to adapt and publish:",
-      },
-      {
-        type: "paragraph",
-        text: "Privacy Policy — covers GDPR, DPDP, and CCPA/state disclosures in one document, organized so EU, Indian, and US visitors can each find their specific rights section.",
-      },
-      {
-        type: "paragraph",
-        text: "Terms of Service — governs website use and general service engagement terms.",
-      },
-      {
-        type: "paragraph",
-        text: "Cookie Policy — cookie categories, purposes, and consent mechanism description, meant to pair with the CookieYes banner.",
-      },
-      {
-        type: "paragraph",
-        text: "Data Processing Agreement (DPA) template — for use with your own subprocessors and to offer clients during procurement review.",
-      },
-      {
-        type: "paragraph",
-        text: "Every bracketed [placeholder] in these documents needs a real value before publishing — registered address, grievance officer name/email, and specific tool names (CRM, analytics, hosting) are the ones most likely to need your input.",
-      },
-    ],
-  },
+  // {
+  //   slug: "privacy-compliance-audit",
+  //   title: "Privacy Compliance Audit",
+  //   sourceFile: "policies/Nagana_Media_Compliance_Audit09072026.docx",
+  //   description:
+  //     "Nagana Media currently operates naganamedia.com and processes personal data of website visitors, prospects, and B2B clients across India, the EU, and the United States, but has no published privacy policy, cookie consent",
+  //   blocks: [
+  //     {
+  //       type: "paragraph",
+  //       text: "GDPR (EU) · DPDP Act (India) · US State Privacy Laws (CCPA/CPRA and peers)",
+  //     },
+  //     {
+  //       type: "paragraph",
+  //       text: "Prepared for Naganarai Media Tech Pvt. Ltd. (Nagana Media) — July 2026",
+  //     },
+  //     {
+  //       type: "paragraph",
+  //       text: "1. Executive Summary",
+  //     },
+  //     {
+  //       type: "paragraph",
+  //       text: "Nagana Media currently operates naganamedia.com and processes personal data of website visitors, prospects, and B2B clients across India, the EU, and the United States, but has no published privacy policy, cookie consent mechanism, terms of service, or grievance/contact-handling process. This creates simultaneous exposure under three regimes at once: the EU General Data Protection Regulation (GDPR), India's Digital Personal Data Protection Act 2023 (DPDP Act) together with its 2025 Rules, and the patchwork of US state privacy laws led by California's CCPA/CPRA.",
+  //     },
+  //     {
+  //       type: "paragraph",
+  //       text: "The good news: because Nagana Media is an early-stage agency without large-scale data processing, the fix is primarily documentation, consent tooling, and process discipline rather than deep re-engineering. This audit identifies the gaps, explains why each regime applies, and lays out a prioritized remediation roadmap. The companion documents (Privacy Policy, Terms of Service, Cookie Policy, and a Data Processing Agreement template) operationalize the fixes.",
+  //     },
+  //     {
+  //       type: "paragraph",
+  //       text: "This audit and the accompanying documents are prepared to a high operational standard but do not constitute legal advice. DPDP Rules were only finalized in 2025 and enforcement guidance is still developing; California and other US state laws change most legislative sessions. Have an India-qualified counsel review the Privacy Policy and Grievance Officer designation, and consider a one-time review by US/EU counsel before heavy EU/US sales activity, especially once you sign your first EU enterprise client (e.g., Spherity).",
+  //     },
+  //     {
+  //       type: "paragraph",
+  //       text: "2. Why All Three Regimes Apply Simultaneously",
+  //     },
+  //     {
+  //       type: "paragraph",
+  //       text: "2.1 GDPR — extraterritorial reach",
+  //     },
+  //     {
+  //       type: "paragraph",
+  //       text: "GDPR applies not because Nagana Media has an EU office, but under Article 3(2): it applies to any organization, anywhere, that offers goods or services to individuals in the EU, or monitors their behavior (e.g., via analytics cookies on the website). Marketing content, audits, and consulting services pitched to EU-based contacts (Spherity in Germany is the clearest example already in your pipeline) trigger this.",
+  //     },
+  //     {
+  //       type: "paragraph",
+  //       text: "2.2 DPDP Act — home jurisdiction",
+  //     },
+  //     {
+  //       type: "paragraph",
+  //       text: "The DPDP Act applies to processing of digital personal data within India, and also to processing outside India if it relates to offering goods or services to persons in India. As an Indian-incorporated company (Naganarai Media Tech Pvt. Ltd., Jaipur), Nagana Media is squarely a Data Fiduciary under this law for any personal data it collects from Indian residents (employees, Indian vendors, Indian site visitors) and is expected to demonstrate compliance regardless of company size — there is no small-business carve-out for the core obligations, only for a narrower set of exemptions the government may notify for specific categories.",
+  //     },
+  //     {
+  //       type: "paragraph",
+  //       text: "2.3 US state laws — client-side exposure",
+  //     },
+  //     {
+  //       type: "paragraph",
+  //       text: "CCPA/CPRA and sibling state laws (Virginia's VCDPA, Colorado's CPA, Connecticut's CTDPA, Utah's UCPA, and newer ones like Texas TDPSA and Oregon OCPA) apply based on thresholds tied to revenue or volume of consumer data processed (commonly $25M+ annual revenue, or processing 50,000–100,000+ consumers'/devices' data annually, or deriving 50%+ revenue from selling personal data). Nagana Media, as a small agency, likely falls below every one of these thresholds today. However, two things matter here: first, thresholds change as you grow and as you close larger US clients; second, and more immediately, US enterprise buyers (the ones you are targeting, per your own positioning against Microsoft/IBM-caliber vendors) now expect CCPA-equivalent controls as a baseline vendor trust signal even when not legally mandated. Building to that standard now removes a future gap and shortens security/legal review cycles in enterprise sales.",
+  //     },
+  //     {
+  //       type: "paragraph",
+  //       text: "3. Applicability Matrix",
+  //     },
+  //     {
+  //       type: "table",
+  //       rows: [
+  //         ["Trigger", "GDPR", "DPDP Act", "US State Laws"],
+  //         [
+  //           "Legal basis for applying to Nagana Media today",
+  //           "Art. 3(2) — targeting/monitoring EU individuals via website + EU prospects",
+  //           "Territorial + nationality — Indian entity processing Indian & any digital personal data",
+  //           "Not yet at statutory thresholds; adopting voluntarily for enterprise credibility",
+  //         ],
+  //         [
+  //           "Consent standard",
+  //           "Opt-in, granular, freely given, withdrawable",
+  //           "Free, specific, informed, unambiguous; Consent Manager for scaled processing",
+  //           "Opt-out model (right to opt out of sale/share/targeted ads), plus opt-in for sensitive data & minors",
+  //         ],
+  //         [
+  //           "Core individual rights",
+  //           "Access, rectification, erasure, portability, restriction, objection",
+  //           "Access, correction, erasure, grievance redressal, nomination (post-death)",
+  //           "Know, delete, correct, opt-out, non-discrimination, portability",
+  //         ],
+  //         [
+  //           "Mandatory role/contact",
+  //           "Data Protection Officer (only if core activities require large-scale monitoring — not yet triggered for you)",
+  //           "Grievance Officer — mandatory, name + contact must be published",
+  //           "No mandated role at current scale; publish a privacy contact regardless",
+  //         ],
+  //         [
+  //           "Breach notification",
+  //           "Supervisory authority within 72 hours where feasible; affected individuals if high risk",
+  //           "Data Protection Board of India + affected Data Principals, per Rules",
+  //           "Varies by state; typically 'without unreasonable delay' to affected residents and AG",
+  //         ],
+  //         [
+  //           "Cross-border transfer mechanism",
+  //           "Standard Contractual Clauses / adequacy for transfers out of EEA",
+  //           "Permitted by default except to government-blacklisted countries (none notified as of writing)",
+  //           "No transfer restriction regime; contractual flow-down via DPA still best practice",
+  //         ],
+  //       ],
+  //     },
+  //     {
+  //       type: "paragraph",
+  //       text: "4. Current-State Findings (Gaps)",
+  //     },
+  //     {
+  //       type: "paragraph",
+  //       text: "Confirmed via site review. All of the following are currently absent from naganamedia.com:",
+  //     },
+  //     {
+  //       type: "paragraph",
+  //       text: "No Privacy Policy page or link anywhere on the site.",
+  //     },
+  //     {
+  //       type: "paragraph",
+  //       text: "No Cookie Policy, and no cookie consent banner — despite the site setting analytics/tracking cookies on load, which is a live violation under both GDPR (ePrivacy) and CPRA (no opt-out mechanism for tracking).",
+  //     },
+  //     {
+  //       type: "paragraph",
+  //       text: "No Terms of Service governing use of the site or the boundaries of service engagements.",
+  //     },
+  //     {
+  //       type: "paragraph",
+  //       text: "No footer legal links (Privacy / Terms / Cookies) — the baseline trust signal enterprise buyers scan for in seconds.",
+  //     },
+  //     {
+  //       type: "paragraph",
+  //       text: "No disclosure language on the contact/lead form about what happens to submitted data, retention, or right to withdraw.",
+  //     },
+  //     {
+  //       type: "paragraph",
+  //       text: "No named Grievance Officer or privacy contact — a hard DPDP requirement, not just best practice.",
+  //     },
+  //     {
+  //       type: "paragraph",
+  //       text: "No Record of Processing Activities (ROPA) — an internal document, not published, but expected under GDPR accountability principles and useful for your own operational clarity as you scale Hivig alongside Nagana Media.",
+  //     },
+  //     {
+  //       type: "paragraph",
+  //       text: "No Data Processing Agreement (DPA) template for clients or subprocessors (e.g., whatever email, CRM, or analytics tools you use) — needed both to flow down obligations to your vendors and to hand to enterprise clients who will ask for one during procurement/security review.",
+  //     },
+  //     {
+  //       type: "paragraph",
+  //       text: "No documented data retention schedule (how long lead-form submissions, contracts, or analytics data are kept).",
+  //     },
+  //     {
+  //       type: "paragraph",
+  //       text: "No process for handling a data subject/data principal access or deletion request if one arrives.",
+  //     },
+  //     {
+  //       type: "paragraph",
+  //       text: "5. Remediation Roadmap",
+  //     },
+  //     {
+  //       type: "paragraph",
+  //       text: "Tier 1 — Immediate (this week, blocking for any EU/US outreach)",
+  //     },
+  //     {
+  //       type: "paragraph",
+  //       text: "Publish Privacy Policy, Terms of Service, and Cookie Policy pages (drafts provided as companion documents).",
+  //     },
+  //     {
+  //       type: "paragraph",
+  //       text: "Add footer links to all three on every page (Prashant).",
+  //     },
+  //     {
+  //       type: "paragraph",
+  //       text: "Install a cookie consent banner (CookieYes, as already planned) configured for opt-in in EU/UK traffic and opt-out/GPC recognition for California traffic — most consent tools support geo-aware modes; verify this in CookieYes's plan tier.",
+  //     },
+  //     {
+  //       type: "paragraph",
+  //       text: "Add a one-line data-use disclosure + checkbox on the contact/lead form, linking to the Privacy Policy.",
+  //     },
+  //     {
+  //       type: "paragraph",
+  //       text: "Designate a named Grievance Officer (can be you, Abhijeet, initially) with a published email and response-time commitment — DPDP requires this to be identifiable, not just 'contact us'.",
+  //     },
+  //     {
+  //       type: "paragraph",
+  //       text: "Tier 2 — 30 days",
+  //     },
+  //     {
+  //       type: "paragraph",
+  //       text: "Stand up a lightweight ROPA: one internal spreadsheet listing what personal data you collect (site visitors, leads, clients, employees), why, where it's stored, who has access, and how long it's kept.",
+  //     },
+  //     {
+  //       type: "paragraph",
+  //       text: "Draft and adopt a Data Processing Agreement template to send to any subprocessor (hosting, email, CRM, analytics) and to offer clients who request one during vendor security review.",
+  //     },
+  //     {
+  //       type: "paragraph",
+  //       text: "Confirm which of your tools (analytics, email, CRM, hosting) store data outside India/EU, and note the transfer basis for each in the ROPA — this is mostly a documentation exercise, not a re-platforming one.",
+  //     },
+  //     {
+  //       type: "paragraph",
+  //       text: "Write and internally circulate a one-page breach response checklist: who to notify, within what timeframe, under which law, based on whose data was affected.",
+  //     },
+  //     {
+  //       type: "paragraph",
+  //       text: "Tier 3 — 60–90 days",
+  //     },
+  //     {
+  //       type: "paragraph",
+  //       text: "If naganamedia.com or Hivig site traffic from California, Virginia, or Colorado grows meaningfully, add a 'Do Not Sell or Share My Personal Information' / Global Privacy Control (GPC) recognition mechanism, even ahead of hitting statutory thresholds — this is the single most visible trust signal to US enterprise security teams.",
+  //     },
+  //     {
+  //       type: "paragraph",
+  //       text: "Before finalizing any contract with an EU client like Spherity, confirm whether Nagana Media needs an EU Article 27 representative (required if you have no EU establishment but regularly offer services to EU data subjects at scale — for a single client relationship this is often not yet triggered, but revisit as EU client count grows).",
+  //     },
+  //     {
+  //       type: "paragraph",
+  //       text: "Set an annual review cadence for all three policies — tie it to your existing content calendar rhythm so it doesn't get lost.",
+  //     },
+  //     {
+  //       type: "paragraph",
+  //       text: "Once Hivig launches (target October 2026), replicate the same policy stack for the Hivig domain rather than assuming the Nagana Media policies cover it — they are legally distinct offerings even if commonly owned.",
+  //     },
+  //     {
+  //       type: "paragraph",
+  //       text: "6. What 'On Par with Microsoft/IBM' Actually Means at Your Scale",
+  //     },
+  //     {
+  //       type: "paragraph",
+  //       text: "Enterprise vendors like Microsoft and IBM signal trust through three things you can replicate cheaply: (1) policies that are specific rather than templated boilerplate — naming your actual data flows, not generic placeholder language; (2) a visible, responsive privacy contact rather than a black hole; and (3) a willingness to sign a DPA without friction when a client's procurement team asks. You do not need a dedicated privacy team or a trust-center microsite to hit this bar — you need the four documents in this package published, linked, and kept current, plus a habit of saying yes quickly when a client's security questionnaire lands in your inbox.",
+  //     },
+  //     {
+  //       type: "paragraph",
+  //       text: "7. Companion Documents",
+  //     },
+  //     {
+  //       type: "paragraph",
+  //       text: "The following are provided as separate Word documents, ready to adapt and publish:",
+  //     },
+  //     {
+  //       type: "paragraph",
+  //       text: "Privacy Policy — covers GDPR, DPDP, and CCPA/state disclosures in one document, organized so EU, Indian, and US visitors can each find their specific rights section.",
+  //     },
+  //     {
+  //       type: "paragraph",
+  //       text: "Terms of Service — governs website use and general service engagement terms.",
+  //     },
+  //     {
+  //       type: "paragraph",
+  //       text: "Cookie Policy — cookie categories, purposes, and consent mechanism description, meant to pair with the CookieYes banner.",
+  //     },
+  //     {
+  //       type: "paragraph",
+  //       text: "Data Processing Agreement (DPA) template — for use with your own subprocessors and to offer clients during procurement review.",
+  //     },
+  //     {
+  //       type: "paragraph",
+  //       text: "Every bracketed [placeholder] in these documents needs a real value before publishing — registered address, grievance officer name/email, and specific tool names (CRM, analytics, hosting) are the ones most likely to need your input.",
+  //     },
+  //   ],
+  // },
   {
     slug: "cookie-policy",
     title: "Cookie Policy",
@@ -369,135 +369,135 @@ export const policies = [
       },
     ],
   },
-  {
-    slug: "data-processing-agreement",
-    title: "Data Processing Agreement",
-    sourceFile: "policies/Nagana_Media_DPA_Template09072026.docx",
-    description:
-      "Use this in two directions: (1) send it to your own subprocessors — hosting, email, CRM, analytics vendors — for them to sign as Processor to your Controller; and (2) offer it to enterprise clients who ask Nagana Media t",
-    blocks: [
-      {
-        type: "paragraph",
-        text: "Template — for use between Nagana Media and clients or subprocessors",
-      },
-      {
-        type: "paragraph",
-        text: "Version [2.1] · [Date: July 09, 2026]",
-      },
-      {
-        type: "paragraph",
-        text: "Use this in two directions: (1) send it to your own subprocessors — hosting, email, CRM, analytics vendors — for them to sign as Processor to your Controller; and (2) offer it to enterprise clients who ask Nagana Media to sign as their Processor/Sub-processor during procurement or security review. Bracketed terms need to be filled per relationship.",
-      },
-      {
-        type: "paragraph",
-        text: "1. Parties and Scope",
-      },
-      {
-        type: "paragraph",
-        text: 'This Data Processing Agreement ("DPA") is entered into between [CLIENT/CONTROLLER NAME] ("Controller") and Naganarai Media Tech Pvt. Ltd., operating as Nagana Media ("Processor"), and supplements the underlying services agreement between the parties (the "Agreement"). This DPA applies to the extent Nagana Media processes personal data on behalf of the Controller in the course of providing services under the Agreement.',
-      },
-      {
-        type: "paragraph",
-        text: "2. Nature and Purpose of Processing",
-      },
-      {
-        type: "paragraph",
-        text: "Subject matter: [describe, e.g., content production, marketing analytics, campaign execution]",
-      },
-      {
-        type: "paragraph",
-        text: "Duration: for the term of the Agreement, plus any post-termination retention required by law.",
-      },
-      {
-        type: "paragraph",
-        text: "Nature and purpose: processing personal data solely to deliver the contracted services.",
-      },
-      {
-        type: "paragraph",
-        text: "Categories of data subjects: [e.g., Controller's employees, prospects, customers]",
-      },
-      {
-        type: "paragraph",
-        text: "Categories of personal data: [e.g., name, business email, job title, engagement history]",
-      },
-      {
-        type: "paragraph",
-        text: "3. Processor Obligations",
-      },
-      {
-        type: "paragraph",
-        text: "Process personal data only on documented instructions from the Controller, including regarding international transfers, unless required otherwise by law.",
-      },
-      {
-        type: "paragraph",
-        text: "Ensure personnel authorized to process personal data are bound by confidentiality obligations.",
-      },
-      {
-        type: "paragraph",
-        text: "Implement appropriate technical and organizational security measures proportionate to the risk.",
-      },
-      {
-        type: "paragraph",
-        text: "Assist the Controller in responding to data subject/data principal rights requests to the extent the Processor holds relevant data.",
-      },
-      {
-        type: "paragraph",
-        text: "Notify the Controller without undue delay after becoming aware of a personal data breach affecting the Controller's data, and provide reasonably available information to help the Controller meet its own notification obligations.",
-      },
-      {
-        type: "paragraph",
-        text: "Delete or return all personal data at the end of the engagement, at the Controller's choice, except where retention is required by law.",
-      },
-      {
-        type: "paragraph",
-        text: "Make available information reasonably necessary to demonstrate compliance with this DPA, and allow for reasonable audits or inspections on reasonable notice.",
-      },
-      {
-        type: "paragraph",
-        text: "4. Sub-processors",
-      },
-      {
-        type: "paragraph",
-        text: "The Controller authorizes Nagana Media to engage sub-processors (e.g., hosting, email delivery, analytics providers) to support service delivery, provided Nagana Media: (a) maintains a current list of sub-processors available on request, (b) imposes data protection obligations on each sub-processor materially equivalent to those in this DPA, and (c) remains responsible for each sub-processor's performance. Nagana Media will provide reasonable advance notice of any new sub-processor to allow the Controller to object on reasonable data protection grounds.",
-      },
-      {
-        type: "paragraph",
-        text: "5. International Transfers",
-      },
-      {
-        type: "paragraph",
-        text: "Where personal data is transferred from the EEA/UK to India or another country, the parties agree that such transfer is governed by the European Commission's Standard Contractual Clauses (Controller-to-Processor module), incorporated by reference, or another legally recognized transfer mechanism then in effect. For personal data subject to the DPDP Act, transfer is permitted in the ordinary course except to any country specifically restricted by the Government of India.",
-      },
-      {
-        type: "paragraph",
-        text: "6. Liability and Indemnity",
-      },
-      {
-        type: "paragraph",
-        text: "Liability under this DPA is subject to the limitation of liability provisions in the underlying Agreement, except where applicable law prohibits limiting liability for data protection violations.",
-      },
-      {
-        type: "paragraph",
-        text: "7. Term and Termination",
-      },
-      {
-        type: "paragraph",
-        text: "This DPA remains in effect for as long as Nagana Media processes personal data on behalf of the Controller under the Agreement, and survives termination of the Agreement to the extent necessary to govern deletion/return of data and any residual obligations.",
-      },
-      {
-        type: "paragraph",
-        text: "8. Signatures",
-      },
-      {
-        type: "paragraph",
-        text: "Controller: _______________________     Date: ___________",
-      },
-      {
-        type: "paragraph",
-        text: "Processor (Naganarai Media Tech Pvt. Ltd.): _______________________     Date: ___________",
-      },
-    ],
-  },
+  // {
+  //   slug: "data-processing-agreement",
+  //   title: "Data Processing Agreement",
+  //   sourceFile: "policies/Nagana_Media_DPA_Template09072026.docx",
+  //   description:
+  //     "Use this in two directions: (1) send it to your own subprocessors — hosting, email, CRM, analytics vendors — for them to sign as Processor to your Controller; and (2) offer it to enterprise clients who ask Nagana Media t",
+  //   blocks: [
+  //     {
+  //       type: "paragraph",
+  //       text: "Template — for use between Nagana Media and clients or subprocessors",
+  //     },
+  //     {
+  //       type: "paragraph",
+  //       text: "Version [2.1] · [Date: July 09, 2026]",
+  //     },
+  //     {
+  //       type: "paragraph",
+  //       text: "Use this in two directions: (1) send it to your own subprocessors — hosting, email, CRM, analytics vendors — for them to sign as Processor to your Controller; and (2) offer it to enterprise clients who ask Nagana Media to sign as their Processor/Sub-processor during procurement or security review. Bracketed terms need to be filled per relationship.",
+  //     },
+  //     {
+  //       type: "paragraph",
+  //       text: "1. Parties and Scope",
+  //     },
+  //     {
+  //       type: "paragraph",
+  //       text: 'This Data Processing Agreement ("DPA") is entered into between [CLIENT/CONTROLLER NAME] ("Controller") and Naganarai Media Tech Pvt. Ltd., operating as Nagana Media ("Processor"), and supplements the underlying services agreement between the parties (the "Agreement"). This DPA applies to the extent Nagana Media processes personal data on behalf of the Controller in the course of providing services under the Agreement.',
+  //     },
+  //     {
+  //       type: "paragraph",
+  //       text: "2. Nature and Purpose of Processing",
+  //     },
+  //     {
+  //       type: "paragraph",
+  //       text: "Subject matter: [describe, e.g., content production, marketing analytics, campaign execution]",
+  //     },
+  //     {
+  //       type: "paragraph",
+  //       text: "Duration: for the term of the Agreement, plus any post-termination retention required by law.",
+  //     },
+  //     {
+  //       type: "paragraph",
+  //       text: "Nature and purpose: processing personal data solely to deliver the contracted services.",
+  //     },
+  //     {
+  //       type: "paragraph",
+  //       text: "Categories of data subjects: [e.g., Controller's employees, prospects, customers]",
+  //     },
+  //     {
+  //       type: "paragraph",
+  //       text: "Categories of personal data: [e.g., name, business email, job title, engagement history]",
+  //     },
+  //     {
+  //       type: "paragraph",
+  //       text: "3. Processor Obligations",
+  //     },
+  //     {
+  //       type: "paragraph",
+  //       text: "Process personal data only on documented instructions from the Controller, including regarding international transfers, unless required otherwise by law.",
+  //     },
+  //     {
+  //       type: "paragraph",
+  //       text: "Ensure personnel authorized to process personal data are bound by confidentiality obligations.",
+  //     },
+  //     {
+  //       type: "paragraph",
+  //       text: "Implement appropriate technical and organizational security measures proportionate to the risk.",
+  //     },
+  //     {
+  //       type: "paragraph",
+  //       text: "Assist the Controller in responding to data subject/data principal rights requests to the extent the Processor holds relevant data.",
+  //     },
+  //     {
+  //       type: "paragraph",
+  //       text: "Notify the Controller without undue delay after becoming aware of a personal data breach affecting the Controller's data, and provide reasonably available information to help the Controller meet its own notification obligations.",
+  //     },
+  //     {
+  //       type: "paragraph",
+  //       text: "Delete or return all personal data at the end of the engagement, at the Controller's choice, except where retention is required by law.",
+  //     },
+  //     {
+  //       type: "paragraph",
+  //       text: "Make available information reasonably necessary to demonstrate compliance with this DPA, and allow for reasonable audits or inspections on reasonable notice.",
+  //     },
+  //     {
+  //       type: "paragraph",
+  //       text: "4. Sub-processors",
+  //     },
+  //     {
+  //       type: "paragraph",
+  //       text: "The Controller authorizes Nagana Media to engage sub-processors (e.g., hosting, email delivery, analytics providers) to support service delivery, provided Nagana Media: (a) maintains a current list of sub-processors available on request, (b) imposes data protection obligations on each sub-processor materially equivalent to those in this DPA, and (c) remains responsible for each sub-processor's performance. Nagana Media will provide reasonable advance notice of any new sub-processor to allow the Controller to object on reasonable data protection grounds.",
+  //     },
+  //     {
+  //       type: "paragraph",
+  //       text: "5. International Transfers",
+  //     },
+  //     {
+  //       type: "paragraph",
+  //       text: "Where personal data is transferred from the EEA/UK to India or another country, the parties agree that such transfer is governed by the European Commission's Standard Contractual Clauses (Controller-to-Processor module), incorporated by reference, or another legally recognized transfer mechanism then in effect. For personal data subject to the DPDP Act, transfer is permitted in the ordinary course except to any country specifically restricted by the Government of India.",
+  //     },
+  //     {
+  //       type: "paragraph",
+  //       text: "6. Liability and Indemnity",
+  //     },
+  //     {
+  //       type: "paragraph",
+  //       text: "Liability under this DPA is subject to the limitation of liability provisions in the underlying Agreement, except where applicable law prohibits limiting liability for data protection violations.",
+  //     },
+  //     {
+  //       type: "paragraph",
+  //       text: "7. Term and Termination",
+  //     },
+  //     {
+  //       type: "paragraph",
+  //       text: "This DPA remains in effect for as long as Nagana Media processes personal data on behalf of the Controller under the Agreement, and survives termination of the Agreement to the extent necessary to govern deletion/return of data and any residual obligations.",
+  //     },
+  //     {
+  //       type: "paragraph",
+  //       text: "8. Signatures",
+  //     },
+  //     {
+  //       type: "paragraph",
+  //       text: "Controller: _______________________     Date: ___________",
+  //     },
+  //     {
+  //       type: "paragraph",
+  //       text: "Processor (Naganarai Media Tech Pvt. Ltd.): _______________________     Date: ___________",
+  //     },
+  //   ],
+  // },
   {
     slug: "privacy-policy",
     title: "Privacy Policy",
@@ -755,15 +755,15 @@ export const policies = [
       },
       {
         type: "paragraph",
-        text: "Grievance Officer: [NAME]",
+        text: "Grievance Officer: Abhijeet Singh",
       },
       {
         type: "paragraph",
-        text: "Email: [PRIVACY EMAIL]",
+        text: "Email: contact@naganamedia.com",
       },
       {
         type: "paragraph",
-        text: "Address: Naganarai Media Tech Pvt. Ltd., [REGISTERED ADDRESS], Jaipur, Rajasthan, India",
+        text: "Address: Naganarai Media Tech Pvt. Ltd., 6, Raghu Vihar, Maharani Farm, Durgapura, Jaipur, Rajasthan, India, 302018",
       },
       {
         type: "paragraph",

@@ -91,14 +91,14 @@ export const footerLinksData: FooterLinksProps[] = [
         label: "Terms of Service",
         href: "/policies/terms-of-service",
       },
-      {
-        label: "Data Processing Agreement",
-        href: "/policies/data-processing-agreement",
-      },
-      {
-        label: "Privacy Compliance Audit",
-        href: "/policies/privacy-compliance-audit",
-      },
+      // {
+      //   label: "Data Processing Agreement",
+      //   href: "/policies/data-processing-agreement",
+      // },
+      // {
+      //   label: "Privacy Compliance Audit",
+      //   href: "/policies/privacy-compliance-audit",
+      // },
     ],
   },
 ];
