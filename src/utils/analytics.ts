@@ -1,6 +1,7 @@
 "use client";
 
 import posthog from "posthog-js";
+import { getStoredCookieConsent } from "./cookieConsent";
 
 /**
  * Thin, typed wrapper over posthog-js for semantic journey events.
@@ -28,11 +29,15 @@ export type AnalyticsEvent =
   | "contact_submitted"
   | "contact_failed";
 
+function canUseAnalytics(): boolean {
+  return getStoredCookieConsent()?.analytics === true && posthog.__loaded;
+}
+
 export function track(
   event: AnalyticsEvent,
   properties?: Record<string, unknown>,
 ): void {
-  if (typeof window === "undefined") return;
+  if (typeof window === "undefined" || !canUseAnalytics()) return;
   posthog.capture(event, properties);
 }
 
@@ -41,12 +46,12 @@ export function identify(
   email: string,
   properties?: Record<string, unknown>,
 ): void {
-  if (typeof window === "undefined" || !email) return;
+  if (typeof window === "undefined" || !email || !canUseAnalytics()) return;
   posthog.identify(email, properties);
 }
 
 /** Reset identity (e.g. on logout). Rarely needed on a marketing site. */
 export function resetAnalytics(): void {
-  if (typeof window === "undefined") return;
+  if (typeof window === "undefined" || !posthog.__loaded) return;
   posthog.reset();
 }

@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
+import Link from "next/link";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 
@@ -204,6 +205,18 @@ export const ContactUsForm: React.FC = () => {
         />
 
         {error && <p className="text-sm text-red-500">{error}</p>}
+
+        <p className="text-xs leading-5 text-gray-500">
+          By submitting this form, you agree that Nagana Media may process your
+          details to respond to your request. See our{" "}
+          <Link
+            href="/policies/privacy-policy"
+            className="font-medium text-gray-700 underline underline-offset-2"
+          >
+            Privacy Policy
+          </Link>
+          .
+        </p>
 
         <Button
           variant="brand"

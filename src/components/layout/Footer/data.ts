@@ -76,4 +76,29 @@ export const footerLinksData: FooterLinksProps[] = [
       },
     ],
   },
+  {
+    category: "Policies",
+    links: [
+      {
+        label: "Privacy Policy",
+        href: "/policies/privacy-policy",
+      },
+      {
+        label: "Cookie Policy",
+        href: "/policies/cookie-policy",
+      },
+      {
+        label: "Terms of Service",
+        href: "/policies/terms-of-service",
+      },
+      // {
+      //   label: "Data Processing Agreement",
+      //   href: "/policies/data-processing-agreement",
+      // },
+      // {
+      //   label: "Privacy Compliance Audit",
+      //   href: "/policies/privacy-compliance-audit",
+      // },
+    ],
+  },
 ];

@@ -18,12 +18,6 @@ export default async function RootLayout({
   return (
     <html lang="en" className={`${fonts.outfit.className} antialiased`}>
       <head>
-        {/* PostHog is loaded directly from its host, so warm the connection
-            early on every environment to reduce analytics latency. */}
-        <link rel="preconnect" href="https://us.i.posthog.com" />
-        <link rel="preconnect" href="https://us-assets.i.posthog.com" />
-        <link rel="dns-prefetch" href="https://us.i.posthog.com" />
-        <link rel="dns-prefetch" href="https://us-assets.i.posthog.com" />
         <link
           rel="llms"
           type="text/plain"
