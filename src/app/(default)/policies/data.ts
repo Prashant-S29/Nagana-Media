@@ -12,6 +12,105 @@ export interface PolicyDocument {
 
 export const policies = [
   {
+    slug: "cookie-policy",
+    title: "Cookie Policy",
+    sourceFile: "policies/Nagana_Media_Cookie_Policy09072026.docx",
+    description:
+      "This Cookie Policy explains how naganamedia.com uses cookies and similar tracking technologies, and how you can control them. It should be read alongside our Privacy Policy.",
+    blocks: [
+      {
+        type: "paragraph",
+        text: "Nagana Media (Naganarai Media Tech Pvt. Ltd.)",
+      },
+      {
+        type: "paragraph",
+        text: "Effective Date: [August 16, 2023] · Last Updated: [July 09, 2026]",
+      },
+      {
+        type: "paragraph",
+        text: "This Cookie Policy explains how naganamedia.com uses cookies and similar tracking technologies, and how you can control them. It should be read alongside our Privacy Policy.",
+      },
+      {
+        type: "paragraph",
+        text: "1. What Are Cookies",
+      },
+      {
+        type: "paragraph",
+        text: "Cookies are small text files placed on your device when you visit a website. They allow the site to recognize your device and remember information about your visit, such as preferences and browsing activity.",
+      },
+      {
+        type: "paragraph",
+        text: "2. Categories of Cookies We Use",
+      },
+      {
+        type: "table",
+        rows: [
+          ["Category", "Purpose", "Consent Required?"],
+          [
+            "Strictly Necessary",
+            "Core site functionality, security, load balancing",
+            "No — cannot be disabled, but disclosed",
+          ],
+          [
+            "Analytics",
+            "Understanding site traffic and content performance (e.g., pages visited, session duration)",
+            "Yes, for EU/UK visitors; opt-out honored for California/US visitors",
+          ],
+          [
+            "Functional",
+            "Remembering preferences (e.g., form field values) to improve usability",
+            "Yes, where non-essential",
+          ],
+          [
+            "Marketing / Advertising",
+            "Currently not used for third-party advertising or retargeting",
+            "N/A — none deployed as of the effective date",
+          ],
+        ],
+      },
+      {
+        type: "paragraph",
+        text: "3. Consent Management",
+      },
+      {
+        type: "paragraph",
+        text: "On your first visit, a cookie consent banner lets you accept, reject, or customize non-essential cookies. Visitors identified as located in the EU or UK are shown an opt-in banner (no non-essential cookies are set until you consent). Visitors identified as located in the US are shown an opt-out mechanism, and we honor Global Privacy Control (GPC) browser signals as a valid opt-out where our consent management platform supports it. You can change your preferences at any time via the consent management link in the site footer.",
+      },
+      {
+        type: "paragraph",
+        text: "4. Third-Party Cookies",
+      },
+      {
+        type: "paragraph",
+        text: "Some cookies are set by third-party service providers we use for analytics or site functionality (for example, [ANALYTICS PROVIDER]). These providers may process data under their own privacy policies; we select providers that offer appropriate data protection commitments and, where required, execute data processing agreements with them.",
+      },
+      {
+        type: "paragraph",
+        text: "5. Managing Cookies in Your Browser",
+      },
+      {
+        type: "paragraph",
+        text: "In addition to our consent tool, most browsers let you block or delete cookies directly through browser settings. Blocking strictly necessary cookies may affect site functionality.",
+      },
+      {
+        type: "paragraph",
+        text: "6. Updates to This Policy",
+      },
+      {
+        type: "paragraph",
+        text: 'We may update this Cookie Policy as our use of cookies changes. Check the "Last Updated" date for the most recent version.',
+      },
+      {
+        type: "paragraph",
+        text: "7. Contact",
+      },
+      {
+        type: "paragraph",
+        text: "Questions about this Cookie Policy can be directed to contact@naganamedia.com.",
+      },
+    ],
+  },
+  {
     slug: "privacy-policy",
     title: "Privacy Policy",
     sourceFile: "policies/Nagana_Media_Privacy_Policy09072026.docx",
