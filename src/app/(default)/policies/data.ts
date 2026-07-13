@@ -24,7 +24,7 @@ export const policies = [
       },
       {
         type: "paragraph",
-        text: "Effective Date: [August 16, 2023] · Last Updated: [July 09, 2026]",
+        text: "Effective Date: August 16, 2023 · Last Updated: July 09, 2026",
       },
       {
         type: "paragraph",
@@ -48,18 +48,18 @@ export const policies = [
           ["Category", "Purpose", "Consent Required?"],
           [
             "Strictly Necessary",
-            "Core site functionality, security, load balancing",
+            "Core site functionality, security, basic form operation, and remembering your cookie preference",
             "No — cannot be disabled, but disclosed",
           ],
           [
             "Analytics",
-            "Understanding site traffic and content performance (e.g., pages visited, session duration)",
-            "Yes, for EU/UK visitors; opt-out honored for California/US visitors",
+            "PostHog analytics, heatmaps, session recordings, page views, clicks, and form journey events to improve the website",
+            "Yes — not loaded unless you allow analytics cookies",
           ],
           [
             "Functional",
-            "Remembering preferences (e.g., form field values) to improve usability",
-            "Yes, where non-essential",
+            "Currently not used beyond strictly necessary site functionality",
+            "N/A — none deployed as of the effective date",
           ],
           [
             "Marketing / Advertising",
@@ -74,7 +74,7 @@ export const policies = [
       },
       {
         type: "paragraph",
-        text: "On your first visit, a cookie consent banner lets you accept, reject, or customize non-essential cookies. Visitors identified as located in the EU or UK are shown an opt-in banner (no non-essential cookies are set until you consent). Visitors identified as located in the US are shown an opt-out mechanism, and we honor Global Privacy Control (GPC) browser signals as a valid opt-out where our consent management platform supports it. You can change your preferences at any time via the consent management link in the site footer.",
+        text: "On your first visit, a cookie consent banner lets you accept all cookies, choose only necessary cookies, or customize non-essential analytics cookies. We use an opt-in approach for analytics: PostHog analytics is not loaded unless you allow analytics cookies. We also honor Global Privacy Control (GPC) browser signals by treating them as an analytics opt-out where technically available. You can change your preferences at any time via the Cookie preferences link in the site footer.",
       },
       {
         type: "paragraph",
@@ -82,7 +82,7 @@ export const policies = [
       },
       {
         type: "paragraph",
-        text: "Some cookies are set by third-party service providers we use for analytics or site functionality (for example, [ANALYTICS PROVIDER]). These providers may process data under their own privacy policies; we select providers that offer appropriate data protection commitments and, where required, execute data processing agreements with them.",
+        text: "Some cookies or similar technologies are set by third-party service providers we use for analytics or site functionality, including PostHog for analytics, heatmaps, and session recordings after consent. These providers may process data under their own privacy policies; we select providers that offer appropriate data protection commitments and, where required, execute data processing agreements with them.",
       },
       {
         type: "paragraph",
@@ -123,7 +123,7 @@ export const policies = [
       },
       {
         type: "paragraph",
-        text: "Effective Date: [August 16, 2023] · Last Updated: [July 09, 2026]",
+        text: "Effective Date: August 16, 2023 · Last Updated: July 09, 2026",
       },
       {
         type: "paragraph",
@@ -227,7 +227,7 @@ export const policies = [
       },
       {
         type: "paragraph",
-        text: "With service providers who support our operations (hosting, email delivery, analytics, CRM), bound by contract to protect the data and use it only for the purposes we specify.",
+        text: "With service providers who support our operations, including website hosting and deployment providers, Google Sheets / Google Workspace for submission records, Resend for email delivery, Upstash Redis for temporary OTP verification data, PostHog for analytics after consent, GitHub / Decap CMS for website content workflows, and other operational tools we may use from time to time. These providers are expected to protect the data and use it only for the purposes we specify.",
       },
       {
         type: "paragraph",
@@ -255,7 +255,7 @@ export const policies = [
       },
       {
         type: "paragraph",
-        text: "We keep personal data only as long as necessary for the purposes described in this policy: engagement and contract records for the duration of the relationship and as required by Indian tax and corporate law thereafter (typically up to [RETENTION PERIOD] years), and lead/contact-form data for [RETENTION PERIOD] from last contact unless you ask us to delete it sooner or opt in to continued contact.",
+        text: "We keep personal data only as long as necessary for the purposes described in this policy: engagement and contract records for the duration of the relationship and as required by Indian tax and corporate law thereafter (typically up to 8 years), lead/contact-form data for 24 months from last contact unless you ask us to delete it sooner or opt in to continued contact, AI SEO audit submissions for 24 months from submission, and OTP verification data for approximately 5 minutes. Analytics data is retained according to our PostHog workspace settings and deleted or anonymized when no longer needed.",
       },
       {
         type: "paragraph",
@@ -347,7 +347,7 @@ export const policies = [
       },
       {
         type: "paragraph",
-        text: "To exercise any right described above, contact us using the details in Section 9. We will verify your request and respond within the timeframe required by applicable law (generally 30 days under GDPR and DPDP, 45 days under CCPA, extendable in defined circumstances).",
+        text: "To exercise any right described above, email contact@naganamedia.com with the subject line “Privacy Request” and describe whether you are requesting access, correction, erasure, withdrawal of consent, nomination, or grievance redressal. We will verify your request and respond within the timeframe required by applicable law (generally 30 days under GDPR and DPDP, 45 days under CCPA, extendable in defined circumstances).",
       },
       {
         type: "paragraph",
@@ -404,7 +404,7 @@ export const policies = [
       },
       {
         type: "paragraph",
-        text: "Effective Date: [August 16, 2023] · Last Updated: [July 09, 2026]",
+        text: "Effective Date: August 16, 2023 · Last Updated: July 09, 2026",
       },
       {
         type: "paragraph",
@@ -496,7 +496,7 @@ export const policies = [
       },
       {
         type: "paragraph",
-        text: "Questions about these Terms can be directed to [contact@naganamedia.com], Naganarai Media Tech Pvt. Ltd., 6, Raghu Vihar, Maharani Farm, Jaipur, Rajasthan (302018), India.",
+        text: "Questions about these Terms can be directed to contact@naganamedia.com, Naganarai Media Tech Pvt. Ltd., 6, Raghu Vihar, Maharani Farm, Jaipur, Rajasthan (302018), India.",
       },
     ],
   },

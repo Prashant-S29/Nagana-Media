@@ -10,6 +10,15 @@ import {
 
 const resend = new Resend(env.RESEND_API_KEY);
 
+function escapeHtml(value: string): string {
+  return value
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#39;");
+}
+
 export async function POST(req: Request) {
   try {
     const body: unknown = await req.json();
@@ -46,6 +55,12 @@ export async function POST(req: Request) {
     }
 
     // ─── 2. Notify the team (non-blocking) ────────────────────────────────
+    const safeName = escapeHtml(name);
+    const safeEmail = escapeHtml(email);
+    const safeCompany = company ? escapeHtml(company) : "—";
+    const safePhone = phone ? escapeHtml(phone) : "—";
+    const safeMessage = escapeHtml(message).replace(/\n/g, "<br/>");
+
     const { error: notifyError } = await resend.emails.send({
       from: "Nagana Media <info@naganamedia.com>",
       to: "contact@naganamedia.com",
@@ -53,12 +68,12 @@ export async function POST(req: Request) {
       subject: `New contact form submission from ${name}`,
       html: `
         <h2>New contact enquiry</h2>
-        <p><strong>Name:</strong> ${name}</p>
-        <p><strong>Email:</strong> ${email}</p>
-        <p><strong>Company:</strong> ${company ?? "—"}</p>
-        <p><strong>Phone:</strong> ${phone ?? "—"}</p>
+        <p><strong>Name:</strong> ${safeName}</p>
+        <p><strong>Email:</strong> ${safeEmail}</p>
+        <p><strong>Company:</strong> ${safeCompany}</p>
+        <p><strong>Phone:</strong> ${safePhone}</p>
         <p><strong>Message:</strong></p>
-        <p>${message.replace(/\n/g, "<br/>")}</p>
+        <p>${safeMessage}</p>
       `,
     });
 

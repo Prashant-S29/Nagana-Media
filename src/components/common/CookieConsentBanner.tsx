@@ -89,8 +89,8 @@ export function CookieConsentBanner() {
             <p className="mt-2 text-sm leading-6 text-slate-700">
               We use necessary storage to run the site and optional analytics
               through PostHog to understand page views, clicks, form journeys,
-              heatmaps, and session recordings. You can accept, reject, or
-              manage analytics preferences. Read our{" "}
+              heatmaps, and session recordings. You can accept all, choose only
+              necessary cookies, or manage analytics preferences. Read our{" "}
               <Link
                 href="/policies/cookie-policy"
                 className="font-medium underline underline-offset-2"
