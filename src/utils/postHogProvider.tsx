@@ -2,9 +2,15 @@
 
 import posthog from "posthog-js";
 import { PostHogProvider as PHProvider } from "posthog-js/react";
-import { useEffect } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { usePathname, useSearchParams } from "next/navigation";
+import { CookieConsentBanner } from "~/components/common/CookieConsentBanner";
 import { env } from "~/env";
+import {
+  COOKIE_CONSENT_CHANGED_EVENT,
+  type CookieConsent,
+  getStoredCookieConsent,
+} from "~/utils/cookieConsent";
 import { AnalyticsListeners } from "./AnalyticsListeners";
 
 // ─── Page-view tracker ───────────────────────────────────────────────────────
@@ -29,13 +35,18 @@ function PostHogPageView() {
 }
 
 // ─── Provider ────────────────────────────────────────────────────────────────
-// Standard, direct initialisation. The previous version proxied through a
-// `/ingest` rewrite and deferred init by 3s via requestIdleCallback, which
-// prevented events from ever reaching the dashboard. We now init immediately
-// against the configured PostHog host with autocapture + session replay on.
+// PostHog is non-essential analytics, so it is not initialised until the visitor
+// accepts analytics cookies/tracking in the consent banner.
 export function PostHogProvider({ children }: { children: React.ReactNode }) {
-  useEffect(() => {
-    if (posthog.__loaded) return; // strict-mode double-invoke guard
+  const [analyticsConsent, setAnalyticsConsent] = useState<boolean | null>(
+    null,
+  );
+
+  const enablePostHog = useCallback(() => {
+    if (posthog.__loaded) {
+      posthog.opt_in_capturing();
+      return;
+    }
 
     posthog.init(env.NEXT_PUBLIC_POSTHOG_KEY, {
       api_host: env.NEXT_PUBLIC_POSTHOG_HOST ?? "https://us.i.posthog.com",
@@ -57,11 +68,48 @@ export function PostHogProvider({ children }: { children: React.ReactNode }) {
     });
   }, []);
 
+  useEffect(() => {
+    const storedConsent = getStoredCookieConsent();
+    setAnalyticsConsent(storedConsent?.analytics ?? false);
+  }, []);
+
+  useEffect(() => {
+    function onConsentChanged(event: Event) {
+      const consent = (event as CustomEvent<CookieConsent>).detail;
+      setAnalyticsConsent(consent.analytics);
+    }
+
+    window.addEventListener(COOKIE_CONSENT_CHANGED_EVENT, onConsentChanged);
+    return () =>
+      window.removeEventListener(
+        COOKIE_CONSENT_CHANGED_EVENT,
+        onConsentChanged,
+      );
+  }, []);
+
+  useEffect(() => {
+    if (analyticsConsent === true) {
+      enablePostHog();
+      return;
+    }
+
+    if (analyticsConsent === false && posthog.__loaded) {
+      posthog.opt_out_capturing();
+      posthog.stopSessionRecording();
+      posthog.reset();
+    }
+  }, [analyticsConsent, enablePostHog]);
+
   return (
     <PHProvider client={posthog}>
-      <PostHogPageView />
-      <AnalyticsListeners />
+      {analyticsConsent === true ? (
+        <>
+          <PostHogPageView />
+          <AnalyticsListeners />
+        </>
+      ) : null}
       {children}
+      <CookieConsentBanner />
     </PHProvider>
   );
 }
