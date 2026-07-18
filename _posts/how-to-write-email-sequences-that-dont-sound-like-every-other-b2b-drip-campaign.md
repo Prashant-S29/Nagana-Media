@@ -8,7 +8,7 @@ excerpt: 'You can recognize a generic drip campaign within one sentence: the
 coverImage: /assets/blog/uploads/b15t4-email-drip-better.webp
 date: 2026-07-18T18:24:00.000Z
 author:
-  name: Nagana Media
+  name: Abhijeet Singh
   picture: /assets/blog/authors/nagana.webp
 metaTitle: How to Write Email Sequences That Don't Sound Like Every Other B2B
   Drip Campaign
