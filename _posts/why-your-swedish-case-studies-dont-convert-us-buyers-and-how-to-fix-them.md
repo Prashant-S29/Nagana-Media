@@ -6,7 +6,7 @@ excerpt: The case study is well-written, the result is genuinely strong, and it
 coverImage: /assets/blog/uploads/b16t3-swedish-case-study.webp
 date: 2026-07-21T16:21:00.000Z
 author:
-  name: Nagana Media
+  name: Abhijeet Singh
   picture: /assets/blog/authors/nagana.webp
 metaTitle: Why Your Swedish Case Studies Don't Convert US Buyers (And How to Fix Them)
 metaDescription: The case study is well-written, the result is genuinely strong,
