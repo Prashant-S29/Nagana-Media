@@ -7,7 +7,7 @@ excerpt: A compliance officer at a US regional bank asks an AI platform which
 coverImage: /assets/blog/uploads/b16t4-aeo-for-swedish-fintech.webp
 date: 2026-07-21T18:04:00.000Z
 author:
-  name: Nagana Media
+  name: Abhijeet Singh
   picture: /assets/blog/authors/nagana.webp
 metaTitle: "AEO for Swedish Fintech: How US and EU Banks Research Payment
   Software Before Contacting Sales"
