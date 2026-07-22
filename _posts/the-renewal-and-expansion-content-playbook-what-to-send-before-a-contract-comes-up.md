@@ -7,7 +7,7 @@ excerpt: 68% of B2B expansion revenue happens at or around renewal, not in some
 coverImage: /assets/blog/uploads/b17t1-renewal-expansion.webp
 date: 2026-07-22T14:39:00.000Z
 author:
-  name: Nagana Media
+  name: Sai Archith
   picture: /assets/blog/authors/nagana.webp
 metaTitle: "The Renewal and Expansion Content Playbook: What to Send Before a
   Contract Comes Up"
