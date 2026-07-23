@@ -32,8 +32,7 @@ Over 70% of SaaS brands still use blue as their primary color. For twenty years,
 
 Here's the part that should actually worry you, though, more than the sameness itself. 90% of consumers form a snap judgment about a product based on color alone. If your color palette is indistinguishable from your three closest competitors, you're not just failing to stand out. You're actively losing the one judgment call that happens before a visitor reads a single sentence of your meticulously written value proposition.
 
-Infographic 01: Infog-color-type-01.png
-Alt: Bar chart showing design look as the top-cited website credibility factor, ranking above accuracy, usefulness, and reputation, from a Stanford study of 2,684 participants
+![Bar chart showing design look as the top-cited website credibility factor, ranking above accuracy, usefulness, and reputation, from a Stanford study of 2,684 participants](/assets/blog/uploads/b17t2-info-2-infog-color-type-01-1-.webp)
 
 ## Typography Just Became the Real Trust Signal
 
@@ -61,8 +60,7 @@ A typographic system with genuine hierarchy, not just three font sizes stacked o
 
 And white space, treated as a strategic decision rather than space you forgot to fill. Minimalist layouts and generous spacing signal confidence, oddly enough. Brands that don't need to shout are, on some level, perceived as more trustworthy than the ones filling every available pixel because silence made someone nervous.
 
-Infographic 2: MH-SH-BCopy.png
-Alt: Two-panel diagram showing a working brand color system with primary secondary and single accent color, alongside a clear typographic hierarchy of header subhead and body copy x
+![Two-panel diagram showing a working brand color system with primary secondary and single accent color, alongside a clear typographic hierarchy of header subhead and body copy x](/assets/blog/uploads/b17t2-info-2-mh-sh-bcopy-.webp)
 
 ## Two Ways to See This
 
@@ -94,8 +92,8 @@ Auditing accent color consistency across every call-to-action on the site. A sin
 
 ## References
 
-Fello Agency, Visual Identity Tech: A 2026 Guide for AI and Deep Tech Brands, Stanford credibility study and brand-product alignment analysis: [https://www.fello.agency/blog/visual-identity-tech-a-2026-guide-for-ai-deep-tech-brands](https://www.fello.agency/blog/visual-identity-tech-a-2026-guide-for-ai-deep-tech-brands)
-Tentackles, 4 B2B SaaS Color Palettes That Stand Out in 2026, blue saturation data and color-as-positioning framework: [https://tentackles.com/blog/b2b-saas-color-palettes-2026-that-stand-out](https://tentackles.com/blog/b2b-saas-color-palettes-2026-that-stand-out)
-Hemisphere, Graphic Design Trends 2026: A Brand Forecast, typography as the primary anchor of brand credibility: [https://www.hemispheredm.com/graphic-design-trends-2026](https://www.hemispheredm.com/graphic-design-trends-2026)
-Biznamelab, Tech Brand Color Palette: Beyond Blue, WCAG accessibility standards and accent color consistency guidance: [https://biznamelab.com/tech-brand-color-palette/](https://biznamelab.com/tech-brand-color-palette/)
-Squark Design, Visual Branding Trends to Ignore in 2026, brand continuity versus trend-chasing analysis: [https://www.squarkdesign.com/visual-branding-trends-to-ignore-in-2026-and-what-to-do-instead/](https://www.squarkdesign.com/visual-branding-trends-to-ignore-in-2026-and-what-to-do-instead/)
+Fello Agency, Visual Identity Tech: A 2026 Guide for AI and Deep Tech Brands, Stanford credibility study and brand-product alignment analysis: <https://www.fello.agency/blog/visual-identity-tech-a-2026-guide-for-ai-deep-tech-brands>
+Tentackles, 4 B2B SaaS Color Palettes That Stand Out in 2026, blue saturation data and color-as-positioning framework: <https://tentackles.com/blog/b2b-saas-color-palettes-2026-that-stand-out>
+Hemisphere, Graphic Design Trends 2026: A Brand Forecast, typography as the primary anchor of brand credibility: <https://www.hemispheredm.com/graphic-design-trends-2026>
+Biznamelab, Tech Brand Color Palette: Beyond Blue, WCAG accessibility standards and accent color consistency guidance: <https://biznamelab.com/tech-brand-color-palette/>
+Squark Design, Visual Branding Trends to Ignore in 2026, brand continuity versus trend-chasing analysis: <https://www.squarkdesign.com/visual-branding-trends-to-ignore-in-2026-and-what-to-do-instead/>
