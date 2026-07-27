@@ -486,7 +486,7 @@ const Home: React.FC = () => {
         <section className="py-20 lg:py-24">
           <div className={containerClass}>
             <div className="mx-auto max-w-3xl text-center">
-              <h2 className={titleClass}>The Resonance Framework™</h2>
+              <h2 className={titleClass}>The Resonance Framework</h2>
               <p className="mx-auto mt-4 max-w-xl text-base text-body-muted">
                 A four-stage system that takes B2B technology companies from
                 unclear and invisible to authoritative and AI-cited.

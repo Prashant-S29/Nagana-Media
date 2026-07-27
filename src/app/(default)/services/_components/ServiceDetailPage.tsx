@@ -34,6 +34,7 @@ export type ServicePageContent = {
   slug: string;
   kicker: string;
   eyebrow: string;
+  bannerImage: string;
   headline: ReactNode;
   intro: ReactNode;
   primaryCta: { label: string; href: string };
@@ -150,8 +151,17 @@ export function ServiceDetailPage({
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
       />
 
-      <section className="bg-[#062D3A] pb-[90px] pt-[160px] sm:pb-[120px] sm:pt-[190px]">
-        <div className={containerClass}>
+      <section className="relative bg-[#062D3A] pb-[90px] pt-[160px] sm:pb-[120px] sm:pt-[190px]">
+        <div
+          className="absolute inset-0"
+          style={{
+            backgroundImage: `url(${service.bannerImage})`,
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+            opacity: 0.2,
+          }}
+        />
+        <div className={`${containerClass} relative`}>
           <nav
             aria-label="Breadcrumb"
             className="mb-8 flex items-center gap-2 text-xs text-white/55"

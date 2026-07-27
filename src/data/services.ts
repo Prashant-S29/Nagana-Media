@@ -5,6 +5,7 @@ export const services = [
     slug: "sales-enablement",
     icon: "/assets/static/calendar.webp",
     title: "Sales Enablement",
+    bannerImage: "/assets/static/service/sales.webp",
     description:
       "Select our sales support service that comes in to deliver specific sales assets during key business events or build internal repository of employee training material.",
   },
@@ -12,6 +13,7 @@ export const services = [
     slug: "marketing-enablement",
     icon: "/assets/static/file.webp",
     title: "Marketing Enablement",
+    bannerImage: "/assets/static/service/marketing.webp",
     description:
       "Fill in your marketing gaps with specialized technology content, marketing initiatives, or scale your digital footprint.",
   },
@@ -19,6 +21,7 @@ export const services = [
     slug: "program-management",
     icon: "/assets/static/users.webp",
     title: "Program Management",
+    bannerImage: "/assets/static/service/program.webp",
     description:
       "Manage your digital marketing, design, and content initiatives with ease.",
   },
