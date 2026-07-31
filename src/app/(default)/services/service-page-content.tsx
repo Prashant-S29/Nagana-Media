@@ -11,6 +11,7 @@ export const salesEnablementContent: ServicePageContent = {
   slug: "sales-enablement",
   kicker: "Sales Enablement",
   eyebrow: "Sales Enablement",
+  bannerImage: "/assets/static/service/sales.webp",
   headline: (
     <>
       Assets that <span className="text-brand">close</span>
@@ -224,6 +225,7 @@ export const marketingEnablementContent: ServicePageContent = {
   slug: "marketing-enablement",
   kicker: "Marketing Enablement",
   eyebrow: "Marketing Enablement",
+  bannerImage: "/assets/static/service/market.webp",
   headline: (
     <>
       Content that gets <br />
@@ -501,6 +503,7 @@ export const programManagementContent: ServicePageContent = {
   slug: "program-management",
   kicker: "Program Management",
   eyebrow: "Program Management",
+  bannerImage: "/assets/static/service/program.webp",
   headline: (
     <>
       Strategy is worthless <br /> if it{" "}

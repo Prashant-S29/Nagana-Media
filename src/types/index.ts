@@ -40,6 +40,7 @@ export interface Blog {
 export interface Service {
   slug: string;
   icon: string;
+  bannerImage: string;
   title: string;
   description: string;
 }
