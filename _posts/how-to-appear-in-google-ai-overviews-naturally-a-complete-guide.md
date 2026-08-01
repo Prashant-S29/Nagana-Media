@@ -7,7 +7,7 @@ excerpt: Google just published its own AI optimization guide, and it quietly
 coverImage: /assets/blog/uploads/guide-1-google-ai-overviews.webp
 date: 2026-08-01T11:56:00.000Z
 author:
-  name: Nagana Media
+  name: Abhijeet Singh
   picture: /assets/blog/authors/nagana.webp
 metaTitle: "How to Appear in Google AI Overviews Naturally: A Complete Guide"
 metaDescription: Google just published its own AI optimization guide, and it
