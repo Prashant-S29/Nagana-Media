@@ -26,7 +26,7 @@ On May 15, 2026, Google finally spilled some beans about something it had never 
 
 In my opinion, one line in it did more damage to the GEO consulting industry than anything else published this year. From Google Search's perspective, optimizing for generative AI search is optimizing for the search experience, and thus still SEO. Answer Engine Optimization and Generative Engine Optimization, according to Google, aren't new disciplines. They're the same job with a new name attached.
 
-Search Engine Journal's Matt Southern covered it the same week, and the headline says the whole thing plainly: Google's new AI search guide calls AEO and GEO "still SEO." That's Google's own words, quoted directly.
+Search Engine Journal's Matt Southern covered it the same week, and the headline says the whole thing plainly: Google's new AI search guide calls[ AEO](https://share.google/ttGocT76zTyr6yjSR) and GEO "still SEO." That's Google's own words, quoted directly.
 
 I want to walk through what the guide actually says, because a lot of the coverage since has flattened a nuanced document into a single soundbite. Google is right about a lot of this. It's also only telling half the story, because it's only talking about its own results page, and everything I've researched about ChatGPT, Perplexity, and Claude suggests a different set of rules applies there.
 
@@ -98,13 +98,13 @@ The fix isn't complicated, though it is genuinely more work. Pull a real custome
 
 Start by pulling up your last ten published articles and running Google's own test against each one. Does this contain a unique point of view, or does it restate what's already searchable? Would a reader feel this was written by someone with genuine, specific experience in the topic? Is the technical foundation, crawlability, indexing, and page experience actually sound, since none of the content quality work matters if Google can't retrieve the page in the first place?
 
-Then check Search Console's Generative AI performance report, which Google specifically recommends in the guide for tracking how content performs inside AI Overviews and AI Mode. Most teams have never opened this report. It exists specifically to answer the question this whole guide is about.
+Then check Search Console's Generative AI performance report, which Google specifically recommends in the guide for tracking how content performs inside AI Overviews and [AI Mode](https://share.google/1TUAydx9r3NBPooXh). Most teams have never opened this report. It exists specifically to answer the question this whole guide is about.
 
 Beyond that, resist the urge to either strip out every piece of structured data because Google said it doesn't need it, or to keep chasing "AI-specific" tactics that were built for a version of AI search that only ever existed in a consultant's sales deck. The fundamentals Google names – non-commodity content, technical clarity, genuine expertise – are the same fundamentals that have mattered for years. They were just given a new, official name this year.
 
 ## Where Nagana Media Fits Into This
 
-This is, in a lot of ways, the exact argument we've been making with clients since before Google put it in writing. B2B technology content has a commodity problem. Too many companies publish the same five-bullet blog post their three closest competitors already wrote, then wonder why an AI Overview cites someone else instead.
+This is, in a lot of ways, the exact argument we've been making with clients since before Google put it in writing. [B2B](https://share.google/h0hrkUwrgnOs9O1VC) technology content has a commodity problem. Too many companies publish the same five-bullet blog post their three closest competitors already wrote, then wonder why an AI Overview cites someone else instead.
 
 What we actually do at Nagana Media is help B2B technology brands write the non-commodity version. That means pulling real usage data out of your product, structuring genuine customer outcomes into content that can't be replicated by a competitor with no access to your delivery history, and building the technical foundation, crawlability, structured data where it genuinely helps, clean page experience that makes sure Google and every other AI platform can actually find and retrieve what you've built. Google's new guide didn't change our approach. It just gave us better language to explain why it works.
 
@@ -132,12 +132,12 @@ Start with the technical basics. A page must be indexed and eligible to appear i
 
 ## References
 
-Google Search Central, Optimizing your website for generative AI features on Google Search, official guide published May 15, 2026: [https://developers.google.com/search/docs/fundamentals/ai-optimization-guide](https://developers.google.com/search/docs/fundamentals/ai-optimization-guide)
+Google Search Central, Optimizing your website for generative AI features on Google Search, official guide published May 15, 2026: <https://developers.google.com/search/docs/fundamentals/ai-optimization-guide>
 
-Search Engine Journal, Matt G. Southern, Google's New AI Search Guide Calls AEO And GEO 'Still SEO': [https://www.searchenginejournal.com/googles-new-ai-search-guide-calls-aeo-and-geo-still-seo/575026/](https://www.searchenginejournal.com/googles-new-ai-search-guide-calls-aeo-and-geo-still-seo/575026/)
+Search Engine Journal, Matt G. Southern, Google's New AI Search Guide Calls AEO And GEO 'Still SEO': <https://www.searchenginejournal.com/googles-new-ai-search-guide-calls-aeo-and-geo-still-seo/575026/>
 
 Averi, Google's New AI Optimization Guide Just Killed 4 GEO Myths (And Validated 3 Things Smart Companies Already Do), platform-specific caveat analysis: [https://www.averi.ai/blog/google-s-ai-guide-just-killed-4-geo-myths-(and-validated-3](https://www.averi.ai/blog/google-s-ai-guide-just-killed-4-geo-myths-(and-validated-3))
 
-Frase, Google's AI Optimization Guide: AEO and GEO Are Still SEO, RAG and query fan-out mechanics breakdown: [https://www.frase.io/blog/google-ai-optimization-guide](https://www.frase.io/blog/google-ai-optimization-guide)
+Frase, Google's AI Optimization Guide: AEO and GEO Are Still SEO, RAG and query fan-out mechanics breakdown: <https://www.frase.io/blog/google-ai-optimization-guide>
 
-Powerful Combo, Google AI Optimization Guide: What Everyone Gets Wrong, llms.txt platform-specific nuance analysis: [https://powerfulcombo.com/blog/google-ai-optimization-guide/](https://powerfulcombo.com/blog/google-ai-optimization-guide/)
+Powerful Combo, Google AI Optimization Guide: What Everyone Gets Wrong, llms.txt platform-specific nuance analysis: <https://powerfulcombo.com/blog/google-ai-optimization-guide/>
