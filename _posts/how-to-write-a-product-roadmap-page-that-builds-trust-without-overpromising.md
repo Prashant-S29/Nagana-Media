@@ -11,7 +11,7 @@ author:
 metaTitle: How to Write a Product Roadmap Page That Builds Trust Without Overpromising
 metaDescription: 94% of consumers say they're more loyal to brands that practice
   transparency. A public roadmap is one of the highest-leverage trust signals a
-  B2B company has, and most of them are built wrong.
+  B2B company has, and most of them are built wrong
 primaryKeyword: Product Roadmap Page
 secondaryKeywords:
   - B2B product roadmap
